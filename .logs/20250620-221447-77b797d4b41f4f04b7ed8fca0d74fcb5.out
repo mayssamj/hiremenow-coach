@@ -1,0 +1,60 @@
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 1550ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.8s (1650 modules)
+ GET / 200 in 3339ms
+ GET / 200 in 3372ms
+ ✓ Compiled in 627ms (709 modules)
+ GET / 200 in 80ms
+ GET / 200 in 62ms
+ GET / 200 in 30ms
+ ✓ Compiled /api/auth/[...nextauth] in 288ms (945 modules)
+ GET /api/auth/session 200 in 724ms
+ GET /api/auth/session 200 in 26ms
+ GET / 200 in 88ms
+ GET / 200 in 48ms
+ GET / 200 in 29ms
+ GET /api/auth/session 200 in 29ms
+ GET /api/auth/session 200 in 16ms
+ GET / 200 in 35ms
+ GET /api/auth/session 200 in 28ms
+ GET /api/auth/session 200 in 15ms
+ GET /api/auth/providers 200 in 36ms
+ GET /api/auth/csrf 200 in 15ms
+ POST /api/auth/callback/credentials 200 in 442ms
+ GET / 307 in 48ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 639ms (1661 modules)
+ GET /dashboard 200 in 725ms
+ ✓ Compiled /api/dashboard/stats in 261ms (982 modules)
+ GET /api/auth/session 200 in 510ms
+ GET /api/dashboard/stats 200 in 531ms
+ GET /api/dashboard/stats 200 in 23ms
+ GET /api/auth/session 200 in 15ms
+ ○ Compiling /companies ...
+ ✓ Compiled /companies in 650ms (1698 modules)
+ GET /companies?_rsc=1w89j 200 in 23ms
+ ✓ Compiled /api/companies in 187ms (991 modules)
+ GET /api/companies 200 in 232ms
+ GET /api/companies 200 in 21ms
+ ○ Compiling /companies/[slug] ...
+ ✓ Compiled /companies/[slug] in 528ms (1725 modules)
+ GET /companies/airbnb?_rsc=1sirw 200 in 36ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 634ms (1728 modules)
+ GET /questions/cmc5d77r0003dtf2lfzecstrn 404 in 53ms
+ GET /api/auth/session 200 in 46ms
+ GET /api/auth/session 200 in 16ms
+ GET /questions/cmc5d77r0003dtf2lfzecstrn 404 in 21ms
+ GET /api/auth/session 200 in 34ms
+ GET /api/auth/session 200 in 16ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1340ms (1891 modules)
+ GET / 404 in 1675ms
+[?25h

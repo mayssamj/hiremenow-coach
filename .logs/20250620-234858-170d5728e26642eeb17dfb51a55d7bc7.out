@@ -1,0 +1,206 @@
+sending incremental file list
+complete-flow-test.js
+components.json
+debug-page.js
+debug-screenshot.png
+dev.log
+next-env.d.ts
+next.config.js
+package.json
+playwright.config.ts
+postcss.config.js
+tailwind.config.ts
+test-user-flow.js
+tsconfig.json
+tsconfig.tsbuildinfo
+app/
+app/globals.css
+app/layout.tsx
+app/page.tsx
+app/api/
+app/api/auth/
+app/api/auth/[...nextauth]/
+app/api/auth/[...nextauth]/route.ts
+app/api/auth/signup/
+app/api/auth/signup/route.ts
+app/api/companies/
+app/api/companies/route.ts
+app/api/dashboard/
+app/api/dashboard/stats/
+app/api/dashboard/stats/route.ts
+app/api/questions/
+app/api/questions/route.ts
+app/api/questions/[id]/
+app/api/questions/[id]/route.ts
+app/api/questions/[id]/answers/
+app/api/questions/[id]/answers/route.ts
+app/api/search/
+app/api/search/route.ts
+app/api/stories/
+app/api/stories/route.ts
+app/auth/
+app/auth/signin/
+app/auth/signin/page.tsx
+app/auth/signup/
+app/auth/signup/page.tsx
+app/companies/
+app/companies/page.tsx
+app/companies/[slug]/
+app/companies/[slug]/page.tsx
+app/dashboard/
+app/dashboard/page.tsx
+app/questions/
+app/questions/page.tsx
+app/questions/[id]/
+app/questions/[id]/page.tsx
+app/stories/
+app/stories/page.tsx
+app/stories/new/
+app/stories/new/page.tsx
+components/
+components/companies-content.tsx
+components/company-detail-content.tsx
+components/create-story-form.tsx
+components/dashboard-content.tsx
+components/landing-page.tsx
+components/navigation.tsx
+components/providers.tsx
+components/question-detail-content.tsx
+components/questions-content.tsx
+components/search-dialog.tsx
+components/stories-content.tsx
+components/theme-provider.tsx
+components/ui/
+components/ui/accordion.tsx
+components/ui/alert-dialog.tsx
+components/ui/alert.tsx
+components/ui/aspect-ratio.tsx
+components/ui/avatar.tsx
+components/ui/badge.tsx
+components/ui/breadcrumb.tsx
+components/ui/button.tsx
+components/ui/calendar.tsx
+components/ui/card.tsx
+components/ui/carousel.tsx
+components/ui/checkbox.tsx
+components/ui/collapsible.tsx
+components/ui/command.tsx
+components/ui/context-menu.tsx
+components/ui/date-range-picker.tsx
+components/ui/dialog.tsx
+components/ui/drawer.tsx
+components/ui/dropdown-menu.tsx
+components/ui/form.tsx
+components/ui/hover-card.tsx
+components/ui/input-otp.tsx
+components/ui/input.tsx
+components/ui/label.tsx
+components/ui/menubar.tsx
+components/ui/navigation-menu.tsx
+components/ui/pagination.tsx
+components/ui/popover.tsx
+components/ui/progress.tsx
+components/ui/radio-group.tsx
+components/ui/resizable.tsx
+components/ui/scroll-area.tsx
+components/ui/select.tsx
+components/ui/separator.tsx
+components/ui/sheet.tsx
+components/ui/skeleton.tsx
+components/ui/slider.tsx
+components/ui/sonner.tsx
+components/ui/switch.tsx
+components/ui/table.tsx
+components/ui/tabs.tsx
+components/ui/task-card.tsx
+components/ui/textarea.tsx
+components/ui/toast.tsx
+components/ui/toaster.tsx
+components/ui/toggle-group.tsx
+components/ui/toggle.tsx
+components/ui/tooltip.tsx
+components/ui/use-toast.ts
+data/
+data/interview_prep_data_analysis.md
+data/seed_data.json
+hooks/
+hooks/use-debounce.ts
+hooks/use-toast.ts
+lib/
+lib/auth.ts
+lib/db.ts
+lib/types.ts
+lib/utils.ts
+lib/db/
+prisma/
+prisma/schema.prisma
+scripts/
+scripts/seed.ts
+test-results/
+test-results/.last-run.json
+test-results/404-fix-verification-404-F-752be-rrectly-with-authentication-chromium/
+test-results/404-fix-verification-404-F-752be-rrectly-with-authentication-chromium/error-context.md
+test-results/404-fix-verification-404-F-9c0a6-r-login-original-404-issue--chromium/
+test-results/404-fix-verification-404-F-9c0a6-r-login-original-404-issue--chromium/error-context.md
+test-results/404-fix-verification-404-F-b74bb-avigation-works-without-404-chromium/
+test-results/404-fix-verification-404-F-b74bb-avigation-works-without-404-chromium/error-context.md
+tests/
+tests/404-fix-verification.spec.ts
+tests/comprehensive-e2e.spec.ts
+tests/question-specific.spec.ts
+tests/simple-manual-test.spec.ts
+
+sent 811,026 bytes  received 2,358 bytes  1,626,768.00 bytes/sec
+total size is 801,521  speedup is 0.99
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+  ▲ Next.js 14.2.28
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Skipping linting
+   Checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/11) ...
+   Generating static pages (2/11) 
+   Generating static pages (5/11) 
+   Generating static pages (8/11) 
+ ✓ Generating static pages (11/11)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ƒ /                                    2.34 kB         184 kB
+├ ○ /_not-found                          873 B          88.1 kB
+├ ƒ /api/auth/[...nextauth]              0 B                0 B
+├ ƒ /api/auth/signup                     0 B                0 B
+├ ƒ /api/companies                       0 B                0 B
+├ ƒ /api/dashboard/stats                 0 B                0 B
+├ ƒ /api/questions                       0 B                0 B
+├ ƒ /api/questions/[id]                  0 B                0 B
+├ ƒ /api/questions/[id]/answers          0 B                0 B
+├ ƒ /api/search                          0 B                0 B
+├ ƒ /api/stories                         0 B                0 B
+├ ○ /auth/signin                         3.87 kB         118 kB
+├ ○ /auth/signup                         3.98 kB         108 kB
+├ ƒ /companies                           2.23 kB         184 kB
+├ ƒ /companies/[slug]                    4.99 kB         186 kB
+├ ƒ /dashboard                           3.23 kB         185 kB
+├ ƒ /questions                           10.4 kB         192 kB
+├ ƒ /questions/[id]                      5.35 kB         187 kB
+├ ƒ /stories                             2.59 kB         184 kB
+└ ƒ /stories/new                         6.02 kB         188 kB
++ First Load JS shared by all            87.2 kB
+  ├ chunks/117-48f287d7bc3c67fa.js       31.6 kB
+  ├ chunks/fd9d1056-7c7bb764d8eb8c76.js  53.6 kB
+  └ other shared chunks (total)          1.96 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

@@ -1,0 +1,249 @@
+
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+    output = "/home/ubuntu/hiremenow-coach/app/node_modules/.prisma/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  username      String    @unique
+  password      String
+  emailVerified DateTime?
+  image         String?
+  role          Role      @default(USER)
+  isActive      Boolean   @default(true)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts Account[]
+  sessions Session[]
+  stories  Story[]
+  answers  Answer[]
+  notes    Note[]
+  tags     Tag[]
+
+  @@map("users")
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model Company {
+  id                 String   @id @default(cuid())
+  name               String   @unique
+  slug               String   @unique
+  industry           String?
+  description        String?
+  website            String?
+  logo               String?
+  values             String[] @default([])
+  evaluationCriteria String[] @default([])
+  interviewFormat    String?
+  successTips        String[] @default([])
+  redFlags           String[] @default([])
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  questions Question[]
+  answers   Answer[]
+
+  @@map("companies")
+}
+
+model Question {
+  id          String       @id @default(cuid())
+  text        String
+  category    QuestionType @default(BEHAVIORAL)
+  difficulty  Difficulty   @default(MEDIUM)
+  isCritical  Boolean      @default(false)
+  companyId   String?
+  source      String?
+  tags        String[]     @default([])
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  company Company? @relation(fields: [companyId], references: [id])
+  answers Answer[]
+  notes   Note[]   @relation("QuestionNotes")
+
+  @@map("questions")
+}
+
+enum QuestionType {
+  BEHAVIORAL
+  TECHNICAL
+  SYSTEM_DESIGN
+  CASE_STUDY
+  CULTURE_FIT
+}
+
+enum Difficulty {
+  EASY
+  MEDIUM
+  HARD
+  EXPERT
+}
+
+model Story {
+  id          String   @id @default(cuid())
+  title       String
+  situation   String
+  task        String
+  action      String
+  result      String
+  reflection  String?
+  learnings   String?
+  tags        String[] @default([])
+  userId      String
+  isPublic    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user  User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  notes Note[] @relation("StoryNotes")
+
+  @@map("stories")
+}
+
+model Answer {
+  id         String   @id @default(cuid())
+  content    String
+  questionId String
+  userId     String
+  companyId  String?
+  storyIds   String[] @default([])
+  tags       String[] @default([])
+  isComplete Boolean  @default(false)
+  timeSpent  Int      @default(0) // in seconds
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  company  Company? @relation(fields: [companyId], references: [id])
+  notes    Note[]   @relation("AnswerNotes")
+
+  @@unique([questionId, userId])
+  @@map("answers")
+}
+
+model Note {
+  id         String    @id @default(cuid())
+  content    String
+  entityType EntityType
+  userId     String
+  questionId String?
+  storyId    String?
+  answerId   String?
+  tags       String[]  @default([])
+  isPrivate  Boolean   @default(true)
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  question Question? @relation("QuestionNotes", fields: [questionId], references: [id], onDelete: Cascade)
+  story    Story?    @relation("StoryNotes", fields: [storyId], references: [id], onDelete: Cascade)
+  answer   Answer?   @relation("AnswerNotes", fields: [answerId], references: [id], onDelete: Cascade)
+
+  @@map("notes")
+}
+
+enum EntityType {
+  QUESTION
+  STORY
+  ANSWER
+  COMPANY
+}
+
+model Tag {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String?
+  color       String   @default("#3B82F6")
+  userId      String?
+  isGlobal    Boolean  @default(false)
+  usage_count Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user User? @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("tags")
+}
+
+model UserProgress {
+  id                   String   @id @default(cuid())
+  userId               String
+  companyId            String
+  totalQuestions       Int      @default(0)
+  answeredQuestions    Int      @default(0)
+  criticalAnswered     Int      @default(0)
+  lastActivityAt       DateTime @default(now())
+  averageTimePerAnswer Int      @default(0) // in seconds
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  @@unique([userId, companyId])
+  @@map("user_progress")
+}
+
+model SearchIndex {
+  id         String     @id @default(cuid())
+  entityType EntityType
+  entityId   String
+  title      String
+  content    String
+  searchVector String // For full-text search
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+
+  @@unique([entityType, entityId])
+  @@map("search_index")
+}
