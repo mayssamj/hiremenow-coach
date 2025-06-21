@@ -1,5 +1,5 @@
 
-import { NextAuthOptions } from 'next-auth';
+import { NextAuthOptions, getServerSession } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import { prisma } from '@/lib/db';
@@ -39,35 +39,56 @@ export const authOptions: NextAuthOptions = {
         password: { label: 'Password', type: 'password' }
       },
       async authorize(credentials) {
-        if (!credentials?.username || !credentials?.password) {
-          return null;
-        }
-
-        const user = await prisma.user.findUnique({
-          where: {
-            username: credentials.username
+        console.log('🔐 NextAuth authorize called with:', { username: credentials?.username, hasPassword: !!credentials?.password });
+        
+        try {
+          if (!credentials?.username || !credentials?.password) {
+            console.log('❌ Missing credentials');
+            return null;
           }
-        });
 
-        if (!user || !user.isActive) {
+          console.log('🔍 Looking for user:', credentials.username);
+          const user = await prisma.user.findUnique({
+            where: {
+              username: credentials.username
+            }
+          });
+
+          if (!user) {
+            console.log('❌ User not found');
+            return null;
+          }
+
+          console.log('✅ User found, checking if active');
+          if (!user.isActive) {
+            console.log('❌ User is not active');
+            return null;
+          }
+
+          console.log('🔑 Verifying password');
+          const isPasswordValid = await bcrypt.compare(
+            credentials.password,
+            user.password
+          );
+
+          if (!isPasswordValid) {
+            console.log('❌ Password verification failed');
+            return null;
+          }
+
+          console.log('✅ Authentication successful for user:', user.username);
+          const result = {
+            id: user.id,
+            username: user.username,
+            name: user.name || undefined,
+            role: user.role,
+          };
+          console.log('✅ Returning user object:', result);
+          return result;
+        } catch (error) {
+          console.error('❌ Exception in authorize function:', error);
           return null;
         }
-
-        const isPasswordValid = await bcrypt.compare(
-          credentials.password,
-          user.password
-        );
-
-        if (!isPasswordValid) {
-          return null;
-        }
-
-        return {
-          id: user.id,
-          username: user.username,
-          name: user.name || undefined,
-          role: user.role,
-        };
       }
     })
   ],
@@ -93,3 +114,6 @@ export const authOptions: NextAuthOptions = {
     signIn: '/auth/signin',
   },
 };
+
+// Helper function to get server session
+export const getServerAuthSession = () => getServerSession(authOptions);
