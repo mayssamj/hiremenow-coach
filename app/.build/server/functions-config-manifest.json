@@ -1,1 +1,1 @@
-{"version":1,"functions":{"/api/auth/[...nextauth]":{},"/api/auth/signup":{},"/api/companies":{},"/api/dashboard/stats":{},"/api/search":{},"/api/questions/[id]":{},"/api/questions/[id]/answers":{},"/api/questions":{},"/api/stories":{}}}
+{"version":1,"functions":{"/api/auth/[...nextauth]":{},"/api/companies":{},"/api/auth/signup":{},"/api/questions/[id]":{},"/api/questions":{},"/api/stories":{},"/api/questions/[id]/answers":{},"/api/test-fixed-forms":{},"/api/search":{},"/api/dashboard/stats":{}}}

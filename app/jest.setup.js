@@ -57,6 +57,12 @@ jest.mock('next-auth/react', () => ({
   getSession: jest.fn(),
 }))
 
+// Mock next-auth server functions
+jest.mock('next-auth', () => ({
+  getServerSession: jest.fn(),
+  NextAuthOptions: {},
+}))
+
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
   motion: {
@@ -91,13 +97,18 @@ jest.mock('lucide-react', () => ({
   Shield: () => 'Shield',
 }))
 
+// Mock environment variables for tests
+process.env.DATABASE_URL = 'file::memory:?cache=shared'
+process.env.NODE_ENV = 'test'
+
 // Suppress console errors in tests
 const originalError = console.error
 beforeAll(() => {
   console.error = (...args) => {
     if (
       typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is deprecated')
+      (args[0].includes('Warning: ReactDOM.render is deprecated') ||
+       args[0].includes('Warning: React.createRef is deprecated'))
     ) {
       return
     }

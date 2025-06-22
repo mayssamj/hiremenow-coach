@@ -48,20 +48,20 @@ async function main() {
         where: { slug },
         update: {
           name: companyData.name,
-          values: companyData.values || [],
-          evaluationCriteria: companyData.evaluationCriteria || [],
+          values: JSON.stringify(companyData.values || []),
+          evaluationCriteria: JSON.stringify(companyData.evaluationCriteria || []),
           interviewFormat: companyData.interviewFormat || '',
-          successTips: companyData.successTips || [],
-          redFlags: companyData.redFlags || [],
+          successTips: JSON.stringify(companyData.successTips || []),
+          redFlags: JSON.stringify(companyData.redFlags || []),
         },
         create: {
           name: companyData.name,
           slug,
-          values: companyData.values || [],
-          evaluationCriteria: companyData.evaluationCriteria || [],
+          values: JSON.stringify(companyData.values || []),
+          evaluationCriteria: JSON.stringify(companyData.evaluationCriteria || []),
           interviewFormat: companyData.interviewFormat || '',
-          successTips: companyData.successTips || [],
-          redFlags: companyData.redFlags || [],
+          successTips: JSON.stringify(companyData.successTips || []),
+          redFlags: JSON.stringify(companyData.redFlags || []),
         },
       });
     }
@@ -158,7 +158,7 @@ async function main() {
           isCritical: Math.random() > 0.7,
           companyId: randomCompany ? companyMap[randomCompany] : null,
           source: 'seed_data',
-          tags: ['leadership', 'teamwork', 'communication', 'problem-solving'].filter(() => Math.random() > 0.5),
+          tags: JSON.stringify(['leadership', 'teamwork', 'communication', 'problem-solving'].filter(() => Math.random() > 0.5)),
         },
       });
     }
@@ -177,7 +177,7 @@ async function main() {
           isCritical: Math.random() > 0.6,
           companyId: randomCompany ? companyMap[randomCompany] : null,
           source: 'seed_data',
-          tags: ['system-design', 'architecture', 'scalability', 'performance'].filter(() => Math.random() > 0.5),
+          tags: JSON.stringify(['system-design', 'architecture', 'scalability', 'performance'].filter(() => Math.random() > 0.5)),
         },
       });
     }
@@ -196,7 +196,7 @@ async function main() {
           isCritical: Math.random() > 0.5,
           companyId: randomCompany ? companyMap[randomCompany] : null,
           source: 'seed_data',
-          tags: ['system-design', 'architecture', 'scalability'].filter(() => Math.random() > 0.4),
+          tags: JSON.stringify(['system-design', 'architecture', 'scalability'].filter(() => Math.random() > 0.4)),
         },
       });
     }
@@ -238,7 +238,7 @@ async function main() {
         reflection: 'I learned the importance of over-communicating during complex migrations and how proper planning can turn a risky project into a success.',
         learnings: 'Breaking down complex projects into smaller, measurable milestones helps maintain team confidence and stakeholder trust.',
         userId: demo.id,
-        tags: ['leadership', 'migration', 'system-design'],
+        tags: JSON.stringify(['leadership', 'migration', 'system-design']),
         isPublic: false,
       },
     });

@@ -1,0 +1,3447 @@
+➤ YN0000: · Yarn 4.9.2
+➤ YN0000: ┌ Resolution step
+➤ YN0085: │ + @playwright/test@npm:1.53.1, @testing-library/dom@npm:10.4.0, @testing-library/jest-dom@npm:6.6.3, @testing-library/react@npm:16.3.0, and 237 more.
+➤ YN0000: └ Completed in 1s 82ms
+➤ YN0000: ┌ Post-resolution validation
+➤ YN0060: │ @typescript-eslint/parser is listed by your project with version 7.0.0 (p6cb6c), which doesn't satisfy what @typescript-eslint/eslint-plugin requests (^6.0.0-alpha).
+➤ YN0060: │ eslint is listed by your project with version 9.24.0 (pe6e00), which doesn't satisfy what @typescript-eslint/eslint-plugin and other dependencies request (^8.57.0).
+➤ YN0086: │ Some peer dependencies are incorrectly met by your project; run yarn explain peer-requirements <hash> for details, where <hash> is the six-letter p-prefixed code.
+➤ YN0086: │ Some peer dependencies are incorrectly met by dependencies; run yarn explain peer-requirements for details.
+➤ YN0000: └ Completed
+➤ YN0000: ┌ Fetch step
+➤ YN0000: └ Completed in 3s 174ms
+➤ YN0000: ┌ Link step
+➤ YN0000: └ Completed in 1s 869ms
+➤ YN0000: · Done with warnings in 6s 319ms
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v6.7.0) to ./node_modules/.prisma/client in 143ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Interested in query caching in just a few lines of code? Try Accelerate today! https://pris.ly/tip-3-accelerate
+
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 1911ms
+ ○ Compiling / ...
+ ✓ Compiled / in 4.9s (1657 modules)
+ GET / 200 in 5483ms
+ GET / 200 in 5515ms
+ ✓ Compiled in 645ms (709 modules)
+ GET / 200 in 59ms
+ ○ Compiling /api/auth/[...nextauth] ...
+ ✓ Compiled /api/auth/[...nextauth] in 1189ms (945 modules)
+ GET /api/auth/session 200 in 1731ms
+ GET /api/auth/session 200 in 29ms
+ GET / 200 in 135ms
+ GET / 200 in 31ms
+ ○ Compiling /auth/signin ...
+ ✓ Compiled /auth/signin in 835ms (1662 modules)
+ GET /auth/signin 200 in 1022ms
+ GET /auth/signin 200 in 1023ms
+ GET /auth/signin 200 in 1024ms
+ GET /auth/signin 200 in 1025ms
+ ✓ Compiled /api/auth/[...nextauth] in 192ms (958 modules)
+ GET /api/auth/session 200 in 342ms
+ GET /api/auth/session 200 in 342ms
+ GET /api/auth/session 200 in 341ms
+ GET /api/auth/providers 200 in 259ms
+ GET /api/auth/providers 200 in 256ms
+ GET /api/auth/providers 200 in 255ms
+ GET /api/auth/providers 200 in 255ms
+ GET /api/auth/session 200 in 343ms
+ GET /api/auth/session 200 in 24ms
+ GET /api/auth/session 200 in 51ms
+ GET /api/auth/session 200 in 51ms
+ GET /api/auth/session 200 in 51ms
+ GET /api/auth/csrf 200 in 51ms
+ GET /api/auth/csrf 200 in 51ms
+ GET /api/auth/csrf 200 in 51ms
+ GET /api/auth/csrf 200 in 51ms
+ POST /api/auth/callback/credentials 200 in 33ms
+ POST /api/auth/callback/credentials 200 in 32ms
+ POST /api/auth/callback/credentials 200 in 32ms
+ POST /api/auth/callback/credentials 200 in 32ms
+ GET /api/auth/session 200 in 20ms
+ GET /api/auth/session 200 in 34ms
+ GET /api/auth/session 200 in 34ms
+ GET /api/auth/session 200 in 34ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 513ms (1685 modules)
+ GET /dashboard?_rsc=3y0gy 200 in 32ms
+ GET /dashboard?_rsc=3y0gy 200 in 47ms
+ GET /dashboard?_rsc=3y0gy 200 in 47ms
+ GET /dashboard?_rsc=3y0gy 200 in 47ms
+ ✓ Compiled /questions/[id] in 260ms (995 modules)
+ ✓ Compiled in 779ms (739 modules)
+ GET /api/questions 401 in 1434ms
+ GET /questions 307 in 1493ms
+ GET /auth/signin 200 in 46ms
+ GET /api/auth/session 200 in 31ms
+ GET /api/auth/session 200 in 19ms
+ GET /questions/cmc5dupt3003ntfm4hlx62p83 307 in 1847ms
+ GET /auth/signin 200 in 31ms
+ GET /api/auth/session 200 in 21ms
+ GET /api/auth/session 200 in 30ms
+ GET /auth/signin 200 in 34ms
+ GET /api/auth/session 200 in 32ms
+ GET /api/auth/session 200 in 24ms
+ GET /api/auth/providers 200 in 26ms
+ GET /api/auth/csrf 200 in 20ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 456ms
+ GET /api/auth/session 200 in 30ms
+ GET /dashboard?_rsc=3y0gy 200 in 22ms
+ ✓ Compiled /api/dashboard/stats in 230ms (1026 modules)
+ GET /questions 200 in 311ms
+ GET /api/dashboard/stats 200 in 517ms
+ GET /api/questions 200 in 57ms
+ GET /api/auth/session 200 in 264ms
+ ✓ Compiled /api/companies in 254ms (1028 modules)
+ GET /auth/signin 200 in 357ms
+ GET /api/auth/session 200 in 25ms
+ GET /api/auth/session 200 in 39ms
+ GET /api/auth/providers 200 in 21ms
+ GET /api/auth/csrf 200 in 19ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 360ms
+ GET /api/auth/session 200 in 56ms
+ GET / 200 in 72ms
+ GET /dashboard?_rsc=3y0gy 200 in 35ms
+ GET /api/dashboard/stats 200 in 39ms
+ GET /api/dashboard/stats 200 in 33ms
+ GET /auth/signin 200 in 55ms
+ POST /api/auth/_log 200 in 41ms
+ POST /api/auth/_log 200 in 67ms
+ GET /api/questions 200 in 31ms
+ ✓ Compiled /api/questions/[id] in 261ms (1030 modules)
+ GET /api/auth/providers 200 in 326ms
+ GET /api/auth/session 200 in 425ms
+ GET /api/auth/session 200 in 27ms
+ GET /api/auth/csrf 200 in 33ms
+ POST /api/auth/callback/credentials 200 in 25ms
+ GET /api/auth/session 200 in 23ms
+ GET /dashboard?_rsc=3y0gy 200 in 25ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 879ms
+ ✓ Compiled /api/questions/[id]/answers in 227ms (1032 modules)
+ POST /api/questions/cmc5gleob003nulcmwysk4n1p/answers 200 in 606ms
+ GET / 200 in 52ms
+ GET /auth/signin 200 in 44ms
+ POST /api/auth/_log 200 in 57ms
+ POST /api/auth/_log 200 in 56ms
+ GET /api/auth/session 200 in 21ms
+ GET /api/auth/session 200 in 19ms
+ GET /api/auth/providers 200 in 22ms
+ GET /api/auth/csrf 200 in 19ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 354ms
+ GET /api/auth/session 200 in 41ms
+ GET / 200 in 51ms
+ GET /dashboard?_rsc=3y0gy 200 in 33ms
+ GET /api/dashboard/stats 200 in 33ms
+ GET /api/dashboard/stats 200 in 35ms
+ GET /auth/signin 200 in 42ms
+ GET /api/auth/session 200 in 31ms
+ GET /api/auth/session 200 in 28ms
+ GET /api/auth/providers 200 in 24ms
+ GET /api/auth/csrf 200 in 22ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 354ms
+ GET /api/auth/session 200 in 40ms
+ GET /api/questions 200 in 49ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 45ms
+ GET /dashboard?_rsc=3y0gy 200 in 33ms
+ POST /api/questions/cmc5gleob003nulcmwysk4n1p/answers 200 in 57ms
+ GET / 200 in 46ms
+ GET /api/dashboard/stats 200 in 55ms
+ GET /api/dashboard/stats 200 in 72ms
+ GET /questions 307 in 48ms
+ GET /api/auth/session 200 in 31ms
+ GET /api/auth/session 200 in 22ms
+ GET /auth/signin 200 in 67ms
+ POST /api/auth/_log 200 in 40ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/auth/session 200 in 34ms
+ GET /dashboard 200 in 56ms
+ GET /api/auth/providers 200 in 51ms
+ GET /api/auth/csrf 200 in 33ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 363ms
+ GET /api/auth/session 200 in 42ms
+ GET /dashboard?_rsc=3y0gy 200 in 25ms
+ GET /api/auth/session 200 in 32ms
+ GET /api/dashboard/stats 200 in 46ms
+ GET /api/auth/session 200 in 26ms
+ GET /api/dashboard/stats 200 in 42ms
+ GET /api/dashboard/stats 200 in 37ms
+ GET /api/dashboard/stats 200 in 29ms
+ GET /questions 200 in 37ms
+ GET /api/companies 200 in 56ms
+ GET /api/questions 200 in 58ms
+ GET /api/auth/session 200 in 54ms
+ GET /api/companies 200 in 39ms
+ GET /api/auth/session 200 in 38ms
+ GET /api/questions 200 in 48ms
+ GET /api/auth/csrf 200 in 30ms
+ POST /api/auth/signout 200 in 25ms
+ GET / 200 in 47ms
+ GET / 200 in 37ms
+ GET /auth/signin 200 in 40ms
+ POST /api/auth/_log 200 in 48ms
+ POST /api/auth/_log 200 in 67ms
+ ○ Compiling /companies ...
+ ✓ Compiled /companies in 894ms (1782 modules)
+ GET /api/auth/providers 200 in 721ms
+ GET /api/auth/session 200 in 742ms
+ GET /companies 200 in 1073ms
+ GET / 200 in 185ms
+ GET /api/auth/session 200 in 96ms
+ GET /api/auth/csrf 200 in 95ms
+ POST /api/auth/callback/credentials 200 in 57ms
+ GET /api/auth/session 200 in 30ms
+ GET /dashboard?_rsc=3y0gy 200 in 29ms
+ GET /api/companies 200 in 41ms
+ GET /api/auth/session 200 in 60ms
+ GET /api/companies 200 in 59ms
+ GET /api/auth/session 200 in 37ms
+ GET / 200 in 38ms
+ GET /auth/signin 200 in 62ms
+ POST /api/auth/_log 200 in 60ms
+ POST /api/auth/_log 200 in 60ms
+ GET /questions 307 in 82ms
+ GET /auth/signin 200 in 41ms
+ ○ Compiling /stories ...
+ ✓ Compiled /stories in 821ms (1797 modules)
+ GET /api/auth/providers 200 in 751ms
+ GET /api/auth/session 200 in 825ms
+ GET /api/auth/session 200 in 741ms
+ GET /stories 200 in 962ms
+ GET /api/auth/session 200 in 46ms
+ GET /api/auth/csrf 200 in 46ms
+ GET /api/auth/session 200 in 47ms
+ POST /api/auth/callback/credentials 200 in 34ms
+ GET /api/auth/session 200 in 22ms
+ GET /dashboard?_rsc=3y0gy 200 in 24ms
+ ✓ Compiled /api/stories in 467ms (1051 modules)
+ GET /api/auth/session 200 in 779ms
+ GET /api/stories 200 in 823ms
+ GET /api/auth/session 200 in 48ms
+ GET /api/stories 200 in 31ms
+ GET / 200 in 70ms
+ GET /auth/signin 200 in 67ms
+ POST /api/auth/_log 200 in 50ms
+ POST /api/auth/_log 200 in 49ms
+ GET /api/auth/session 200 in 21ms
+ GET /api/auth/session 200 in 22ms
+ GET /api/auth/providers 200 in 24ms
+ GET /api/auth/csrf 200 in 25ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 348ms
+ GET / 200 in 364ms
+ GET /api/auth/session 200 in 42ms
+ GET /dashboard?_rsc=3y0gy 200 in 26ms
+ GET /api/dashboard/stats 200 in 33ms
+ GET /api/dashboard/stats 200 in 41ms
+ GET /auth/signin 200 in 56ms
+ POST /api/auth/_log 200 in 37ms
+ POST /api/auth/_log 200 in 51ms
+ GET /api/auth/session 200 in 32ms
+ GET /api/auth/session 200 in 20ms
+ GET /api/auth/providers 200 in 21ms
+ GET /api/auth/csrf 200 in 19ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 353ms
+ GET /api/auth/session 200 in 44ms
+ GET /questions 200 in 69ms
+ GET /dashboard?_rsc=3y0gy 200 in 32ms
+ GET /api/dashboard/stats 200 in 34ms
+ GET /api/dashboard/stats 200 in 34ms
+ GET /api/questions 200 in 50ms
+ GET /api/auth/session 200 in 46ms
+ GET /api/companies 200 in 54ms
+ GET /api/questions 200 in 35ms
+ GET /api/companies 200 in 39ms
+ GET /api/auth/session 200 in 45ms
+ GET /questions 200 in 33ms
+ GET /api/questions 200 in 42ms
+ GET /api/companies 200 in 63ms
+ GET /api/auth/session 200 in 60ms
+ GET /api/auth/session 200 in 33ms
+ GET /api/questions 200 in 37ms
+ GET /api/companies 200 in 45ms
+ GET / 200 in 35ms
+ GET /auth/signin 200 in 32ms
+ POST /api/auth/_log 200 in 59ms
+ POST /api/auth/_log 200 in 58ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/auth/session 200 in 19ms
+ GET /api/auth/providers 200 in 20ms
+ GET /api/auth/csrf 200 in 21ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 347ms
+ GET /api/auth/session 200 in 30ms
+ GET /dashboard?_rsc=3y0gy 200 in 24ms
+ GET /api/dashboard/stats 200 in 32ms
+ GET /api/dashboard/stats 200 in 30ms
+ GET /questions 200 in 36ms
+ GET /api/questions 200 in 50ms
+ GET /api/auth/session 200 in 45ms
+ GET /api/companies 200 in 55ms
+ GET /api/questions 200 in 48ms
+ GET /api/auth/session 200 in 43ms
+ GET /api/companies 200 in 47ms
+ GET / 200 in 41ms
+ GET /auth/signin 200 in 36ms
+ POST /api/auth/_log 200 in 58ms
+ POST /api/auth/_log 200 in 54ms
+ GET /api/auth/session 200 in 21ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/auth/providers 200 in 22ms
+ GET /api/auth/csrf 200 in 18ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 345ms
+ GET /api/auth/session 200 in 31ms
+ GET /dashboard?_rsc=3y0gy 200 in 24ms
+ GET /api/dashboard/stats 200 in 30ms
+ GET /api/dashboard/stats 200 in 31ms
+ GET /api/questions 200 in 25ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 39ms
+ GET / 200 in 36ms
+ GET /auth/signin 200 in 33ms
+ POST /api/auth/_log 200 in 52ms
+ POST /api/auth/_log 200 in 64ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/auth/session 200 in 20ms
+ GET /api/auth/providers 200 in 23ms
+ GET /api/auth/csrf 200 in 20ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 351ms
+ GET /api/auth/session 200 in 29ms
+ GET /dashboard?_rsc=3y0gy 200 in 26ms
+ GET / 200 in 60ms
+ GET /api/dashboard/stats 200 in 47ms
+ GET /api/dashboard/stats 200 in 49ms
+ GET /auth/signin 200 in 31ms
+ POST /api/auth/_log 200 in 54ms
+ POST /api/auth/_log 200 in 52ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/auth/session 200 in 19ms
+ GET /api/auth/providers 200 in 21ms
+ GET /api/auth/csrf 200 in 33ms
+ GET /companies 200 in 52ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 378ms
+ GET /api/auth/session 200 in 35ms
+ GET /dashboard?_rsc=3y0gy 200 in 26ms
+ GET /api/dashboard/stats 200 in 35ms
+ GET /api/companies 200 in 34ms
+ GET /api/auth/session 200 in 44ms
+ GET /api/dashboard/stats 200 in 54ms
+ GET /api/companies 200 in 49ms
+ GET /api/auth/session 200 in 39ms
+ GET /stories 200 in 39ms
+ GET / 200 in 39ms
+ GET /api/stories 200 in 30ms
+ GET /api/auth/session 200 in 44ms
+ GET /api/stories 200 in 59ms
+ GET /api/auth/session 200 in 40ms
+ GET /auth/signin 200 in 71ms
+ POST /api/auth/_log 200 in 57ms
+ POST /api/auth/_log 200 in 57ms
+ GET /api/auth/session 200 in 22ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/auth/providers 200 in 22ms
+ GET /api/auth/csrf 200 in 20ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 368ms
+ GET /api/auth/session 200 in 43ms
+ GET / 200 in 62ms
+ GET /dashboard?_rsc=3y0gy 200 in 33ms
+ GET /api/dashboard/stats 200 in 33ms
+ GET /api/dashboard/stats 200 in 31ms
+ GET /auth/signin 200 in 35ms
+ POST /api/auth/_log 200 in 37ms
+ POST /api/auth/_log 200 in 36ms
+ GET /api/auth/session 200 in 32ms
+ GET /api/auth/session 200 in 20ms
+ GET /api/auth/providers 200 in 22ms
+ GET /api/auth/csrf 200 in 19ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 383ms
+ GET /api/auth/session 200 in 51ms
+ GET /dashboard 200 in 61ms
+ GET /dashboard?_rsc=3y0gy 200 in 27ms
+ GET /api/dashboard/stats 200 in 36ms
+ GET /api/dashboard/stats 200 in 35ms
+ GET /api/auth/session 200 in 32ms
+ GET /api/dashboard/stats 200 in 45ms
+ GET /api/auth/session 200 in 27ms
+ GET /api/dashboard/stats 200 in 41ms
+ GET / 200 in 37ms
+ GET /api/auth/csrf 200 in 40ms
+ POST /api/auth/signout 200 in 23ms
+ GET / 200 in 47ms
+ GET /questions 307 in 83ms
+ GET /api/auth/session 200 in 29ms
+ GET /api/auth/session 200 in 22ms
+ GET /auth/signin 200 in 73ms
+ GET / 200 in 71ms
+ POST /api/auth/_log 200 in 59ms
+ GET /api/auth/session 200 in 48ms
+ GET /auth/signin 200 in 75ms
+ GET /dashboard 307 in 100ms
+ GET /api/auth/session 200 in 67ms
+ POST /api/auth/_log 200 in 69ms
+ POST /api/auth/_log 200 in 69ms
+ GET /auth/signin 200 in 48ms
+ GET /api/auth/session 200 in 29ms
+ GET /api/auth/session 200 in 41ms
+ GET /api/auth/session 200 in 33ms
+ GET /api/auth/providers 200 in 62ms
+ GET /api/auth/session 200 in 47ms
+ GET /companies 307 in 85ms
+ GET /api/auth/csrf 200 in 26ms
+ GET /auth/signin 200 in 54ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 377ms
+ GET /api/auth/session 200 in 32ms
+ GET /dashboard?_rsc=3y0gy 200 in 29ms
+ GET /api/dashboard/stats 200 in 39ms
+ GET /api/auth/session 200 in 33ms
+ GET /stories 307 in 72ms
+ GET /api/dashboard/stats 200 in 66ms
+ GET /api/auth/session 200 in 43ms
+ GET /auth/signin 200 in 44ms
+ GET / 200 in 36ms
+ GET / 307 in 39ms
+ GET /dashboard 200 in 40ms
+ GET / 200 in 42ms
+ GET /api/auth/session 200 in 34ms
+ GET /api/dashboard/stats 200 in 43ms
+ GET /api/auth/session 200 in 55ms
+ GET /auth/signin 200 in 75ms
+ GET /api/dashboard/stats 200 in 84ms
+ POST /api/auth/_log 200 in 56ms
+ POST /api/auth/_log 200 in 55ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/auth/session 200 in 21ms
+ GET /api/auth/providers 200 in 24ms
+ GET /api/auth/csrf 200 in 20ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 374ms
+ GET /api/auth/session 200 in 49ms
+ GET /questions 200 in 61ms
+ GET /dashboard?_rsc=3y0gy 200 in 31ms
+ GET /api/dashboard/stats 200 in 34ms
+ GET /api/dashboard/stats 200 in 35ms
+ GET /api/auth/session 200 in 40ms
+ GET /api/questions 200 in 48ms
+ GET /api/companies 200 in 64ms
+ GET /api/questions 200 in 47ms
+ GET /api/auth/session 200 in 47ms
+ GET /api/companies 200 in 43ms
+ GET /companies 200 in 40ms
+ GET /api/companies 200 in 32ms
+ GET /api/auth/session 200 in 49ms
+ GET /api/companies 200 in 32ms
+ GET /api/auth/session 200 in 31ms
+ GET / 200 in 34ms
+ GET /stories 200 in 31ms
+ GET /auth/signin 200 in 75ms
+ POST /api/auth/_log 200 in 57ms
+ POST /api/auth/_log 200 in 56ms
+ GET /api/stories 200 in 33ms
+ GET /api/auth/session 200 in 34ms
+ GET /api/stories 200 in 39ms
+ GET /api/auth/session 200 in 41ms
+ GET /api/auth/session 200 in 44ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/auth/providers 200 in 29ms
+ GET /api/auth/csrf 200 in 23ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 360ms
+ GET /api/auth/session 200 in 36ms
+ GET /dashboard?_rsc=3y0gy 200 in 40ms
+ GET /dashboard 200 in 48ms
+ GET /api/dashboard/stats 200 in 38ms
+ GET /api/dashboard/stats 200 in 32ms
+ GET /api/auth/session 200 in 46ms
+ GET /api/dashboard/stats 200 in 56ms
+ GET /api/auth/session 200 in 27ms
+ GET /api/dashboard/stats 200 in 43ms
+ GET /questions 200 in 35ms
+ GET / 200 in 58ms
+ GET /api/questions 200 in 63ms
+ GET /api/companies 200 in 61ms
+ GET /api/auth/session 200 in 69ms
+ GET /api/questions 200 in 77ms
+ GET /api/companies 200 in 81ms
+ GET /api/auth/session 200 in 58ms
+ GET /auth/signin 200 in 38ms
+ POST /api/auth/_log 200 in 53ms
+ POST /api/auth/_log 200 in 53ms
+ GET /api/auth/session 200 in 41ms
+ GET /api/auth/session 200 in 30ms
+ GET /api/auth/providers 200 in 24ms
+ GET /api/auth/csrf 200 in 21ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 372ms
+ GET /api/auth/session 200 in 43ms
+ GET / 200 in 66ms
+ GET /dashboard?_rsc=3y0gy 200 in 48ms
+ GET /api/dashboard/stats 200 in 34ms
+ GET /api/dashboard/stats 200 in 32ms
+ GET /auth/signin 200 in 41ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/auth/session 200 in 24ms
+ GET /api/auth/providers 200 in 26ms
+ GET /api/auth/csrf 200 in 20ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 369ms
+ GET /api/auth/session 200 in 45ms
+ GET /questions 200 in 53ms
+ GET /dashboard?_rsc=3y0gy 200 in 39ms
+ GET /api/dashboard/stats 200 in 37ms
+ GET /api/dashboard/stats 200 in 34ms
+ GET /api/questions 200 in 45ms
+ GET /api/auth/session 200 in 40ms
+ GET /api/companies 200 in 46ms
+ GET /api/questions 200 in 47ms
+ GET /api/auth/session 200 in 45ms
+ GET /api/companies 200 in 50ms
+ GET /questions 200 in 42ms
+ GET /api/questions 200 in 43ms
+ GET /api/auth/session 200 in 70ms
+ GET /api/companies 200 in 77ms
+ GET /api/questions 200 in 80ms
+ GET /api/companies 200 in 72ms
+ GET /api/auth/session 200 in 72ms
+ GET / 200 in 53ms
+ GET /auth/signin 200 in 42ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/auth/session 200 in 29ms
+ GET /api/auth/providers 200 in 37ms
+ GET /api/auth/csrf 200 in 24ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 388ms
+ GET /api/auth/session 200 in 40ms
+ GET /dashboard?_rsc=3y0gy 200 in 24ms
+ GET /api/dashboard/stats 200 in 36ms
+ GET /api/dashboard/stats 200 in 36ms
+ GET / 200 in 38ms
+ GET /api/questions 200 in 33ms
+ GET /auth/signin 200 in 49ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 64ms
+ POST /api/auth/_log 200 in 87ms
+ POST /api/auth/_log 200 in 115ms
+ GET / 200 in 61ms
+ GET /api/auth/session 200 in 30ms
+ GET /api/auth/providers 200 in 60ms
+ GET /api/auth/session 200 in 60ms
+ GET /auth/signin 200 in 89ms
+ GET /api/auth/csrf 200 in 58ms
+ POST /api/auth/_log 200 in 46ms
+ POST /api/auth/_log 200 in 67ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 359ms
+ GET /api/auth/session 200 in 34ms
+ GET /dashboard?_rsc=3y0gy 200 in 24ms
+ GET /api/dashboard/stats 200 in 31ms
+ GET /api/dashboard/stats 200 in 39ms
+ GET /api/auth/session 200 in 26ms
+ GET /api/auth/session 200 in 27ms
+ GET /api/auth/providers 200 in 29ms
+ GET /api/auth/csrf 200 in 19ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 356ms
+ GET /api/auth/session 200 in 30ms
+ GET /dashboard?_rsc=3y0gy 200 in 26ms
+ GET /companies 200 in 60ms
+ GET /api/dashboard/stats 200 in 33ms
+ GET /api/dashboard/stats 200 in 31ms
+ GET /api/companies 200 in 31ms
+ GET /api/auth/session 200 in 50ms
+ GET /api/companies 200 in 52ms
+ GET /api/auth/session 200 in 32ms
+ GET /stories 200 in 35ms
+ GET /api/stories 200 in 62ms
+ GET /api/auth/session 200 in 59ms
+ GET /api/stories 200 in 37ms
+ GET /api/auth/session 200 in 42ms
+ GET / 200 in 34ms
+ GET /auth/signin 200 in 35ms
+ POST /api/auth/_log 200 in 56ms
+ POST /api/auth/_log 200 in 55ms
+ GET /api/auth/session 200 in 30ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/auth/providers 200 in 39ms
+ GET /api/auth/csrf 200 in 24ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 355ms
+ GET / 200 in 373ms
+ GET /api/auth/session 200 in 44ms
+ GET /dashboard?_rsc=3y0gy 200 in 31ms
+ GET /api/dashboard/stats 200 in 39ms
+ GET /auth/signin 200 in 49ms
+ GET /api/dashboard/stats 200 in 57ms
+ POST /api/auth/_log 200 in 50ms
+ POST /api/auth/_log 200 in 78ms
+ GET /api/auth/session 200 in 25ms
+ GET /api/auth/session 200 in 19ms
+ GET /api/auth/providers 200 in 21ms
+ GET /api/auth/csrf 200 in 20ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 355ms
+ GET /api/auth/session 200 in 47ms
+ GET /dashboard 200 in 69ms
+ GET /dashboard?_rsc=3y0gy 200 in 36ms
+ GET /api/dashboard/stats 200 in 34ms
+ GET /api/dashboard/stats 200 in 43ms
+ GET /api/auth/session 200 in 40ms
+ GET /api/dashboard/stats 200 in 51ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/dashboard/stats 200 in 53ms
+ GET / 200 in 38ms
+ GET /questions 307 in 46ms
+ GET /api/auth/session 200 in 50ms
+ GET /api/auth/session 200 in 25ms
+ GET /auth/signin 200 in 84ms
+ POST /api/auth/_log 200 in 43ms
+ GET /api/auth/session 200 in 38ms
+ GET /api/auth/session 200 in 59ms
+ GET /dashboard 307 in 88ms
+ GET / 200 in 87ms
+ GET /auth/signin 200 in 83ms
+ GET /auth/signin 200 in 38ms
+ GET /api/auth/session 200 in 40ms
+ POST /api/auth/_log 200 in 54ms
+ POST /api/auth/_log 200 in 53ms
+ GET /api/auth/session 200 in 56ms
+ GET /companies 307 in 96ms
+ GET /auth/signin 200 in 48ms
+ GET /api/auth/session 200 in 31ms
+ GET /api/auth/session 200 in 38ms
+ GET /api/auth/session 200 in 47ms
+ GET /api/auth/providers 200 in 41ms
+ GET /stories 307 in 73ms
+ GET /api/auth/csrf 200 in 33ms
+ GET /api/auth/session 200 in 39ms
+ GET /auth/signin 200 in 56ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 378ms
+ GET /api/auth/session 200 in 37ms
+ GET /dashboard?_rsc=3y0gy 200 in 32ms
+ GET /api/dashboard/stats 200 in 39ms
+ GET /api/auth/session 200 in 17ms
+ GET /api/dashboard/stats 200 in 51ms
+ GET / 200 in 38ms
+ GET /api/auth/session 200 in 14ms
+ GET / 200 in 34ms
+ GET / 307 in 43ms
+ GET /dashboard 200 in 34ms
+ GET /auth/signin 200 in 77ms
+ POST /api/auth/_log 200 in 45ms
+ POST /api/auth/_log 200 in 76ms
+ GET /api/auth/session 200 in 33ms
+ GET /api/dashboard/stats 200 in 49ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/auth/session 200 in 45ms
+ GET /api/dashboard/stats 200 in 65ms
+ GET /api/auth/providers 200 in 25ms
+ GET /api/auth/session 200 in 18ms
+ GET /questions 200 in 38ms
+ GET / 200 in 41ms
+ GET /api/questions 200 in 58ms
+ GET /api/companies 200 in 74ms
+ GET /api/auth/session 200 in 80ms
+ GET /api/questions 200 in 78ms
+ GET /api/companies 200 in 80ms
+ GET /api/auth/session 200 in 54ms
+ GET /auth/signin 200 in 35ms
+ POST /api/auth/_log 200 in 65ms
+ POST /api/auth/_log 200 in 64ms
+ GET /api/auth/session 200 in 32ms
+ GET /api/auth/session 200 in 24ms
+ GET /api/auth/providers 200 in 27ms
+ GET /questions 307 in 52ms
+ GET /api/auth/csrf 200 in 37ms
+ GET /companies 200 in 70ms
+ POST /api/auth/callback/credentials 200 in 45ms
+ GET /auth/signin 200 in 79ms
+ GET /api/auth/session 200 in 40ms
+ GET /api/companies 200 in 57ms
+ GET /api/auth/session 200 in 57ms
+ GET /api/companies 200 in 28ms
+ GET /api/auth/session 200 in 34ms
+ GET /api/auth/session 200 in 34ms
+ GET /stories 200 in 35ms
+ GET /api/stories 200 in 32ms
+ GET /api/auth/session 200 in 46ms
+ GET /api/stories 200 in 32ms
+ GET /api/auth/session 200 in 39ms
+ GET /dashboard 200 in 33ms
+ GET /api/auth/session 200 in 49ms
+ GET /api/dashboard/stats 200 in 62ms
+ GET /api/auth/session 200 in 32ms
+ GET /api/dashboard/stats 200 in 44ms
+ GET / 200 in 38ms
+ GET /auth/signin 200 in 44ms
+ POST /api/auth/_log 200 in 61ms
+ POST /api/auth/_log 200 in 61ms
+ GET /api/auth/session 200 in 26ms
+ GET /api/auth/session 200 in 24ms
+ GET /api/auth/providers 200 in 25ms
+ GET /api/auth/csrf 200 in 31ms
+ GET /questions 307 in 58ms
+ POST /api/auth/callback/credentials 200 in 27ms
+ GET /auth/signin 200 in 58ms
+ GET /api/auth/session 200 in 21ms
+ GET / 200 in 36ms
+ GET /auth/signin 200 in 34ms
+ POST /api/auth/_log 200 in 69ms
+ POST /api/auth/_log 200 in 69ms
+ GET /api/auth/session 200 in 26ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/auth/providers 200 in 25ms
+ GET /questions 307 in 50ms
+ GET /api/auth/csrf 200 in 31ms
+ POST /api/auth/callback/credentials 200 in 31ms
+ GET /auth/signin 200 in 47ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/auth/session 200 in 21ms
+ GET / 200 in 37ms
+ GET /auth/signin 200 in 35ms
+ POST /api/auth/_log 200 in 64ms
+ POST /api/auth/_log 200 in 60ms
+ GET /api/auth/session 200 in 26ms
+ GET /api/auth/session 200 in 22ms
+ GET /api/auth/providers 200 in 23ms
+ GET /api/questions 401 in 26ms
+ GET /api/auth/csrf 200 in 30ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+ POST /api/auth/callback/credentials 200 in 38ms
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ GET / 200 in 34ms
+ GET /auth/signin 200 in 33ms
+ POST /api/auth/_log 200 in 52ms
+ POST /api/auth/_log 200 in 50ms
+ GET /api/auth/session 200 in 22ms
+ GET /api/auth/session 200 in 22ms
+ GET /api/auth/providers 200 in 23ms
+ GET /api/auth/csrf 200 in 30ms
+ GET /companies 307 in 52ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+ GET /auth/signin 200 in 56ms
+ POST /api/auth/callback/credentials 200 in 49ms
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ GET /api/auth/session 200 in 31ms
+ GET /api/auth/session 200 in 21ms
+ GET / 200 in 55ms
+ GET / 200 in 53ms
+ GET /auth/signin 200 in 87ms
+ GET /auth/signin 200 in 90ms
+ POST /api/auth/_log 200 in 87ms
+ POST /api/auth/_log 200 in 87ms
+ POST /api/auth/_log 200 in 79ms
+ POST /api/auth/_log 200 in 75ms
+ GET /api/auth/session 200 in 30ms
+ GET /api/auth/session 200 in 34ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/auth/providers 200 in 38ms
+ GET /api/auth/providers 200 in 38ms
+ GET /dashboard 307 in 78ms
+ GET /stories 307 in 77ms
+ GET /api/auth/csrf 200 in 65ms
+ GET /api/auth/csrf 200 in 63ms
+ GET /auth/signin 200 in 81ms
+ POST /api/auth/callback/credentials 200 in 46ms
+ GET /auth/signin 200 in 114ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/auth/session 200 in 26ms
+ GET /api/auth/session 200 in 24ms
+ GET /api/auth/session 200 in 31ms
+ GET / 200 in 33ms
+ GET /auth/signin 200 in 34ms
+ POST /api/auth/_log 200 in 54ms
+ POST /api/auth/_log 200 in 53ms
+ GET /api/auth/session 200 in 20ms
+ GET /api/auth/session 200 in 22ms
+ GET /api/auth/providers 200 in 21ms
+ GET / 200 in 35ms
+ GET /questions 307 in 46ms
+ GET /api/auth/session 200 in 41ms
+ GET /api/auth/session 200 in 22ms
+ GET /auth/signin 200 in 62ms
+ POST /api/auth/_log 200 in 41ms
+ GET /api/auth/session 200 in 27ms
+ GET /api/auth/session 200 in 31ms
+ GET /dashboard 307 in 58ms
+ GET /auth/signin 200 in 36ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/auth/session 200 in 29ms
+ GET /companies 307 in 65ms
+ GET /auth/signin 200 in 35ms
+ GET /api/auth/session 200 in 123ms
+ GET /stories 307 in 152ms
+ GET /api/auth/session 200 in 31ms
+ GET /auth/signin 200 in 49ms
+ GET /api/auth/session 200 in 17ms
+ GET / 200 in 34ms
+ GET /auth/signin 200 in 33ms
+ POST /api/auth/_log 200 in 185ms
+ POST /api/auth/_log 200 in 182ms
+ GET /api/auth/session 200 in 29ms
+ GET /api/auth/session 200 in 26ms
+ GET /api/auth/providers 200 in 31ms
+ GET / 200 in 45ms
+ POST /api/auth/_log 200 in 126ms
+ GET /api/auth/session 200 in 27ms
+ GET /api/auth/session 200 in 43ms
+ GET /questions 307 in 55ms
+ GET /auth/signin 200 in 41ms
+ GET / 200 in 51ms
+ GET /api/auth/session 200 in 75ms
+ GET / 200 in 111ms
+ GET /companies 307 in 115ms
+ GET /api/auth/session 200 in 62ms
+ GET /auth/signin 200 in 89ms
+ GET /questions 307 in 113ms
+ GET /auth/signin 200 in 125ms
+ GET /api/auth/session 200 in 104ms
+ GET /api/auth/session 200 in 93ms
+ POST /api/auth/_log 200 in 106ms
+ POST /api/auth/_log 200 in 103ms
+ GET /api/auth/session 200 in 38ms
+ GET /stories 307 in 155ms
+ GET /auth/signin 200 in 157ms
+ GET /api/auth/session 200 in 79ms
+ POST /api/auth/_log 200 in 60ms
+ GET /auth/signin 200 in 96ms
+ GET /api/auth/session 200 in 41ms
+ GET /api/auth/session 200 in 28ms
+ GET /api/auth/session 200 in 52ms
+ GET /api/auth/session 200 in 81ms
+ GET /api/auth/session 200 in 81ms
+ GET /api/auth/providers 200 in 90ms
+ GET /api/auth/providers 200 in 89ms
+ GET /api/auth/session 200 in 53ms
+ GET /dashboard 307 in 120ms
+ GET /api/auth/csrf 200 in 38ms
+ GET /api/auth/csrf 200 in 37ms
+ GET /auth/signin 200 in 58ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 735ms
+ POST /api/auth/callback/credentials 200 in 736ms
+ GET /api/auth/session 200 in 57ms
+ GET /api/auth/session 200 in 58ms
+ GET / 200 in 72ms
+ GET /dashboard?_rsc=3y0gy 200 in 45ms
+ GET /dashboard?_rsc=3y0gy 200 in 45ms
+ GET /api/auth/session 200 in 22ms
+ GET /api/dashboard/stats 200 in 49ms
+ GET /api/dashboard/stats 200 in 58ms
+ GET /api/dashboard/stats 200 in 79ms
+ GET / 200 in 93ms
+ GET /auth/signin 200 in 127ms
+ GET /api/dashboard/stats 200 in 122ms
+ POST /api/auth/_log 200 in 79ms
+ POST /api/auth/_log 200 in 97ms
+ GET /auth/signin 200 in 46ms
+ GET /api/auth/session 200 in 36ms
+ POST /api/auth/_log 200 in 62ms
+ GET /api/auth/session 200 in 64ms
+ GET /api/auth/providers 200 in 60ms
+ POST /api/auth/_log 200 in 92ms
+ GET /api/auth/csrf 200 in 48ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 420ms
+ GET /api/auth/session 200 in 69ms
+ GET /api/auth/providers 200 in 68ms
+ GET /api/auth/csrf 200 in 66ms
+ GET /api/auth/session 200 in 71ms
+ GET /questions 200 in 100ms
+ GET /api/auth/session 200 in 45ms
+ GET /api/auth/csrf 200 in 72ms
+ POST /api/auth/signout 200 in 76ms
+ POST /api/auth/callback/credentials 200 in 58ms
+ GET /dashboard?_rsc=3y0gy 200 in 58ms
+ GET / 200 in 77ms
+ GET /api/auth/session 200 in 57ms
+ GET /dashboard?_rsc=3y0gy 200 in 29ms
+ GET / 200 in 68ms
+ GET /api/dashboard/stats 200 in 83ms
+ GET /api/questions 200 in 77ms
+ GET /api/companies 200 in 109ms
+ GET /api/auth/session 200 in 104ms
+ GET /api/dashboard/stats 200 in 122ms
+ GET /api/questions 200 in 102ms
+ GET /api/companies 200 in 78ms
+ GET /api/auth/session 200 in 79ms
+ GET /auth/signin 200 in 38ms
+ POST /api/auth/_log 200 in 53ms
+ POST /api/auth/_log 200 in 52ms
+ GET /questions 307 in 56ms
+ GET /auth/signin 200 in 33ms
+ GET /api/auth/session 200 in 59ms
+ GET /questions 200 in 90ms
+ GET /api/auth/providers 200 in 72ms
+ GET /api/auth/session 200 in 72ms
+ GET /api/auth/session 200 in 52ms
+ GET /api/auth/csrf 200 in 78ms
+ GET /api/auth/session 200 in 75ms
+ GET /questions/cmc5gleob003nulcmwysk4n1p?_rsc=9bkzp 200 in 46ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 419ms
+ GET /api/questions 200 in 70ms
+ GET /api/auth/session 200 in 66ms
+ GET /api/auth/session 200 in 65ms
+ GET /api/companies 200 in 73ms
+ GET /api/questions 200 in 50ms
+ GET /api/auth/session 200 in 61ms
+ GET /api/companies 200 in 67ms
+ GET /dashboard?_rsc=3y0gy 200 in 46ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 75ms
+ GET / 200 in 102ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 101ms
+ GET /api/questions 200 in 90ms
+ GET /api/dashboard/stats 200 in 77ms
+ POST /api/questions/cmc5gleob003nulcmwysk4n1p/answers 200 in 107ms
+ GET /api/dashboard/stats 200 in 116ms
+ GET / 200 in 114ms
+ GET /auth/signin 200 in 104ms
+ GET /auth/signin 200 in 70ms
+ POST /api/auth/_log 200 in 85ms
+ POST /api/auth/_log 200 in 84ms
+ GET /auth/signin 200 in 44ms
+ GET /api/auth/session 200 in 55ms
+ GET /api/auth/providers 200 in 59ms
+ GET /dashboard 200 in 107ms
+ GET /api/auth/session 200 in 86ms
+ GET /api/auth/providers 200 in 61ms
+ GET /api/auth/session 200 in 60ms
+ GET /api/auth/csrf 200 in 78ms
+ GET /api/auth/session 200 in 55ms
+ GET /api/auth/csrf 200 in 70ms
+ POST /api/auth/callback/credentials 200 in 54ms
+ POST /api/auth/callback/credentials 200 in 37ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/auth/session 200 in 42ms
+ GET /dashboard?_rsc=3y0gy 200 in 45ms
+ GET /dashboard?_rsc=3y0gy 200 in 43ms
+ GET /api/auth/session 200 in 54ms
+ GET /api/auth/providers 200 in 52ms
+ GET /api/auth/csrf 200 in 30ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+ GET /api/auth/session 200 in 250ms
+ GET /api/dashboard/stats 200 in 384ms
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 369ms
+ GET /api/auth/session 200 in 59ms
+ GET /api/auth/session 200 in 57ms
+ GET /api/dashboard/stats 200 in 65ms
+ GET /api/questions 401 in 35ms
+ GET /questions/cmc5dupt3003ntfm4hlx62p83 307 in 90ms
+ GET /dashboard?_rsc=3y0gy 200 in 82ms
+ GET /auth/signin 200 in 56ms
+ GET /auth/signin 200 in 81ms
+ GET /api/dashboard/stats 200 in 48ms
+ GET /api/dashboard/stats 200 in 41ms
+ GET /api/auth/session 200 in 54ms
+ GET /api/auth/session 200 in 58ms
+ GET /api/auth/providers 200 in 42ms
+ GET /api/auth/session 200 in 55ms
+ GET /questions 200 in 90ms
+ GET /api/auth/session 200 in 50ms
+ GET /api/auth/csrf 200 in 49ms
+ POST /api/auth/callback/credentials 200 in 39ms
+ GET /api/auth/session 200 in 25ms
+ GET /dashboard?_rsc=3y0gy 200 in 24ms
+ GET /api/questions 200 in 66ms
+ GET /api/auth/session 200 in 64ms
+ GET /api/companies 200 in 73ms
+ GET /api/questions 200 in 77ms
+ GET /api/auth/session 200 in 72ms
+ GET /api/companies 200 in 79ms
+ GET /questions 200 in 125ms
+ GET /api/questions 200 in 43ms
+ GET /api/auth/session 200 in 58ms
+ GET /api/questions 401 in 68ms
+ GET /api/companies 200 in 81ms
+ GET /api/questions 200 in 57ms
+ GET /api/auth/session 200 in 54ms
+ GET /api/companies 200 in 58ms
+ GET /auth/signin 200 in 44ms
+ GET /companies 200 in 35ms
+ GET /api/auth/session 200 in 63ms
+ GET /api/auth/providers 200 in 30ms
+ GET /api/auth/session 200 in 29ms
+ GET /api/auth/csrf 200 in 22ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 369ms
+ GET /api/companies 200 in 37ms
+ GET /api/auth/session 200 in 63ms
+ GET /api/auth/session 200 in 61ms
+ GET /auth/signin 200 in 88ms
+ GET /api/companies 200 in 90ms
+ GET /api/auth/session 200 in 89ms
+ GET /dashboard?_rsc=3y0gy 200 in 28ms
+ GET /api/dashboard/stats 200 in 31ms
+ GET /api/dashboard/stats 200 in 36ms
+ GET /api/auth/session 200 in 21ms
+ GET /api/auth/session 200 in 20ms
+ GET /api/auth/providers 200 in 38ms
+ GET /api/auth/csrf 200 in 20ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 433ms
+ GET /stories 200 in 40ms
+ GET /api/auth/session 200 in 66ms
+ GET /questions 200 in 106ms
+ GET /dashboard?_rsc=3y0gy 200 in 51ms
+ GET /api/dashboard/stats 200 in 38ms
+ GET /api/dashboard/stats 200 in 57ms
+ GET /api/stories 200 in 62ms
+ GET /api/auth/session 200 in 68ms
+ GET /api/auth/session 200 in 59ms
+ GET /api/companies 200 in 78ms
+ GET /api/questions 200 in 88ms
+ GET /api/auth/session 200 in 63ms
+ GET /api/stories 200 in 102ms
+ GET /api/auth/session 200 in 95ms
+ GET /api/companies 200 in 97ms
+ GET /api/questions 200 in 95ms
+ GET /questions/invalid-question-id-12345 200 in 54ms
+ GET /auth/signin 200 in 42ms
+ GET /api/questions/invalid-question-id-12345 404 in 60ms
+ GET /api/auth/session 200 in 86ms
+ GET /api/questions/invalid-question-id-12345 404 in 36ms
+ GET /api/auth/session 200 in 54ms
+ GET /api/auth/session 200 in 38ms
+ GET /api/auth/providers 200 in 39ms
+ GET /api/auth/session 200 in 43ms
+ GET /api/questions 401 in 52ms
+ GET /api/auth/csrf 200 in 38ms
+ GET /auth/signin 200 in 38ms
+ GET /api/auth/session 200 in 38ms
+ GET /api/auth/providers 200 in 21ms
+ GET /api/questions 401 in 36ms
+ GET /api/auth/session 200 in 42ms
+ GET /api/auth/csrf 200 in 16ms
+ GET /auth/signin 200 in 34ms
+ GET /api/auth/session 200 in 40ms
+ GET /api/auth/providers 200 in 33ms
+ GET /api/auth/session 200 in 51ms
+ GET /questions 307 in 63ms
+ GET /api/auth/csrf 200 in 27ms
+ GET /auth/signin 200 in 46ms
+ GET /api/auth/session 200 in 40ms
+ GET /api/auth/session 200 in 22ms
+ GET /auth/signin 200 in 31ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/auth/session 200 in 29ms
+ GET /api/auth/providers 200 in 36ms
+ GET /questions/invalid-question-id-12345 307 in 67ms
+ GET /api/auth/csrf 200 in 56ms
+ POST /api/auth/callback/credentials 200 in 54ms
+ GET /auth/signin 200 in 79ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/auth/session 200 in 27ms
+ GET / 200 in 33ms
+ GET /api/auth/session 200 in 40ms
+ ✓ Compiled /api/test-fixed-forms in 416ms (1053 modules)
+ POST /api/test-fixed-forms 200 in 487ms
+ POST /api/questions/test-id/answers 401 in 46ms
+ POST /api/stories 401 in 26ms
+ POST /api/test-fixed-forms 200 in 33ms
+ POST /api/test-fixed-forms 200 in 23ms
+ POST /api/test-fixed-forms 200 in 24ms
+ GET /auth/signin 200 in 73ms
+ GET /api/auth/session 200 in 36ms
+ GET /api/auth/session 200 in 20ms
+ GET /api/auth/providers 200 in 23ms
+ GET /api/auth/csrf 200 in 20ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 369ms
+ GET /api/auth/session 200 in 34ms
+ GET /dashboard?_rsc=3y0gy 200 in 25ms
+ GET /api/dashboard/stats 200 in 36ms
+ GET /api/dashboard/stats 200 in 32ms
+ GET /questions 200 in 67ms
+ GET /api/questions 200 in 64ms
+ GET /api/auth/session 200 in 59ms
+ GET /api/companies 200 in 72ms
+ GET /api/questions 200 in 43ms
+ GET /api/companies 200 in 47ms
+ GET /api/auth/session 200 in 50ms
+ GET /auth/signin 200 in 31ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/auth/session 200 in 24ms
+ GET /api/auth/providers 200 in 27ms
+ GET /api/auth/csrf 200 in 20ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 347ms
+ GET /api/auth/session 200 in 35ms
+ GET /dashboard?_rsc=3y0gy 200 in 26ms
+ GET /api/dashboard/stats 200 in 31ms
+ GET /api/dashboard/stats 200 in 30ms
+ GET /api/questions 200 in 27ms
+ GET /auth/signin 200 in 41ms
+ GET /api/auth/session 200 in 38ms
+ GET /api/auth/session 200 in 27ms
+ GET /api/auth/providers 200 in 29ms
+ GET /api/auth/csrf 200 in 22ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 358ms
+ GET /api/auth/session 200 in 34ms
+ GET /dashboard?_rsc=3y0gy 200 in 29ms
+ GET /api/dashboard/stats 200 in 32ms
+ GET /api/dashboard/stats 200 in 32ms
+ GET /auth/signin 200 in 34ms
+ GET /api/auth/session 200 in 43ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/auth/providers 200 in 26ms
+ GET /api/auth/csrf 200 in 20ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 359ms
+ GET /api/auth/session 200 in 38ms
+ GET /dashboard?_rsc=3y0gy 200 in 28ms
+ GET /questions 200 in 41ms
+ GET /api/dashboard/stats 200 in 33ms
+ GET /api/dashboard/stats 200 in 34ms
+ GET /api/questions 200 in 42ms
+ GET /api/auth/session 200 in 44ms
+ GET /api/companies 200 in 53ms
+ GET /api/questions 200 in 70ms
+ GET /api/auth/session 200 in 65ms
+ GET /api/companies 200 in 69ms
+ GET /api/questions 200 in 30ms
+ GET / 200 in 43ms
+ GET / 200 in 34ms
+ POST /api/test-fixed-forms 200 in 45ms
+ GET / 200 in 55ms
+ POST /api/questions/test-id/answers 401 in 60ms
+ POST /api/test-fixed-forms 200 in 70ms
+ POST /api/test-fixed-forms 200 in 64ms
+ POST /api/stories 401 in 58ms
+ POST /api/test-fixed-forms 200 in 32ms
+ GET /api/auth/session 200 in 39ms
+ ✓ Compiled in 1048ms (1814 modules)
+ GET / 200 in 77ms
+ GET / 200 in 34ms
+ POST /api/test-fixed-forms 200 in 46ms
+ POST /api/questions/test-id/answers 401 in 62ms
+ POST /api/test-fixed-forms 200 in 79ms
+ GET /questions 307 in 93ms
+ POST /api/test-fixed-forms 400 in 31ms
+ POST /api/stories 401 in 40ms
+ POST /api/test-fixed-forms 200 in 70ms
+ GET /auth/signin 200 in 82ms
+ POST /api/test-fixed-forms 200 in 28ms
+ GET /api/auth/session 200 in 44ms
+ GET / 200 in 44ms
+ GET / 200 in 35ms
+ GET / 200 in 94ms
+ GET / 200 in 94ms
+ GET / 200 in 93ms
+ GET / 200 in 155ms
+ GET /auth/signin 200 in 161ms
+ GET /auth/signin 200 in 174ms
+ GET /questions 307 in 177ms
+ GET /api/auth/session 200 in 75ms
+ GET /api/auth/session 200 in 122ms
+ POST /api/auth/_log 200 in 128ms
+ POST /api/auth/_log 200 in 127ms
+ GET /auth/signin 200 in 208ms
+ POST /api/auth/_log 200 in 158ms
+ POST /api/auth/_log 200 in 157ms
+ GET /auth/signin 200 in 186ms
+ POST /api/auth/_log 200 in 74ms
+ POST /api/auth/_log 200 in 114ms
+ POST /api/auth/_log 200 in 99ms
+ GET /api/auth/session 200 in 60ms
+ GET /api/auth/session 200 in 94ms
+ GET /api/auth/providers 200 in 77ms
+ GET /api/auth/session 200 in 76ms
+ GET /api/auth/session 200 in 74ms
+ GET /api/auth/session 200 in 77ms
+ GET /api/auth/providers 200 in 72ms
+ GET /api/auth/providers 200 in 62ms
+ GET /api/auth/session 200 in 61ms
+ GET /api/auth/providers 200 in 61ms
+ GET /api/auth/session 200 in 51ms
+ GET /api/auth/csrf 200 in 51ms
+ GET /api/auth/csrf 200 in 51ms
+ GET /api/auth/session 200 in 51ms
+ GET /api/auth/csrf 200 in 50ms
+ GET /api/auth/csrf 200 in 49ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+ POST /api/auth/callback/credentials 200 in 40ms
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 372ms
+ POST /api/auth/callback/credentials 200 in 386ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 725ms
+ GET /api/auth/session 200 in 365ms
+ GET /api/auth/session 200 in 366ms
+ GET /api/auth/session 200 in 380ms
+ GET /api/auth/session 200 in 74ms
+ GET /dashboard?_rsc=3y0gy 200 in 51ms
+ GET /dashboard?_rsc=3y0gy 200 in 59ms
+ GET /dashboard?_rsc=3y0gy 200 in 61ms
+ GET /dashboard?_rsc=3y0gy 200 in 44ms
+ GET /api/dashboard/stats 200 in 47ms
+ GET /api/dashboard/stats 200 in 44ms
+ GET /api/dashboard/stats 200 in 41ms
+ GET /api/dashboard/stats 200 in 53ms
+ GET /questions 307 in 41ms
+ GET /questions 307 in 65ms
+ GET /auth/signin 200 in 66ms
+ GET /auth/signin 200 in 45ms
+ GET /questions 200 in 44ms
+ GET /api/auth/session 200 in 68ms
+ GET /api/auth/session 200 in 55ms
+ GET /api/auth/session 200 in 38ms
+ GET /api/auth/session 200 in 30ms
+ GET /api/questions 200 in 57ms
+ GET /api/auth/session 200 in 55ms
+ GET /api/companies 200 in 67ms
+ GET /api/auth/csrf 200 in 48ms
+ GET /api/questions 200 in 56ms
+ GET /api/auth/session 200 in 51ms
+ GET /api/companies 200 in 61ms
+ POST /api/auth/signout 200 in 42ms
+ GET / 200 in 41ms
+ GET / 200 in 40ms
+ GET / 200 in 35ms
+ GET /auth/signin 200 in 44ms
+ GET /auth/signin 200 in 34ms
+ GET /api/auth/session 200 in 75ms
+ GET /api/auth/providers 200 in 48ms
+ GET /api/auth/session 200 in 47ms
+ GET /questions/cmc5gleob003nulcmwysk4n1p?_rsc=9bkzp 200 in 51ms
+ GET /api/auth/csrf 200 in 42ms
+ GET /api/auth/session 200 in 41ms
+ POST /api/auth/callback/credentials 200 in 48ms
+ GET /api/auth/session 200 in 54ms
+ GET /api/auth/providers 200 in 49ms
+ GET /api/auth/session 200 in 45ms
+ GET /api/auth/csrf 200 in 37ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 68ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 443ms
+ GET /dashboard?_rsc=3y0gy 200 in 426ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 448ms
+ GET /api/auth/session 200 in 90ms
+ POST /api/questions/cmc5gleob003nulcmwysk4n1p/answers 200 in 102ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 46ms
+ GET /dashboard?_rsc=3y0gy 200 in 41ms
+ GET /api/dashboard/stats 200 in 36ms
+ GET /api/dashboard/stats 200 in 33ms
+ GET /dashboard 307 in 38ms
+ GET /auth/signin 200 in 38ms
+ GET / 200 in 49ms
+ GET /api/auth/session 200 in 38ms
+ GET /api/auth/session 200 in 58ms
+ GET /auth/signin 200 in 71ms
+ GET /questions/cmc5dupt3003ntfm4hlx62p83 200 in 138ms
+ POST /api/auth/_log 200 in 106ms
+ POST /api/auth/_log 200 in 105ms
+ GET /api/auth/session 200 in 50ms
+ GET /api/auth/session 200 in 36ms
+ GET /api/auth/providers 200 in 38ms
+ GET /api/auth/session 200 in 70ms
+ GET /api/questions/cmc5dupt3003ntfm4hlx62p83 200 in 78ms
+ GET /api/auth/csrf 200 in 34ms
+ GET /api/auth/session 200 in 34ms
+ GET /api/questions/cmc5dupt3003ntfm4hlx62p83 200 in 48ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 389ms
+ GET /api/auth/session 200 in 47ms
+ GET /questions 307 in 418ms
+ GET /auth/signin 200 in 74ms
+ GET /dashboard?_rsc=3y0gy 200 in 40ms
+ GET /api/dashboard/stats 200 in 30ms
+ GET /api/dashboard/stats 200 in 32ms
+ GET /api/auth/session 200 in 21ms
+ GET /api/auth/session 200 in 21ms
+ GET /questions 200 in 30ms
+ GET /companies 307 in 54ms
+ GET /auth/signin 200 in 41ms
+ GET /api/questions 200 in 36ms
+ GET /api/companies 200 in 55ms
+ GET /api/auth/session 200 in 54ms
+ GET /api/auth/session 200 in 48ms
+ GET /api/questions 200 in 58ms
+ GET /api/companies 200 in 62ms
+ GET /api/auth/session 200 in 28ms
+ GET /api/auth/session 200 in 20ms
+ GET /stories 307 in 55ms
+ GET /auth/signin 200 in 60ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/auth/session 200 in 21ms
+ GET / 200 in 35ms
+ GET / 200 in 32ms
+ GET / 200 in 41ms
+ GET / 200 in 31ms
+ GET / 200 in 39ms
+ GET /auth/signin 200 in 34ms
+ POST /api/auth/_log 200 in 61ms
+ POST /api/auth/_log 200 in 60ms
+ GET /api/auth/session 200 in 24ms
+ GET /api/auth/session 200 in 22ms
+ GET /api/auth/providers 200 in 20ms
+ GET /api/auth/csrf 200 in 19ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 342ms
+ GET /api/auth/session 200 in 43ms
+ GET /dashboard?_rsc=3y0gy 200 in 24ms
+ GET /api/dashboard/stats 200 in 30ms
+ GET /api/dashboard/stats 200 in 32ms
+ GET /questions 200 in 35ms
+ GET /api/questions 200 in 55ms
+ GET /api/auth/session 200 in 53ms
+ GET /api/companies 200 in 60ms
+ GET /api/questions 200 in 41ms
+ GET /api/companies 200 in 42ms
+ GET /api/auth/session 200 in 40ms
+ GET /api/questions 200 in 26ms
+ GET / 200 in 38ms
+ GET / 200 in 34ms
+ GET / 200 in 62ms
+ GET / 200 in 96ms
+ GET / 200 in 113ms
+ GET / 200 in 138ms
+ GET /auth/signin 200 in 79ms
+ GET /auth/signin 200 in 127ms
+ GET /api/auth/session 200 in 101ms
+ GET /auth/signin 200 in 187ms
+ POST /api/auth/_log 200 in 133ms
+ POST /api/auth/_log 200 in 133ms
+ GET /questions 307 in 209ms
+ POST /api/auth/_log 200 in 119ms
+ POST /api/auth/_log 200 in 114ms
+ GET /api/auth/session 200 in 72ms
+ GET /auth/signin 200 in 116ms
+ GET /api/auth/session 200 in 36ms
+ GET /api/auth/session 200 in 68ms
+ GET /api/auth/session 200 in 83ms
+ GET /api/auth/session 200 in 79ms
+ GET /api/auth/providers 200 in 84ms
+ GET /api/auth/providers 200 in 64ms
+ GET /api/auth/session 200 in 61ms
+ GET /api/auth/providers 200 in 57ms
+ GET /api/auth/session 200 in 63ms
+ GET /api/auth/session 200 in 53ms
+ GET /api/auth/csrf 200 in 52ms
+ GET /api/auth/providers 200 in 53ms
+ GET /api/auth/csrf 200 in 44ms
+ GET /api/auth/csrf 200 in 44ms
+ GET /api/auth/session 200 in 44ms
+ GET /api/auth/csrf 200 in 40ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 369ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+ POST /api/auth/callback/credentials 200 in 381ms
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 711ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+ GET /api/auth/session 200 in 368ms
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 754ms
+ GET /api/auth/session 200 in 410ms
+ GET /api/auth/session 200 in 424ms
+ GET /api/auth/session 200 in 42ms
+ GET /dashboard?_rsc=3y0gy 200 in 52ms
+ GET /dashboard?_rsc=3y0gy 200 in 57ms
+ GET /dashboard?_rsc=3y0gy 200 in 38ms
+ GET /dashboard?_rsc=3y0gy 200 in 66ms
+ GET /api/dashboard/stats 200 in 46ms
+ GET /api/dashboard/stats 200 in 46ms
+ GET /api/dashboard/stats 200 in 42ms
+ GET /api/dashboard/stats 200 in 67ms
+ GET /api/dashboard/stats 200 in 89ms
+ GET /api/dashboard/stats 200 in 63ms
+ GET /questions 307 in 45ms
+ GET /auth/signin 200 in 34ms
+ GET /questions 200 in 46ms
+ GET /api/auth/session 200 in 84ms
+ GET /questions 200 in 132ms
+ GET /api/auth/session 200 in 75ms
+ GET /api/auth/csrf 200 in 23ms
+ POST /api/auth/signout 200 in 32ms
+ GET / 200 in 85ms
+ GET /api/auth/session 200 in 72ms
+ GET /api/questions 200 in 87ms
+ GET /api/companies 200 in 94ms
+ GET /api/questions 200 in 81ms
+ GET /api/companies 200 in 87ms
+ GET /api/auth/session 200 in 84ms
+ GET /api/questions 200 in 78ms
+ GET /api/auth/session 200 in 106ms
+ GET /api/companies 200 in 112ms
+ GET /api/companies 200 in 113ms
+ GET /api/questions 200 in 122ms
+ GET / 200 in 154ms
+ GET /api/auth/session 200 in 134ms
+ GET / 200 in 47ms
+ GET /auth/signin 200 in 49ms
+ GET /auth/signin 200 in 40ms
+ GET /api/questions 200 in 64ms
+ POST /api/auth/_log 200 in 109ms
+ POST /api/auth/_log 200 in 108ms
+ GET /api/auth/session 200 in 47ms
+ GET /api/auth/providers 200 in 49ms
+ GET /api/auth/session 200 in 68ms
+ GET / 200 in 116ms
+ GET /api/auth/csrf 200 in 99ms
+ GET /questions/cmc5gleob003nulcmwysk4n1p?_rsc=9bkzp 200 in 76ms
+ POST /api/auth/callback/credentials 200 in 70ms
+ GET /api/auth/session 200 in 62ms
+ GET /api/auth/session 200 in 41ms
+ GET /api/auth/session 200 in 87ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 90ms
+ GET /api/auth/providers 200 in 96ms
+ GET /dashboard?_rsc=3y0gy 200 in 119ms
+ GET /api/auth/csrf 200 in 68ms
+ GET /api/auth/session 200 in 57ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 118ms
+ GET /auth/signin 200 in 151ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+ POST /api/auth/_log 200 in 91ms
+ POST /api/auth/_log 200 in 90ms
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 424ms
+ POST /api/questions/cmc5gleob003nulcmwysk4n1p/answers 200 in 438ms
+ GET /api/auth/session 200 in 67ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 94ms
+ GET /dashboard 307 in 121ms
+ GET /auth/signin 200 in 72ms
+ GET /dashboard?_rsc=3y0gy 200 in 74ms
+ GET /api/auth/session 200 in 46ms
+ GET /api/auth/providers 200 in 30ms
+ GET /api/auth/session 200 in 45ms
+ GET /api/dashboard/stats 200 in 57ms
+ GET /api/auth/csrf 200 in 66ms
+ GET /api/dashboard/stats 200 in 66ms
+ GET /api/auth/session 200 in 78ms
+ POST /api/auth/callback/credentials 200 in 79ms
+ GET /api/auth/session 200 in 22ms
+ GET /api/auth/session 200 in 34ms
+ GET /dashboard?_rsc=3y0gy 200 in 25ms
+ GET /questions/cmc5dupt3003ntfm4hlx62p83 200 in 51ms
+ GET /questions 307 in 55ms
+ GET /questions 307 in 68ms
+ GET /auth/signin 200 in 61ms
+ GET /auth/signin 200 in 61ms
+ GET /api/questions/cmc5dupt3003ntfm4hlx62p83 200 in 75ms
+ GET /api/auth/session 200 in 75ms
+ GET /api/questions/cmc5dupt3003ntfm4hlx62p83 200 in 65ms
+ GET /api/auth/session 200 in 67ms
+ GET /api/auth/session 200 in 79ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/auth/session 200 in 33ms
+ GET /api/auth/session 200 in 32ms
+ GET /companies 307 in 39ms
+ GET /auth/signin 200 in 31ms
+ GET /api/auth/session 200 in 33ms
+ GET /api/auth/session 200 in 21ms
+ GET /stories 307 in 40ms
+ GET /auth/signin 200 in 34ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/auth/session 200 in 19ms
+ GET / 200 in 42ms
+ GET / 200 in 35ms
+ GET / 200 in 35ms
+ GET /auth/signin 200 in 34ms
+ POST /api/auth/_log 200 in 63ms
+ POST /api/auth/_log 200 in 60ms
+ GET /api/auth/session 200 in 21ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/auth/providers 200 in 21ms
+ GET /api/auth/csrf 200 in 19ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 338ms
+ GET /api/auth/session 200 in 33ms
+ GET /dashboard?_rsc=3y0gy 200 in 23ms
+ GET /api/dashboard/stats 200 in 30ms
+ GET /api/dashboard/stats 200 in 31ms
+ GET /questions 200 in 34ms
+ GET /api/auth/session 200 in 61ms
+ GET /api/questions 200 in 67ms
+ GET /api/companies 200 in 76ms
+ GET /api/auth/session 200 in 40ms
+ GET /api/questions 200 in 44ms
+ GET /api/companies 200 in 48ms
+ GET / 200 in 37ms
+ GET / 200 in 32ms
+ GET / 200 in 35ms
+ GET /auth/signin 200 in 30ms
+ POST /api/auth/_log 200 in 62ms
+ POST /api/auth/_log 200 in 63ms
+ GET /api/auth/session 200 in 21ms
+ GET /api/auth/session 200 in 19ms
+ GET /api/auth/providers 200 in 19ms
+ GET /api/auth/csrf 200 in 19ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 358ms
+ GET /api/auth/session 200 in 35ms
+ GET /dashboard?_rsc=3y0gy 200 in 22ms
+ GET /api/dashboard/stats 200 in 30ms
+ GET /api/dashboard/stats 200 in 30ms
+ GET /questions 200 in 30ms
+ GET /api/questions 200 in 55ms
+ GET /api/auth/session 200 in 51ms
+ GET /api/companies 200 in 66ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/questions 200 in 46ms
+ GET /api/companies 200 in 44ms
+ GET / 200 in 38ms
+ GET / 200 in 31ms
+ GET / 200 in 47ms
+ GET / 200 in 108ms
+ GET / 200 in 181ms
+ GET / 200 in 193ms
+ GET /questions 307 in 70ms
+ GET /api/auth/session 200 in 56ms
+ GET /api/auth/session 200 in 153ms
+ GET /auth/signin 200 in 201ms
+ GET /auth/signin 200 in 185ms
+ GET /auth/signin 200 in 187ms
+ GET /auth/signin 200 in 215ms
+ POST /api/auth/_log 200 in 163ms
+ POST /api/auth/_log 200 in 163ms
+ POST /api/auth/_log 200 in 163ms
+ POST /api/auth/_log 200 in 163ms
+ POST /api/auth/_log 200 in 152ms
+ POST /api/auth/_log 200 in 149ms
+ POST /api/auth/_log 200 in 118ms
+ POST /api/auth/_log 200 in 117ms
+ GET /api/auth/session 200 in 26ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/auth/session 200 in 29ms
+ GET /api/auth/session 200 in 77ms
+ GET /api/auth/session 200 in 65ms
+ GET /api/auth/session 200 in 65ms
+ GET /api/auth/providers 200 in 63ms
+ GET /api/auth/providers 200 in 62ms
+ GET /api/auth/providers 200 in 77ms
+ GET /api/auth/providers 200 in 38ms
+ GET /api/auth/session 200 in 38ms
+ GET /api/auth/session 200 in 38ms
+ GET /api/auth/csrf 200 in 37ms
+ GET /api/auth/csrf 200 in 37ms
+ GET /api/auth/csrf 200 in 45ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 356ms
+ GET /api/auth/csrf 200 in 380ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 709ms
+ POST /api/auth/callback/credentials 200 in 714ms
+ GET /api/auth/session 200 in 370ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 381ms
+ GET /api/auth/session 200 in 373ms
+ GET /api/auth/session 200 in 382ms
+ GET /api/auth/session 200 in 53ms
+ GET /dashboard?_rsc=3y0gy 200 in 53ms
+ GET /dashboard?_rsc=3y0gy 200 in 45ms
+ GET /dashboard?_rsc=3y0gy 200 in 47ms
+ GET /dashboard?_rsc=3y0gy 200 in 46ms
+ GET /api/dashboard/stats 200 in 39ms
+ GET /api/dashboard/stats 200 in 43ms
+ GET /api/dashboard/stats 200 in 54ms
+ GET /api/dashboard/stats 200 in 74ms
+ GET /api/dashboard/stats 200 in 52ms
+ GET /api/dashboard/stats 200 in 35ms
+ GET /questions 307 in 38ms
+ GET /auth/signin 200 in 33ms
+ GET /questions 200 in 43ms
+ GET /questions 200 in 88ms
+ GET /api/auth/session 200 in 86ms
+ GET /api/auth/session 200 in 47ms
+ GET /api/auth/session 200 in 44ms
+ GET /api/questions 200 in 64ms
+ GET /api/companies 200 in 69ms
+ GET /api/questions 200 in 60ms
+ GET /api/questions 200 in 70ms
+ GET /api/auth/csrf 200 in 84ms
+ GET /api/companies 200 in 85ms
+ GET /api/companies 200 in 85ms
+ GET /api/auth/session 200 in 91ms
+ GET /api/auth/session 200 in 71ms
+ GET /api/questions 200 in 47ms
+ GET /api/companies 200 in 44ms
+ POST /api/auth/signout 200 in 51ms
+ GET /api/auth/session 200 in 52ms
+ GET / 200 in 41ms
+ GET / 200 in 50ms
+ GET / 200 in 37ms
+ GET /auth/signin 200 in 41ms
+ GET /api/questions 200 in 44ms
+ GET / 200 in 127ms
+ GET /auth/signin 200 in 139ms
+ GET /questions/cmc5gleob003nulcmwysk4n1p?_rsc=9bkzp 200 in 105ms
+ POST /api/auth/_log 200 in 130ms
+ POST /api/auth/_log 200 in 129ms
+ GET /api/auth/session 200 in 53ms
+ GET /api/auth/providers 200 in 51ms
+ GET /api/auth/session 200 in 61ms
+ GET /api/auth/csrf 200 in 62ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 63ms
+ POST /api/auth/callback/credentials 200 in 63ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 55ms
+ GET /api/auth/session 200 in 52ms
+ GET /auth/signin 200 in 90ms
+ GET /api/auth/session 200 in 76ms
+ GET /api/auth/providers 200 in 63ms
+ GET /api/auth/session 200 in 42ms
+ GET /dashboard?_rsc=3y0gy 200 in 54ms
+ GET /api/auth/csrf 200 in 44ms
+ POST /api/auth/callback/credentials 200 in 31ms
+ GET /api/auth/session 200 in 26ms
+ GET /dashboard?_rsc=3y0gy 200 in 35ms
+ GET /api/auth/session 200 in 22ms
+ GET /api/auth/session 200 in 30ms
+ GET /api/auth/providers 200 in 27ms
+ GET /api/auth/csrf 200 in 20ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 352ms
+ GET /api/auth/session 200 in 72ms
+ GET /dashboard 307 in 82ms
+ POST /api/questions/cmc5gleob003nulcmwysk4n1p/answers 200 in 78ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 113ms
+ GET /questions/cmc5dupt3003ntfm4hlx62p83 307 in 181ms
+ GET /auth/signin 200 in 162ms
+ GET /dashboard?_rsc=3y0gy 200 in 115ms
+ GET /auth/signin 200 in 159ms
+ GET /api/dashboard/stats 200 in 45ms
+ GET /api/dashboard/stats 200 in 45ms
+ GET /api/auth/session 200 in 45ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/auth/session 200 in 39ms
+ GET /api/auth/session 200 in 26ms
+ GET /questions 200 in 34ms
+ GET /questions 307 in 44ms
+ GET /auth/signin 200 in 33ms
+ GET /api/questions 200 in 45ms
+ GET /api/companies 200 in 65ms
+ GET /api/auth/session 200 in 61ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/questions 200 in 45ms
+ GET /api/companies 200 in 53ms
+ GET /api/auth/session 200 in 26ms
+ GET /api/auth/session 200 in 24ms
+ GET /companies 307 in 40ms
+ GET /auth/signin 200 in 36ms
+ GET /api/auth/session 200 in 46ms
+ GET /api/auth/session 200 in 27ms
+ GET /stories 307 in 42ms
+ GET /auth/signin 200 in 32ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/auth/session 200 in 19ms
+ GET / 200 in 37ms
+ GET / 200 in 30ms
+ GET / 200 in 32ms
+ GET /auth/signin 200 in 32ms
+ POST /api/auth/_log 200 in 64ms
+ POST /api/auth/_log 200 in 63ms
+ GET /api/auth/session 200 in 21ms
+ GET /api/auth/session 200 in 26ms
+ GET /api/auth/providers 200 in 27ms
+ GET /api/auth/csrf 200 in 20ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 341ms
+ GET /api/auth/session 200 in 36ms
+ GET /dashboard?_rsc=3y0gy 200 in 23ms
+ GET /api/dashboard/stats 200 in 30ms
+ GET /api/dashboard/stats 200 in 31ms
+ GET /api/questions 200 in 29ms
+ GET /questions/cmc5gleob003nulcmwysk4n1p 200 in 47ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 65ms
+ GET /api/auth/session 200 in 62ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 47ms
+ GET /api/auth/session 200 in 48ms
+ GET / 200 in 34ms
+ GET / 200 in 26ms
+ GET / 200 in 61ms
+ GET / 200 in 88ms
+ GET / 200 in 111ms
+ GET / 200 in 132ms
+ GET /auth/signin 200 in 62ms
+ POST /api/auth/_log 200 in 118ms
+ POST /api/auth/_log 200 in 118ms
+ GET /questions 307 in 191ms
+ GET /api/auth/session 200 in 141ms
+ GET /auth/signin 200 in 189ms
+ GET /auth/signin 200 in 210ms
+ POST /api/auth/_log 200 in 107ms
+ POST /api/auth/_log 200 in 107ms
+ POST /api/auth/_log 200 in 104ms
+ POST /api/auth/_log 200 in 104ms
+ GET /auth/signin 200 in 209ms
+ POST /api/auth/_log 200 in 57ms
+ GET /api/auth/session 200 in 87ms
+ GET /api/auth/session 200 in 88ms
+ GET /api/auth/session 200 in 97ms
+ GET /api/auth/providers 200 in 56ms
+ GET /api/auth/providers 200 in 56ms
+ GET /api/auth/session 200 in 56ms
+ GET /api/auth/providers 200 in 53ms
+ GET /api/auth/session 200 in 57ms
+ GET /api/auth/session 200 in 53ms
+ GET /api/auth/providers 200 in 59ms
+ GET /api/auth/session 200 in 56ms
+ GET /api/auth/csrf 200 in 50ms
+ GET /api/auth/csrf 200 in 50ms
+ GET /api/auth/csrf 200 in 50ms
+ GET /api/auth/session 200 in 51ms
+ GET /api/auth/csrf 200 in 47ms
+ POST /api/auth/callback/credentials 200 in 29ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+ POST /api/auth/callback/credentials 200 in 47ms
+✅ User found, checking if active
+🔑 Verifying password
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 688ms
+ POST /api/auth/callback/credentials 200 in 678ms
+ GET /api/auth/session 200 in 690ms
+ GET /api/auth/session 200 in 45ms
+ GET /api/auth/session 200 in 61ms
+ GET /api/auth/session 200 in 61ms
+ GET /dashboard?_rsc=3y0gy 200 in 40ms
+ GET /dashboard?_rsc=3y0gy 200 in 47ms
+ GET /dashboard?_rsc=3y0gy 200 in 44ms
+ GET /dashboard?_rsc=3y0gy 200 in 44ms
+ GET /api/dashboard/stats 200 in 41ms
+ GET /api/dashboard/stats 200 in 39ms
+ GET /api/dashboard/stats 200 in 34ms
+ GET /api/dashboard/stats 200 in 42ms
+ GET /questions 307 in 36ms
+ GET /auth/signin 200 in 31ms
+ GET /questions 200 in 42ms
+ GET /api/auth/session 200 in 68ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/auth/session 200 in 27ms
+ GET /api/questions 200 in 37ms
+ GET /api/companies 200 in 45ms
+ GET /api/questions 200 in 59ms
+ GET /api/auth/session 200 in 56ms
+ GET /api/companies 200 in 63ms
+ GET /api/auth/csrf 200 in 58ms
+ POST /api/auth/signout 200 in 43ms
+ GET / 200 in 45ms
+ GET / 200 in 41ms
+ GET /auth/signin 200 in 35ms
+ POST /api/auth/_log 200 in 61ms
+ POST /api/auth/_log 200 in 59ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/auth/session 200 in 26ms
+ GET /api/auth/providers 200 in 26ms
+ GET /api/auth/csrf 200 in 18ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 347ms
+ GET /api/auth/session 200 in 35ms
+ GET /dashboard?_rsc=3y0gy 200 in 22ms
+ GET /api/dashboard/stats 200 in 30ms
+ GET /api/dashboard/stats 200 in 32ms
+ GET /dashboard 200 in 34ms
+ GET /api/auth/session 200 in 63ms
+ GET /api/dashboard/stats 200 in 81ms
+ GET /api/auth/session 200 in 40ms
+ GET /api/dashboard/stats 200 in 58ms
+ GET /questions 200 in 32ms
+ GET /api/questions 200 in 59ms
+ GET /api/auth/session 200 in 54ms
+ GET /api/companies 200 in 65ms
+ GET /api/questions 200 in 41ms
+ GET /api/companies 200 in 42ms
+ GET /api/auth/session 200 in 43ms
+ GET / 200 in 38ms
+ GET /auth/signin 200 in 34ms
+ POST /api/auth/_log 200 in 65ms
+ POST /api/auth/_log 200 in 62ms
+ GET /api/auth/session 200 in 24ms
+ GET /companies 200 in 63ms
+ GET /api/auth/session 200 in 43ms
+ GET /api/auth/providers 200 in 37ms
+ GET /api/auth/csrf 200 in 40ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 365ms
+ GET /api/auth/session 200 in 35ms
+ GET /dashboard?_rsc=3y0gy 200 in 34ms
+ GET /api/companies 200 in 34ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/auth/session 200 in 24ms
+ GET /api/companies 200 in 68ms
+ GET /api/dashboard/stats 200 in 32ms
+ GET /api/dashboard/stats 200 in 31ms
+ GET /stories 200 in 32ms
+ GET /api/questions 200 in 35ms
+ GET /questions/cmc5gleob003nulcmwysk4n1p 200 in 63ms
+ GET /api/stories 200 in 49ms
+ GET /api/auth/session 200 in 45ms
+ GET /api/stories 200 in 38ms
+ GET /api/auth/session 200 in 40ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 63ms
+ GET /api/auth/session 200 in 57ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 32ms
+ GET /api/auth/session 200 in 38ms
+ GET / 200 in 30ms
+ GET /auth/signin 200 in 33ms
+ POST /api/auth/_log 200 in 57ms
+ POST /api/auth/_log 200 in 55ms
+ GET /api/auth/session 200 in 19ms
+ GET /api/auth/session 200 in 17ms
+ GET /api/auth/providers 200 in 25ms
+ GET /api/auth/csrf 200 in 17ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 347ms
+ GET /api/auth/session 200 in 41ms
+ GET /dashboard?_rsc=3y0gy 200 in 20ms
+ GET /api/dashboard/stats 200 in 29ms
+ GET /api/dashboard/stats 200 in 28ms
+ GET /questions 200 in 31ms
+ GET /api/questions 200 in 33ms
+ GET /api/companies 200 in 33ms
+ GET /api/auth/session 200 in 50ms
+ GET /api/auth/session 200 in 30ms
+ GET /api/questions 200 in 37ms
+ GET /api/companies 200 in 43ms
+ GET / 200 in 31ms
+ GET / 200 in 29ms
+ GET / 200 in 58ms
+ GET / 200 in 70ms
+ GET / 200 in 116ms
+ GET / 200 in 117ms
+ GET /auth/signin 200 in 92ms
+ GET /questions 307 in 95ms
+ GET /api/auth/session 200 in 117ms
+ POST /api/auth/_log 200 in 120ms
+ POST /api/auth/_log 200 in 120ms
+ GET /auth/signin 200 in 185ms
+ GET /auth/signin 200 in 186ms
+ GET /auth/signin 200 in 213ms
+ POST /api/auth/_log 200 in 131ms
+ POST /api/auth/_log 200 in 131ms
+ POST /api/auth/_log 200 in 129ms
+ POST /api/auth/_log 200 in 121ms
+ POST /api/auth/_log 200 in 102ms
+ GET /api/auth/session 200 in 32ms
+ GET /api/auth/session 200 in 33ms
+ GET /api/auth/session 200 in 50ms
+ GET /api/auth/providers 200 in 72ms
+ GET /api/auth/session 200 in 64ms
+ GET /api/auth/session 200 in 45ms
+ GET /api/auth/providers 200 in 45ms
+ GET /api/auth/session 200 in 45ms
+ GET /api/auth/providers 200 in 43ms
+ GET /api/auth/csrf 200 in 43ms
+ GET /api/auth/providers 200 in 51ms
+ GET /api/auth/session 200 in 45ms
+ GET /api/auth/session 200 in 34ms
+ GET /api/auth/csrf 200 in 40ms
+ GET /api/auth/csrf 200 in 35ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 367ms
+ GET /api/auth/csrf 200 in 383ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+ POST /api/auth/callback/credentials 200 in 59ms
+ GET /api/auth/session 200 in 54ms
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 388ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 701ms
+ GET /api/auth/session 200 in 388ms
+ GET /api/auth/session 200 in 367ms
+ GET /api/auth/session 200 in 57ms
+ GET /dashboard?_rsc=3y0gy 200 in 45ms
+ GET /dashboard?_rsc=3y0gy 200 in 44ms
+ GET /dashboard?_rsc=3y0gy 200 in 41ms
+ GET /dashboard?_rsc=3y0gy 200 in 48ms
+ GET /api/dashboard/stats 200 in 37ms
+ GET /api/dashboard/stats 200 in 43ms
+ GET /api/dashboard/stats 200 in 45ms
+ GET /api/dashboard/stats 200 in 71ms
+ GET /api/dashboard/stats 200 in 46ms
+ GET /api/dashboard/stats 200 in 34ms
+ GET /questions 307 in 38ms
+ GET /auth/signin 200 in 34ms
+ GET /questions 200 in 40ms
+ GET /api/auth/session 200 in 48ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/questions 200 in 45ms
+ GET /api/companies 200 in 47ms
+ GET /api/auth/csrf 200 in 52ms
+ GET /api/auth/session 200 in 50ms
+ GET /api/questions 200 in 56ms
+ GET /api/companies 200 in 65ms
+ POST /api/auth/signout 200 in 18ms
+ GET / 200 in 41ms
+ GET / 200 in 33ms
+ GET / 200 in 31ms
+ GET /auth/signin 200 in 31ms
+ POST /api/auth/_log 200 in 57ms
+ POST /api/auth/_log 200 in 72ms
+ GET /auth/signin 200 in 41ms
+ POST /api/auth/_log 200 in 63ms
+ POST /api/auth/_log 200 in 60ms
+ GET /api/auth/session 200 in 24ms
+ GET /api/auth/session 200 in 21ms
+ GET /api/auth/providers 200 in 52ms
+ GET /api/auth/session 200 in 28ms
+ GET /api/auth/providers 200 in 22ms
+ GET /api/auth/csrf 200 in 22ms
+ GET /api/auth/session 200 in 27ms
+ GET /api/auth/csrf 200 in 22ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 362ms
+ POST /api/auth/callback/credentials 200 in 375ms
+ GET /api/auth/session 200 in 43ms
+ GET /api/auth/session 200 in 27ms
+ GET /dashboard?_rsc=3y0gy 200 in 27ms
+ GET /dashboard?_rsc=3y0gy 200 in 28ms
+ GET /questions 200 in 31ms
+ GET /api/dashboard/stats 200 in 49ms
+ GET /api/dashboard/stats 200 in 37ms
+ GET /api/companies 200 in 54ms
+ GET /api/questions 200 in 56ms
+ GET /api/auth/session 200 in 51ms
+ GET /api/companies 200 in 38ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/questions 200 in 47ms
+ GET /api/questions 401 in 21ms
+ GET / 200 in 30ms
+ GET /dashboard 200 in 35ms
+ GET /auth/signin 200 in 30ms
+ GET /api/auth/session 200 in 56ms
+ GET /api/dashboard/stats 200 in 76ms
+ GET /api/auth/session 200 in 45ms
+ GET /api/dashboard/stats 200 in 73ms
+ GET /questions/cmc5gleob003nulcmwysk4n1p?_rsc=9bkzp 200 in 32ms
+ GET /api/auth/session 200 in 36ms
+ GET /api/auth/session 200 in 41ms
+ GET /api/auth/providers 200 in 35ms
+ GET /api/auth/csrf 200 in 21ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 394ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 109ms
+ GET /api/auth/session 200 in 66ms
+ GET /questions 200 in 102ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 61ms
+ GET /dashboard?_rsc=3y0gy 200 in 45ms
+ POST /api/questions/cmc5gleob003nulcmwysk4n1p/answers 200 in 73ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 32ms
+ GET /api/dashboard/stats 200 in 36ms
+ GET /api/dashboard/stats 200 in 34ms
+ GET /api/companies 200 in 70ms
+ GET /api/questions 200 in 75ms
+ GET /api/auth/session 200 in 62ms
+ GET /api/questions 200 in 54ms
+ GET /api/companies 200 in 57ms
+ GET /api/questions 200 in 50ms
+ GET /api/auth/session 200 in 47ms
+ GET /questions 200 in 27ms
+ GET /api/questions 200 in 53ms
+ GET /api/auth/session 200 in 50ms
+ GET /api/companies 200 in 64ms
+ GET /api/questions 200 in 65ms
+ GET /api/auth/session 200 in 60ms
+ GET /api/companies 200 in 61ms
+ GET /companies 200 in 111ms
+ GET /api/companies 200 in 25ms
+ GET /api/auth/session 200 in 26ms
+ GET /api/companies 200 in 37ms
+ GET /api/auth/session 200 in 32ms
+ GET /stories 200 in 27ms
+ GET /api/stories 200 in 43ms
+ GET /api/auth/session 200 in 40ms
+ GET /api/stories 200 in 28ms
+ GET /api/auth/session 200 in 27ms
+ GET / 200 in 31ms
+ GET / 200 in 31ms
+ GET / 200 in 49ms
+ GET / 200 in 89ms
+ GET / 200 in 91ms
+ GET / 200 in 91ms
+ GET /api/auth/session 200 in 45ms
+ GET /auth/signin 200 in 86ms
+ GET /auth/signin 200 in 176ms
+ GET /auth/signin 200 in 178ms
+ POST /api/auth/_log 200 in 143ms
+ POST /api/auth/_log 200 in 141ms
+ POST /api/auth/_log 200 in 108ms
+ POST /api/auth/_log 200 in 108ms
+ POST /api/auth/_log 200 in 107ms
+ POST /api/auth/_log 200 in 106ms
+ GET / 200 in 148ms
+ GET /api/auth/session 200 in 63ms
+ GET /api/auth/session 200 in 76ms
+ GET /api/auth/session 200 in 99ms
+ GET /api/auth/providers 200 in 48ms
+ GET /api/auth/session 200 in 47ms
+ GET /api/auth/providers 200 in 67ms
+ GET /api/auth/providers 200 in 64ms
+ GET /auth/signin 200 in 144ms
+ GET /api/auth/session 200 in 71ms
+ GET /api/auth/session 200 in 60ms
+ GET /api/auth/csrf 200 in 59ms
+ GET /api/auth/csrf 200 in 63ms
+ GET /api/auth/csrf 200 in 62ms
+ POST /api/auth/_log 200 in 74ms
+ POST /api/auth/_log 200 in 73ms
+ POST /api/auth/callback/credentials 200 in 45ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+ POST /api/auth/callback/credentials 200 in 38ms
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 361ms
+ GET /api/auth/session 200 in 368ms
+ GET /api/auth/session 200 in 46ms
+ GET /api/auth/session 200 in 63ms
+ GET /dashboard?_rsc=3y0gy 200 in 39ms
+ GET /dashboard?_rsc=3y0gy 200 in 48ms
+ GET /dashboard?_rsc=3y0gy 200 in 52ms
+ GET /api/auth/session 200 in 26ms
+ GET /api/auth/session 200 in 34ms
+ GET /api/auth/providers 200 in 28ms
+ GET /api/dashboard/stats 200 in 43ms
+ GET /api/auth/csrf 200 in 25ms
+ GET /api/dashboard/stats 200 in 39ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 356ms
+ GET /api/auth/session 200 in 50ms
+ GET /questions 307 in 68ms
+ GET /auth/signin 200 in 43ms
+ GET /dashboard?_rsc=3y0gy 200 in 39ms
+ GET /questions 200 in 43ms
+ GET /api/dashboard/stats 200 in 46ms
+ GET /api/dashboard/stats 200 in 42ms
+ GET /api/auth/session 200 in 26ms
+ GET /api/auth/session 200 in 24ms
+ GET /api/auth/session 200 in 47ms
+ GET /api/questions 200 in 53ms
+ GET /api/companies 200 in 64ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/questions 200 in 41ms
+ GET /api/companies 200 in 42ms
+ GET /questions 200 in 35ms
+ GET /api/questions 200 in 75ms
+ GET /api/auth/session 200 in 65ms
+ GET /api/companies 200 in 81ms
+ GET /api/questions 200 in 65ms
+ GET /api/companies 200 in 66ms
+ GET /api/auth/session 200 in 65ms
+ GET / 200 in 34ms
+ GET /auth/signin 200 in 38ms
+ POST /api/auth/_log 200 in 70ms
+ POST /api/auth/_log 200 in 69ms
+ GET /api/auth/session 200 in 25ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/auth/providers 200 in 21ms
+ GET /api/auth/csrf 200 in 22ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 390ms
+ GET /api/auth/session 200 in 40ms
+ GET /dashboard?_rsc=3y0gy 200 in 22ms
+ GET /api/dashboard/stats 200 in 30ms
+ GET /api/dashboard/stats 200 in 30ms
+ GET / 200 in 33ms
+ GET /api/questions 200 in 30ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 44ms
+ GET /auth/signin 200 in 55ms
+ GET / 200 in 82ms
+ POST /api/auth/_log 200 in 96ms
+ POST /api/auth/_log 200 in 92ms
+ GET /api/auth/session 200 in 38ms
+ GET /auth/signin 200 in 68ms
+ GET /api/auth/session 200 in 40ms
+ GET /api/auth/providers 200 in 49ms
+ POST /api/auth/_log 200 in 47ms
+ POST /api/auth/_log 200 in 45ms
+ GET /api/auth/csrf 200 in 22ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 363ms
+ GET /api/auth/session 200 in 36ms
+ GET /dashboard?_rsc=3y0gy 200 in 24ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/dashboard/stats 200 in 42ms
+ GET /api/auth/providers 200 in 26ms
+ GET /api/auth/csrf 200 in 27ms
+ GET /api/dashboard/stats 200 in 43ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 373ms
+ GET /api/auth/session 200 in 39ms
+ GET /dashboard?_rsc=3y0gy 200 in 23ms
+ GET /companies 200 in 32ms
+ GET /api/dashboard/stats 200 in 49ms
+ GET /api/dashboard/stats 200 in 40ms
+ GET /api/companies 200 in 31ms
+ GET /api/auth/session 200 in 56ms
+ GET /api/companies 200 in 33ms
+ GET /api/auth/session 200 in 34ms
+ GET /stories 200 in 43ms
+ GET /api/stories 200 in 31ms
+ GET /api/auth/session 200 in 57ms
+ GET /api/stories 200 in 46ms
+ GET /api/auth/session 200 in 45ms
+ GET / 200 in 56ms
+ GET /auth/signin 200 in 37ms
+ POST /api/auth/_log 200 in 75ms
+ POST /api/auth/_log 200 in 74ms
+ GET / 200 in 55ms
+ GET /api/auth/session 200 in 44ms
+ GET /api/auth/providers 200 in 46ms
+ GET /api/auth/session 200 in 53ms
+ GET /api/auth/csrf 200 in 39ms
+ POST /api/auth/callback/credentials 200 in 44ms
+ GET /api/auth/session 200 in 21ms
+ GET /dashboard?_rsc=3y0gy 200 in 21ms
+ GET /questions 307 in 42ms
+ GET /api/auth/session 200 in 33ms
+ GET /auth/signin 200 in 45ms
+ POST /api/auth/_log 200 in 35ms
+ GET /dashboard 307 in 44ms
+ GET /api/auth/session 200 in 49ms
+ GET / 200 in 67ms
+ GET /api/auth/session 200 in 41ms
+ GET /auth/signin 200 in 108ms
+ POST /api/auth/_log 200 in 95ms
+ GET /dashboard 307 in 155ms
+ GET /auth/signin 200 in 39ms
+ GET /api/auth/session 200 in 64ms
+ GET /auth/signin 200 in 97ms
+ GET /companies 307 in 118ms
+ GET /api/auth/session 200 in 67ms
+ POST /api/auth/_log 200 in 69ms
+ POST /api/auth/_log 200 in 68ms
+ GET /api/auth/session 200 in 45ms
+ GET /auth/signin 200 in 66ms
+ GET /api/auth/session 200 in 43ms
+ GET /api/auth/session 200 in 30ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/auth/session 200 in 70ms
+ GET /stories 307 in 84ms
+ GET /api/auth/session 200 in 62ms
+ GET /api/auth/providers 200 in 53ms
+ GET /auth/signin 200 in 45ms
+ GET /api/auth/csrf 200 in 28ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 367ms
+ GET /api/auth/session 200 in 37ms
+ GET /dashboard?_rsc=3y0gy 200 in 24ms
+ GET /api/dashboard/stats 200 in 35ms
+ GET /api/dashboard/stats 200 in 41ms
+ GET / 200 in 37ms
+ GET /auth/signin 200 in 31ms
+ POST /api/auth/_log 200 in 61ms
+ POST /api/auth/_log 200 in 59ms
+ GET /api/auth/session 200 in 24ms
+ GET /api/auth/session 200 in 19ms
+ GET /api/auth/providers 200 in 26ms
+ GET /api/auth/csrf 200 in 22ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 395ms
+ GET /api/auth/csrf 200 in 40ms
+ GET /api/auth/session 200 in 42ms
+ POST /api/auth/signout 200 in 28ms
+ GET /dashboard?_rsc=3y0gy 200 in 34ms
+ GET / 200 in 41ms
+ GET /api/dashboard/stats 200 in 29ms
+ GET /api/dashboard/stats 200 in 28ms
+ GET / 307 in 38ms
+ GET /dashboard 200 in 29ms
+ GET /api/auth/session 200 in 50ms
+ GET /api/dashboard/stats 200 in 63ms
+ GET /api/auth/session 200 in 25ms
+ GET /api/dashboard/stats 200 in 33ms
+ GET /questions 200 in 30ms
+ GET /api/companies 200 in 52ms
+ GET /api/questions 200 in 54ms
+ GET /api/auth/session 200 in 49ms
+ GET /api/companies 200 in 35ms
+ GET /api/auth/session 200 in 33ms
+ GET /api/questions 200 in 46ms
+ GET /companies 200 in 31ms
+ GET /api/companies 200 in 29ms
+ GET /api/auth/session 200 in 48ms
+ GET /api/companies 200 in 31ms
+ GET /api/auth/session 200 in 28ms
+ GET /stories 200 in 30ms
+ GET /api/stories 200 in 54ms
+ GET /api/auth/session 200 in 48ms
+ GET /api/stories 200 in 32ms
+ GET /api/auth/session 200 in 29ms
+ GET /dashboard 200 in 27ms
+ GET /api/auth/session 200 in 42ms
+ GET /api/dashboard/stats 200 in 55ms
+ GET /api/auth/session 200 in 27ms
+ GET /api/dashboard/stats 200 in 40ms
+ GET / 200 in 31ms
+ GET / 200 in 28ms
+ GET / 200 in 78ms
+ GET / 200 in 97ms
+ GET / 200 in 111ms
+ GET / 200 in 105ms
+ GET /auth/signin 200 in 38ms
+ GET /auth/signin 200 in 88ms
+ GET /auth/signin 200 in 147ms
+ POST /api/auth/_log 200 in 104ms
+ POST /api/auth/_log 200 in 100ms
+ POST /api/auth/_log 200 in 68ms
+ POST /api/auth/_log 200 in 67ms
+ GET / 200 in 100ms
+ GET /api/auth/session 200 in 22ms
+ GET /api/auth/session 200 in 42ms
+ GET /api/auth/session 200 in 47ms
+ GET /api/auth/session 200 in 44ms
+ GET /api/auth/session 200 in 79ms
+ GET /api/auth/providers 200 in 73ms
+ GET /api/auth/session 200 in 83ms
+ GET /auth/signin 200 in 124ms
+ GET /api/auth/providers 200 in 100ms
+ GET /api/auth/providers 200 in 99ms
+ GET /api/auth/csrf 200 in 58ms
+ POST /api/auth/_log 200 in 58ms
+ POST /api/auth/_log 200 in 58ms
+ GET /api/auth/csrf 200 in 46ms
+ GET /api/auth/csrf 200 in 45ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 364ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 1006ms
+ POST /api/auth/callback/credentials 200 in 1007ms
+ GET /api/auth/session 200 in 703ms
+ GET /api/auth/session 200 in 57ms
+ GET /api/auth/session 200 in 57ms
+ GET /dashboard?_rsc=3y0gy 200 in 48ms
+ GET /dashboard?_rsc=3y0gy 200 in 50ms
+ GET /dashboard?_rsc=3y0gy 200 in 44ms
+ GET /api/auth/session 200 in 54ms
+ GET /api/auth/providers 200 in 50ms
+ GET /api/auth/session 200 in 42ms
+ GET /api/dashboard/stats 200 in 65ms
+ GET /api/dashboard/stats 200 in 57ms
+ GET /api/dashboard/stats 200 in 59ms
+ GET /api/auth/csrf 200 in 51ms
+ GET /api/dashboard/stats 200 in 61ms
+ GET /api/dashboard/stats 200 in 63ms
+ GET /api/dashboard/stats 200 in 63ms
+ POST /api/auth/callback/credentials 200 in 67ms
+ GET /api/auth/session 200 in 19ms
+ GET /dashboard?_rsc=3y0gy 200 in 24ms
+ GET /questions 200 in 72ms
+ GET /questions 200 in 78ms
+ GET /questions 307 in 67ms
+ GET /auth/signin 200 in 43ms
+ GET /api/auth/session 200 in 57ms
+ GET /api/questions 200 in 73ms
+ GET /api/companies 200 in 79ms
+ GET /api/questions 200 in 76ms
+ GET /api/questions 200 in 73ms
+ GET /api/auth/session 200 in 71ms
+ GET /api/auth/session 200 in 70ms
+ GET /api/companies 200 in 83ms
+ GET /api/companies 200 in 73ms
+ GET /api/auth/session 200 in 66ms
+ GET /api/questions 200 in 60ms
+ GET /api/auth/session 200 in 56ms
+ GET /api/companies 200 in 62ms
+ GET /api/auth/session 200 in 43ms
+ GET / 200 in 31ms
+ GET /auth/signin 200 in 31ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/auth/session 200 in 24ms
+ GET /api/auth/providers 200 in 28ms
+ GET /api/auth/csrf 200 in 20ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 341ms
+ GET /api/auth/session 200 in 36ms
+ GET /dashboard?_rsc=3y0gy 200 in 22ms
+ GET /api/dashboard/stats 200 in 30ms
+ GET /api/dashboard/stats 200 in 29ms
+ GET /api/questions 200 in 24ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 40ms
+ GET / 200 in 66ms
+ GET /auth/signin 200 in 35ms
+ POST /api/auth/_log 200 in 58ms
+ POST /api/auth/_log 200 in 62ms
+ GET / 200 in 33ms
+ GET /api/auth/session 200 in 21ms
+ GET /api/auth/session 200 in 21ms
+ GET /api/auth/providers 200 in 35ms
+ GET /api/auth/csrf 200 in 34ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 403ms
+ GET /api/auth/session 200 in 30ms
+ GET /api/auth/session 200 in 78ms
+ GET /auth/signin 200 in 460ms
+ GET / 200 in 108ms
+ POST /api/auth/_log 200 in 94ms
+ POST /api/auth/_log 200 in 108ms
+ GET /dashboard?_rsc=3y0gy 200 in 34ms
+ GET /api/dashboard/stats 200 in 36ms
+ GET /api/dashboard/stats 200 in 62ms
+ GET /auth/signin 200 in 65ms
+ GET /api/auth/session 200 in 69ms
+ GET /api/auth/providers 200 in 36ms
+ GET /api/auth/session 200 in 54ms
+ POST /api/auth/_log 200 in 56ms
+ POST /api/auth/_log 200 in 56ms
+ GET /api/auth/csrf 200 in 32ms
+ POST /api/auth/callback/credentials 200 in 19ms
+ GET /api/auth/session 200 in 22ms
+ GET /dashboard?_rsc=3y0gy 200 in 20ms
+ GET /api/auth/session 200 in 21ms
+ GET /api/auth/session 200 in 17ms
+ GET /api/auth/providers 200 in 35ms
+ GET /api/auth/csrf 200 in 18ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 361ms
+ GET /api/auth/session 200 in 66ms
+ GET /companies 200 in 78ms
+ GET /stories 307 in 88ms
+ GET /auth/signin 200 in 67ms
+ GET /dashboard?_rsc=3y0gy 200 in 59ms
+ GET /api/dashboard/stats 200 in 35ms
+ GET /api/dashboard/stats 200 in 42ms
+ GET /api/companies 200 in 48ms
+ GET /api/auth/session 200 in 38ms
+ GET /api/auth/session 200 in 33ms
+ GET /api/companies 200 in 33ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/auth/session 200 in 52ms
+ GET /dashboard 200 in 29ms
+ GET / 200 in 30ms
+ GET /api/auth/session 200 in 50ms
+ GET /api/dashboard/stats 200 in 62ms
+ GET /api/auth/session 200 in 25ms
+ GET /api/dashboard/stats 200 in 37ms
+ GET /auth/signin 200 in 36ms
+ GET /api/auth/session 200 in 42ms
+ GET /api/auth/session 200 in 21ms
+ GET /api/auth/providers 200 in 24ms
+ GET /api/auth/csrf 200 in 17ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 351ms
+ GET /api/auth/session 200 in 34ms
+ GET /dashboard?_rsc=3y0gy 200 in 23ms
+ GET /api/dashboard/stats 200 in 27ms
+ GET /api/dashboard/stats 200 in 29ms
+ GET /api/auth/csrf 200 in 33ms
+ POST /api/auth/signout 200 in 20ms
+ GET / 200 in 29ms
+ GET / 200 in 31ms
+ GET /questions 307 in 36ms
+ GET /auth/signin 200 in 39ms
+ POST /api/auth/_log 200 in 59ms
+ POST /api/auth/_log 200 in 57ms
+ GET /api/auth/session 200 in 32ms
+ GET /api/auth/session 200 in 32ms
+ GET /dashboard 307 in 58ms
+ GET / 200 in 72ms
+ GET /auth/signin 200 in 65ms
+ GET /auth/signin 200 in 40ms
+ GET /api/auth/session 200 in 53ms
+ GET /companies 307 in 92ms
+ GET /api/auth/session 200 in 47ms
+ POST /api/auth/_log 200 in 49ms
+ POST /api/auth/_log 200 in 49ms
+ GET /auth/signin 200 in 52ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/auth/session 200 in 19ms
+ GET /api/auth/session 200 in 27ms
+ GET /stories 307 in 60ms
+ GET /api/auth/providers 200 in 60ms
+ GET /api/auth/session 200 in 49ms
+ GET /api/auth/csrf 200 in 29ms
+ GET /auth/signin 200 in 71ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 359ms
+ GET /api/auth/session 200 in 35ms
+ GET /dashboard?_rsc=3y0gy 200 in 21ms
+ GET /api/dashboard/stats 200 in 38ms
+ GET /api/dashboard/stats 200 in 38ms
+ GET / 307 in 45ms
+ GET /dashboard 200 in 35ms
+ GET /api/auth/session 200 in 46ms
+ GET /api/dashboard/stats 200 in 57ms
+ GET /api/auth/session 200 in 28ms
+ GET /api/dashboard/stats 200 in 39ms
+ GET /questions 200 in 38ms
+ GET /api/questions 200 in 91ms
+ GET /api/companies 200 in 114ms
+ GET /api/auth/session 200 in 110ms
+ GET /api/questions 200 in 74ms
+ GET /api/auth/session 200 in 71ms
+ GET /api/companies 200 in 77ms
+ GET /companies 200 in 28ms
+ GET /api/companies 200 in 28ms
+ GET /api/auth/session 200 in 44ms
+ GET /api/companies 200 in 29ms
+ GET /api/auth/session 200 in 31ms
+ GET /stories 200 in 28ms
+ GET /api/stories 200 in 46ms
+ GET /api/auth/session 200 in 41ms
+ GET /api/stories 200 in 31ms
+ GET /api/auth/session 200 in 26ms
+ GET /dashboard 200 in 26ms
+ GET /api/auth/session 200 in 46ms
+ GET /api/dashboard/stats 200 in 58ms
+ GET /api/auth/session 200 in 27ms
+ GET /api/dashboard/stats 200 in 38ms
+ GET / 200 in 31ms
+ GET / 200 in 34ms
+ GET / 200 in 84ms
+ GET / 200 in 87ms
+ GET / 200 in 111ms
+ GET / 200 in 120ms
+ GET /auth/signin 200 in 77ms
+ GET /auth/signin 200 in 170ms
+ GET /auth/signin 200 in 187ms
+ POST /api/auth/_log 200 in 157ms
+ POST /api/auth/_log 200 in 157ms
+ POST /api/auth/_log 200 in 114ms
+ POST /api/auth/_log 200 in 114ms
+ POST /api/auth/_log 200 in 114ms
+ POST /api/auth/_log 200 in 113ms
+ GET / 200 in 186ms
+ GET /api/auth/session 200 in 73ms
+ GET /api/auth/providers 200 in 66ms
+ GET /api/auth/session 200 in 66ms
+ GET /api/auth/session 200 in 65ms
+ GET /api/auth/session 200 in 65ms
+ GET /auth/signin 200 in 97ms
+ GET /api/auth/providers 200 in 67ms
+ GET /api/auth/providers 200 in 60ms
+ GET /api/auth/session 200 in 72ms
+ GET /api/auth/session 200 in 72ms
+ GET /api/auth/csrf 200 in 71ms
+ GET /api/auth/csrf 200 in 52ms
+ POST /api/auth/_log 200 in 75ms
+ POST /api/auth/_log 200 in 75ms
+ GET /api/auth/csrf 200 in 48ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+ POST /api/auth/callback/credentials 200 in 31ms
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 371ms
+ POST /api/auth/callback/credentials 200 in 383ms
+ GET /api/auth/session 200 in 42ms
+ GET /api/auth/session 200 in 34ms
+ GET /api/auth/session 200 in 42ms
+ GET /dashboard?_rsc=3y0gy 200 in 28ms
+ GET /dashboard?_rsc=3y0gy 200 in 36ms
+ GET /dashboard?_rsc=3y0gy 200 in 46ms
+ GET /api/auth/session 200 in 21ms
+ GET /api/auth/session 200 in 29ms
+ GET /api/auth/providers 200 in 31ms
+ GET /api/dashboard/stats 200 in 44ms
+ GET /api/auth/csrf 200 in 21ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+ GET /api/dashboard/stats 200 in 339ms
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 354ms
+ GET /api/auth/session 200 in 48ms
+ GET /questions 307 in 69ms
+ GET /auth/signin 200 in 37ms
+ GET /dashboard?_rsc=3y0gy 200 in 44ms
+ GET /api/dashboard/stats 200 in 35ms
+ GET /api/dashboard/stats 200 in 29ms
+ GET /api/auth/session 200 in 20ms
+ GET /api/auth/session 200 in 21ms
+ GET /questions 200 in 27ms
+ GET /api/questions 200 in 52ms
+ GET /api/auth/session 200 in 49ms
+ GET /api/companies 200 in 56ms
+ GET /api/questions 200 in 39ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/companies 200 in 38ms
+ GET /questions 200 in 39ms
+ GET /api/questions 200 in 63ms
+ GET /api/auth/session 200 in 53ms
+ GET /api/companies 200 in 67ms
+ GET /api/questions 200 in 43ms
+ GET /api/companies 200 in 42ms
+ GET /api/auth/session 200 in 44ms
+ GET / 200 in 31ms
+ GET /auth/signin 200 in 34ms
+ GET /questions/cmc5gleob003nulcmwysk4n1p?_rsc=9bkzp 200 in 22ms
+ GET /api/auth/session 200 in 59ms
+ GET /api/auth/session 200 in 40ms
+ GET /api/auth/providers 200 in 34ms
+ GET /api/auth/csrf 200 in 30ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 55ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 464ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 466ms
+ GET /api/auth/session 200 in 68ms
+ GET /dashboard?_rsc=3y0gy 200 in 25ms
+ GET /api/dashboard/stats 200 in 32ms
+ GET /api/dashboard/stats 200 in 35ms
+ GET / 200 in 47ms
+ GET /auth/signin 200 in 33ms
+ POST /api/auth/_log 200 in 88ms
+ POST /api/auth/_log 200 in 87ms
+ POST /api/questions/cmc5gleob003nulcmwysk4n1p/answers 200 in 71ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 66ms
+ GET /api/questions 200 in 81ms
+ GET / 200 in 67ms
+ GET /api/questions/cmc5gleob003nulcmwysk4n1p 200 in 55ms
+ GET / 200 in 53ms
+ GET /api/auth/session 200 in 71ms
+ GET /api/auth/providers 200 in 61ms
+ GET /api/auth/session 200 in 35ms
+ GET /api/auth/csrf 200 in 52ms
+ GET /auth/signin 200 in 79ms
+ POST /api/auth/_log 200 in 53ms
+ POST /api/auth/_log 200 in 47ms
+ POST /api/auth/callback/credentials 200 in 58ms
+ GET /api/auth/session 200 in 34ms
+ GET /auth/signin 200 in 57ms
+ GET /dashboard?_rsc=3y0gy 200 in 24ms
+ GET /api/auth/session 200 in 57ms
+ GET /api/auth/session 200 in 48ms
+ GET /api/auth/providers 200 in 53ms
+ GET /api/auth/providers 200 in 40ms
+ GET /api/auth/session 200 in 39ms
+ GET /api/auth/session 200 in 38ms
+ GET /api/auth/csrf 200 in 39ms
+ GET /api/auth/csrf 200 in 25ms
+ POST /api/auth/callback/credentials 200 in 26ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 348ms
+ GET /api/auth/session 200 in 360ms
+ GET /api/auth/session 200 in 56ms
+ GET /companies 307 in 79ms
+ GET /dashboard?_rsc=3y0gy 200 in 49ms
+ GET /auth/signin 200 in 69ms
+ GET /dashboard?_rsc=3y0gy 200 in 60ms
+ GET /api/dashboard/stats 200 in 33ms
+ GET /api/dashboard/stats 200 in 33ms
+ GET /api/auth/session 200 in 46ms
+ GET /api/auth/session 200 in 19ms
+ GET /stories 307 in 36ms
+ GET /auth/signin 200 in 30ms
+ GET /dashboard 200 in 51ms
+ GET /api/auth/session 200 in 49ms
+ GET /api/auth/session 200 in 28ms
+ GET /api/auth/session 200 in 25ms
+ GET /api/dashboard/stats 200 in 37ms
+ GET /api/auth/session 200 in 27ms
+ GET /api/dashboard/stats 200 in 37ms
+ GET / 200 in 35ms
+ GET / 200 in 40ms
+ GET /questions 307 in 52ms
+ GET /auth/signin 200 in 43ms
+ GET /api/auth/session 200 in 52ms
+ GET /auth/signin 200 in 104ms
+ POST /api/auth/_log 200 in 85ms
+ POST /api/auth/_log 200 in 98ms
+ POST /api/auth/_log 200 in 70ms
+ POST /api/auth/_log 200 in 70ms
+ GET /api/auth/session 200 in 34ms
+ GET /api/auth/session 200 in 24ms
+ GET /api/auth/session 200 in 46ms
+ GET /api/auth/session 200 in 45ms
+ GET /dashboard 307 in 71ms
+ GET /api/auth/providers 200 in 35ms
+ GET /auth/signin 200 in 39ms
+ GET /api/auth/csrf 200 in 49ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 350ms
+ GET /api/auth/session 200 in 36ms
+ GET /dashboard?_rsc=3y0gy 200 in 25ms
+ GET /api/dashboard/stats 200 in 37ms
+ GET /api/auth/session 200 in 28ms
+ GET /companies 307 in 58ms
+ GET /api/dashboard/stats 200 in 50ms
+ GET /api/auth/session 200 in 39ms
+ GET /auth/signin 200 in 40ms
+ GET /api/auth/session 200 in 50ms
+ GET /api/auth/session 200 in 24ms
+ GET /stories 307 in 73ms
+ GET /auth/signin 200 in 28ms
+ GET /api/auth/session 200 in 11ms
+ GET / 200 in 45ms
+ GET /auth/signin 200 in 63ms
+ GET /api/auth/csrf 200 in 68ms
+ POST /api/auth/_log 200 in 66ms
+ POST /api/auth/_log 200 in 65ms
+ POST /api/auth/signout 200 in 40ms
+ GET / 200 in 38ms
+ GET /api/auth/session 200 in 19ms
+ GET /api/auth/session 200 in 17ms
+ GET /api/auth/providers 200 in 36ms
+ GET /api/auth/csrf 200 in 17ms
+🔐 NextAuth authorize called with: { username: 'demo', hasPassword: true }
+🔍 Looking for user: demo
+✅ User found, checking if active
+🔑 Verifying password
+✅ Authentication successful for user: demo
+✅ Returning user object: {
+  id: 'cmc5d77nb0001tf2l5t42gldx',
+  username: 'demo',
+  name: 'Demo User',
+  role: 'USER'
+}
+ POST /api/auth/callback/credentials 200 in 338ms
+ GET /api/auth/session 200 in 34ms
+ GET /dashboard?_rsc=3y0gy 200 in 23ms
+ GET /api/dashboard/stats 200 in 27ms
+ GET /api/dashboard/stats 200 in 26ms
+ GET / 307 in 34ms
+ GET /dashboard 200 in 29ms
+ GET /api/auth/session 200 in 42ms
+ GET /api/dashboard/stats 200 in 54ms
+ GET /api/auth/session 200 in 23ms
+ GET /api/dashboard/stats 200 in 33ms
+ GET /questions 200 in 30ms
+ GET /api/auth/session 200 in 44ms
+ GET /api/questions 200 in 50ms
+ GET /api/companies 200 in 59ms
+ GET /api/questions 200 in 37ms
+ GET /api/auth/session 200 in 37ms
+ GET /api/companies 200 in 38ms
+ GET /companies 200 in 27ms
+ GET /api/companies 200 in 53ms
+ GET /api/auth/session 200 in 48ms
+ GET /api/companies 200 in 28ms
+ GET /api/auth/session 200 in 30ms
+ GET /stories 200 in 30ms
+ GET /api/stories 200 in 29ms
+ GET /api/auth/session 200 in 47ms
+ GET /api/stories 200 in 31ms
+ GET /api/auth/session 200 in 28ms
+ GET /dashboard 200 in 31ms
+ GET /api/auth/session 200 in 43ms
+ GET /api/dashboard/stats 200 in 56ms
+ GET /api/auth/session 200 in 27ms
+ GET /api/dashboard/stats 200 in 36ms
+[?25h
