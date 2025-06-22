@@ -68,6 +68,7 @@ export async function POST(req: NextRequest) {
     const story = await prisma.story.create({
       data: {
         ...data,
+        tags: JSON.stringify(data.tags || []),
         userId: session.user.id,
       },
       include: {

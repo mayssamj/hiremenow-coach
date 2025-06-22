@@ -75,7 +75,7 @@ export function QuestionsContent() {
     if (searchQuery.trim()) {
       filtered = filtered.filter(question =>
         question.text.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        question.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())) ||
+        JSON.parse(question.tags || '[]').some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase())) ||
         question.company?.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
@@ -370,9 +370,9 @@ export function QuestionsContent() {
                       </p>
 
                       {/* Tags */}
-                      {question.tags.length > 0 && (
+                      {JSON.parse(question.tags || '[]').length > 0 && (
                         <div className="flex flex-wrap gap-1">
-                          {question.tags.map((tag) => (
+                          {JSON.parse(question.tags || '[]').map((tag: string) => (
                             <Badge key={tag} variant="outline" className="text-xs">
                               {tag}
                             </Badge>

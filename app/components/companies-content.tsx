@@ -38,7 +38,7 @@ export function CompaniesContent() {
       const filtered = companies.filter(company =>
         company.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         company.industry?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        company.values.some(value => 
+        JSON.parse(company.values || '[]').some((value: string) => 
           value.toLowerCase().includes(searchQuery.toLowerCase())
         )
       );
@@ -177,7 +177,7 @@ export function CompaniesContent() {
                     <div>
                       <h4 className="text-sm font-medium text-gray-900 mb-2">Core Values</h4>
                       <div className="space-y-1">
-                        {company.values.slice(0, 3).map((value, i) => (
+                        {JSON.parse(company.values || '[]').slice(0, 3).map((value: string, i: number) => (
                           <p key={i} className="text-sm text-gray-600 line-clamp-1">
                             • {value.split(':')[0]}
                           </p>

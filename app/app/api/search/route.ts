@@ -28,8 +28,8 @@ export async function GET(req: NextRequest) {
     const questions = await prisma.question.findMany({
       where: {
         OR: [
-          { text: { contains: searchQuery, mode: 'insensitive' } },
-          { tags: { has: searchQuery } },
+          { text: { contains: searchQuery } },
+          { tags: { contains: searchQuery } },
         ],
       },
       include: {
@@ -46,7 +46,7 @@ export async function GET(req: NextRequest) {
         content: question.text,
         url: `/questions/${question.id}`,
         company: question.company?.name,
-        tags: question.tags,
+        tags: JSON.parse(question.tags || '[]'),
       });
     });
 
@@ -55,12 +55,12 @@ export async function GET(req: NextRequest) {
       where: {
         userId: session.user.id,
         OR: [
-          { title: { contains: searchQuery, mode: 'insensitive' } },
-          { situation: { contains: searchQuery, mode: 'insensitive' } },
-          { task: { contains: searchQuery, mode: 'insensitive' } },
-          { action: { contains: searchQuery, mode: 'insensitive' } },
-          { result: { contains: searchQuery, mode: 'insensitive' } },
-          { tags: { has: searchQuery } },
+          { title: { contains: searchQuery } },
+          { situation: { contains: searchQuery } },
+          { task: { contains: searchQuery } },
+          { action: { contains: searchQuery } },
+          { result: { contains: searchQuery } },
+          { tags: { contains: searchQuery } },
         ],
       },
       take: 10,
@@ -73,7 +73,7 @@ export async function GET(req: NextRequest) {
         title: story.title,
         content: story.situation.slice(0, 200) + (story.situation.length > 200 ? '...' : ''),
         url: `/stories/${story.id}`,
-        tags: story.tags,
+        tags: JSON.parse(story.tags || '[]'),
       });
     });
 
@@ -81,7 +81,7 @@ export async function GET(req: NextRequest) {
     const answers = await prisma.answer.findMany({
       where: {
         userId: session.user.id,
-        content: { contains: searchQuery, mode: 'insensitive' },
+        content: { contains: searchQuery },
       },
       include: {
         question: true,
@@ -98,7 +98,7 @@ export async function GET(req: NextRequest) {
         content: answer.content.slice(0, 200) + (answer.content.length > 200 ? '...' : ''),
         url: `/questions/${answer.question.id}?answer=${answer.id}`,
         company: answer.company?.name,
-        tags: answer.tags,
+        tags: JSON.parse(answer.tags || '[]'),
       });
     });
 
@@ -106,19 +106,20 @@ export async function GET(req: NextRequest) {
     const companies = await prisma.company.findMany({
       where: {
         OR: [
-          { name: { contains: searchQuery, mode: 'insensitive' } },
-          { values: { hasSome: [searchQuery] } },
+          { name: { contains: searchQuery } },
+          { values: { contains: searchQuery } },
         ],
       },
       take: 5,
     });
 
     companies.forEach(company => {
+      const values = JSON.parse(company.values || '[]');
       results.push({
         id: company.id,
         type: 'company',
         title: company.name,
-        content: company.values.join(', ').slice(0, 200),
+        content: Array.isArray(values) ? values.join(', ').slice(0, 200) : '',
         url: `/companies/${company.slug}`,
         company: company.name,
       });

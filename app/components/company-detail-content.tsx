@@ -204,7 +204,7 @@ export function CompanyDetailContent({ company }: CompanyDetailContentProps) {
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
-                      {company.evaluationCriteria.map((criteria, index) => (
+                      {JSON.parse(company.evaluationCriteria || '[]').map((criteria: string, index: number) => (
                         <li key={index} className="flex items-start space-x-2">
                           <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                           <span className="text-gray-700 text-sm">{criteria}</span>
@@ -232,7 +232,7 @@ export function CompanyDetailContent({ company }: CompanyDetailContentProps) {
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
-                      {company.redFlags.map((flag, index) => (
+                      {JSON.parse(company.redFlags || '[]').map((flag: string, index: number) => (
                         <li key={index} className="flex items-start space-x-2">
                           <AlertTriangle className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
                           <span className="text-gray-700 text-sm">{flag}</span>
@@ -319,9 +319,9 @@ export function CompanyDetailContent({ company }: CompanyDetailContentProps) {
                           <p className="text-gray-900 font-medium leading-relaxed">
                             {question.text}
                           </p>
-                          {question.tags.length > 0 && (
+                          {JSON.parse(question.tags || '[]').length > 0 && (
                             <div className="flex flex-wrap gap-1">
-                              {question.tags.map((tag) => (
+                              {JSON.parse(question.tags || '[]').map((tag: string) => (
                                 <Badge key={tag} variant="outline" className="text-xs">
                                   {tag}
                                 </Badge>
@@ -373,7 +373,7 @@ export function CompanyDetailContent({ company }: CompanyDetailContentProps) {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
-                    {company.values.map((value, index) => (
+                    {JSON.parse(company.values || '[]').map((value: string, index: number) => (
                       <div key={index} className="p-4 border rounded-lg">
                         <h4 className="font-medium text-gray-900 mb-2">
                           {value.split(':')[0]}
@@ -410,7 +410,7 @@ export function CompanyDetailContent({ company }: CompanyDetailContentProps) {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
-                    {company.successTips.map((tip, index) => (
+                    {JSON.parse(company.successTips || '[]').map((tip: string, index: number) => (
                       <li key={index} className="flex items-start space-x-3">
                         <Lightbulb className="h-5 w-5 text-yellow-500 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-700">{tip}</span>

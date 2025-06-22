@@ -38,7 +38,7 @@ export function StoriesContent() {
       const filtered = stories.filter(story =>
         story.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         story.situation.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        story.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+        JSON.parse(story.tags || '[]').some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       );
       setFilteredStories(filtered);
     }
@@ -204,9 +204,9 @@ export function StoriesContent() {
                     </div>
 
                     {/* Tags */}
-                    {story.tags.length > 0 && (
+                    {JSON.parse(story.tags || '[]').length > 0 && (
                       <div className="flex flex-wrap gap-1">
-                        {story.tags.slice(0, 3).map((tag) => (
+                        {JSON.parse(story.tags || '[]').slice(0, 3).map((tag: string) => (
                           <Badge key={tag} variant="outline" className="text-xs">
                             {tag}
                           </Badge>
