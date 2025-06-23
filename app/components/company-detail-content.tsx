@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -25,20 +25,63 @@ import { CompanyWithQuestions, QuestionWithCompany } from '@/lib/types';
 import { motion } from 'framer-motion';
 
 interface CompanyDetailContentProps {
-  company: CompanyWithQuestions & {
-    questions: (QuestionWithCompany & {
-      answers?: { id: string; isComplete: boolean }[];
-    })[];
-  };
+  companySlug: string;
 }
 
-export function CompanyDetailContent({ company }: CompanyDetailContentProps) {
+export function CompanyDetailContent({ companySlug }: CompanyDetailContentProps) {
   const [filter, setFilter] = useState<'all' | 'unanswered' | 'answered' | 'critical'>('all');
+  const [company, setCompany] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
-  const answeredQuestions = company.questions.filter((q: any) => q.answers && q.answers.length > 0);
-  const unansweredQuestions = company.questions.filter((q: any) => !q.answers || q.answers.length === 0);
-  const criticalQuestions = company.questions.filter(q => q.isCritical);
-  const completionPercentage = company.questions.length > 0 
+  useEffect(() => {
+    fetchCompanyData();
+  }, [companySlug]);
+
+  const fetchCompanyData = async () => {
+    try {
+      const response = await fetch(`/api/companies/${companySlug}`);
+      if (response.ok) {
+        const data = await response.json();
+        setCompany(data);
+      }
+    } catch (error) {
+      console.error('Failed to fetch company data:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="animate-pulse space-y-6">
+          <div className="h-8 bg-gray-200 rounded w-1/3"></div>
+          <div className="h-4 bg-gray-200 rounded w-2/3"></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[...Array(3)].map((_, i) => (
+              <div key={i} className="h-32 bg-gray-200 rounded-lg"></div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (!company) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900">Company not found</h1>
+          <p className="text-gray-600 mt-2">The company you're looking for doesn't exist.</p>
+        </div>
+      </div>
+    );
+  }
+
+  const answeredQuestions = company.questions?.filter((q: any) => q.answers && q.answers.length > 0) || [];
+  const unansweredQuestions = company.questions?.filter((q: any) => !q.answers || q.answers.length === 0) || [];
+  const criticalQuestions = company.questions?.filter((q: any) => q.isCritical) || [];
+  const completionPercentage = (company.questions?.length || 0) > 0 
     ? (answeredQuestions.length / company.questions.length) * 100 
     : 0;
 
@@ -287,7 +330,7 @@ export function CompanyDetailContent({ company }: CompanyDetailContentProps) {
 
             {/* Questions List */}
             <div className="space-y-4">
-              {filteredQuestions.map((question, index) => (
+              {filteredQuestions.map((question: any, index: number) => (
                 <motion.div
                   key={question.id}
                   initial={{ opacity: 0, y: 20 }}

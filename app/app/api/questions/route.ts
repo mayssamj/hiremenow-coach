@@ -1,48 +1,32 @@
 
 import { NextRequest, NextResponse } from 'next/server';
-import { getServerSession } from 'next-auth';
-import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
 
-export async function GET(req: NextRequest) {
+export async function GET(request: NextRequest) {
   try {
-    const session = await getServerSession(authOptions);
-    if (!session) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
-
-    const { searchParams } = new URL(req.url);
-    const page = parseInt(searchParams.get('page') || '1');
-    const limit = parseInt(searchParams.get('limit') || '50');
+    const { searchParams } = new URL(request.url);
+    const companySlug = searchParams.get('company');
     const category = searchParams.get('category');
-    const difficulty = searchParams.get('difficulty');
-    const companyId = searchParams.get('companyId');
-    const critical = searchParams.get('critical');
+    const type = searchParams.get('type');
 
-    const skip = (page - 1) * limit;
+    let whereCondition: any = {};
 
-    const where: any = {};
+    if (companySlug) {
+      whereCondition.company = { slug: companySlug };
+    }
 
     if (category && category !== 'all') {
-      where.category = category;
+      whereCondition.category = category;
     }
 
-    if (difficulty && difficulty !== 'all') {
-      where.difficulty = difficulty;
-    }
-
-    if (companyId && companyId !== 'all') {
-      where.companyId = companyId;
-    }
-
-    if (critical === 'true') {
-      where.isCritical = true;
+    if (type && type !== 'all') {
+      whereCondition.type = type;
     }
 
     const questions = await prisma.question.findMany({
-      where,
+      where: whereCondition,
       include: {
         company: {
           select: {
@@ -51,35 +35,20 @@ export async function GET(req: NextRequest) {
             slug: true,
           },
         },
-        answers: {
-          where: {
-            userId: session.user.id,
-          },
+        _count: {
           select: {
-            id: true,
-            isComplete: true,
+            answers: true,
           },
         },
       },
       orderBy: [
         { isCritical: 'desc' },
-        { createdAt: 'desc' },
+        { difficulty: 'asc' },
+        { text: 'asc' },
       ],
-      skip,
-      take: limit,
     });
 
-    const total = await prisma.question.count({ where });
-
-    return NextResponse.json({
-      questions,
-      pagination: {
-        page,
-        limit,
-        total,
-        pages: Math.ceil(total / limit),
-      },
-    });
+    return NextResponse.json({ questions });
   } catch (error) {
     console.error('Questions fetch error:', error);
     return NextResponse.json(

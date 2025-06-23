@@ -1,141 +1,101 @@
 
 import { NextRequest, NextResponse } from 'next/server';
-import { getServerSession } from 'next-auth';
-import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/db';
-import { SearchResult } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
 
-export async function GET(req: NextRequest) {
+export async function GET(request: NextRequest) {
   try {
-    const session = await getServerSession(authOptions);
-    if (!session) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
-
-    const { searchParams } = new URL(req.url);
+    const { searchParams } = new URL(request.url);
     const query = searchParams.get('q');
 
-    if (!query || query.length < 2) {
+    if (!query || query.trim().length === 0) {
       return NextResponse.json({ results: [] });
     }
 
-    const searchQuery = query.toLowerCase().trim();
-    const results: SearchResult[] = [];
+    const searchTerm = query.trim().toLowerCase();
 
-    // Search questions
-    const questions = await prisma.question.findMany({
-      where: {
-        OR: [
-          { text: { contains: searchQuery } },
-          { tags: { contains: searchQuery } },
-        ],
-      },
-      include: {
-        company: true,
-      },
-      take: 10,
-    });
+    // Search across questions, stories, companies
+    const [questions, stories, companies] = await Promise.all([
+      // Search questions
+      prisma.question.findMany({
+        where: {
+          text: { contains: searchTerm },
+        },
+        include: {
+          company: {
+            select: { name: true, slug: true }
+          }
+        },
+        take: 10,
+      }),
 
-    questions.forEach(question => {
-      results.push({
-        id: question.id,
-        type: 'question',
-        title: question.text.slice(0, 100) + (question.text.length > 100 ? '...' : ''),
-        content: question.text,
-        url: `/questions/${question.id}`,
-        company: question.company?.name,
-        tags: JSON.parse(question.tags || '[]'),
-      });
-    });
+      // Search stories (public access)
+      prisma.story.findMany({
+        where: {
+          OR: [
+            { title: { contains: searchTerm } },
+            { situation: { contains: searchTerm } },
+            { task: { contains: searchTerm } },
+            { action: { contains: searchTerm } },
+            { result: { contains: searchTerm } },
+          ],
+        },
+        select: {
+          id: true,
+          title: true,
+          situation: true,
+          createdAt: true,
+          user: {
+            select: { name: true }
+          }
+        },
+        take: 10,
+      }),
 
-    // Search stories
-    const stories = await prisma.story.findMany({
-      where: {
-        userId: session.user.id,
-        OR: [
-          { title: { contains: searchQuery } },
-          { situation: { contains: searchQuery } },
-          { task: { contains: searchQuery } },
-          { action: { contains: searchQuery } },
-          { result: { contains: searchQuery } },
-          { tags: { contains: searchQuery } },
-        ],
-      },
-      take: 10,
-    });
+      // Search companies
+      prisma.company.findMany({
+        where: {
+          OR: [
+            { name: { contains: searchTerm } },
+            { description: { contains: searchTerm } },
+          ],
+        },
+        select: {
+          id: true,
+          name: true,
+          slug: true,
+          description: true,
+        },
+        take: 5,
+      }),
+    ]);
 
-    stories.forEach(story => {
-      results.push({
-        id: story.id,
-        type: 'story',
-        title: story.title,
-        content: story.situation.slice(0, 200) + (story.situation.length > 200 ? '...' : ''),
-        url: `/stories/${story.id}`,
-        tags: JSON.parse(story.tags || '[]'),
-      });
-    });
+    const results = [
+      ...questions.map(q => ({
+        id: q.id,
+        type: 'question' as const,
+        title: q.text,
+        subtitle: `${q.company?.name || 'Unknown'} • ${q.category}`,
+        url: `/questions/${q.id}`,
+      })),
+      ...stories.map(s => ({
+        id: s.id,
+        type: 'story' as const,
+        title: s.title,
+        subtitle: s.situation.slice(0, 100) + (s.situation.length > 100 ? '...' : ''),
+        url: `/stories/${s.id}`,
+      })),
+      ...companies.map(c => ({
+        id: c.id,
+        type: 'company' as const,
+        title: c.name,
+        subtitle: c.description?.slice(0, 80) + (c.description && c.description.length > 80 ? '...' : '') || 'Company profile',
+        url: `/companies/${c.slug}`,
+      })),
+    ];
 
-    // Search answers
-    const answers = await prisma.answer.findMany({
-      where: {
-        userId: session.user.id,
-        content: { contains: searchQuery },
-      },
-      include: {
-        question: true,
-        company: true,
-      },
-      take: 10,
-    });
-
-    answers.forEach(answer => {
-      results.push({
-        id: answer.id,
-        type: 'answer',
-        title: `Answer: ${answer.question.text.slice(0, 80)}...`,
-        content: answer.content.slice(0, 200) + (answer.content.length > 200 ? '...' : ''),
-        url: `/questions/${answer.question.id}?answer=${answer.id}`,
-        company: answer.company?.name,
-        tags: JSON.parse(answer.tags || '[]'),
-      });
-    });
-
-    // Search companies
-    const companies = await prisma.company.findMany({
-      where: {
-        OR: [
-          { name: { contains: searchQuery } },
-          { values: { contains: searchQuery } },
-        ],
-      },
-      take: 5,
-    });
-
-    companies.forEach(company => {
-      const values = JSON.parse(company.values || '[]');
-      results.push({
-        id: company.id,
-        type: 'company',
-        title: company.name,
-        content: Array.isArray(values) ? values.join(', ').slice(0, 200) : '',
-        url: `/companies/${company.slug}`,
-        company: company.name,
-      });
-    });
-
-    // Sort results by relevance (exact matches first, then partial matches)
-    results.sort((a, b) => {
-      const aExact = a.title.toLowerCase().includes(searchQuery) ? 1 : 0;
-      const bExact = b.title.toLowerCase().includes(searchQuery) ? 1 : 0;
-      return bExact - aExact;
-    });
-
-    return NextResponse.json({
-      results: results.slice(0, 20), // Limit to 20 results
-      total: results.length,
-    });
+    return NextResponse.json({ results });
   } catch (error) {
     console.error('Search error:', error);
     return NextResponse.json(

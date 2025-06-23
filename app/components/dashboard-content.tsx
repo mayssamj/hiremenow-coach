@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
+import { ThemeSelector } from '@/components/admin/theme-selector';
 import { 
   BookOpen, 
   Building2, 
@@ -15,7 +16,8 @@ import {
   Target,
   Users,
   ArrowRight,
-  Plus
+  Plus,
+  Palette
 } from 'lucide-react';
 import Link from 'next/link';
 import { DashboardStats } from '@/lib/types';
@@ -24,6 +26,7 @@ import { motion } from 'framer-motion';
 export function DashboardContent() {
   const [stats, setStats] = useState<DashboardStats | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showThemeSelector, setShowThemeSelector] = useState(false);
 
   useEffect(() => {
     fetchDashboardStats();
@@ -71,6 +74,40 @@ export function DashboardContent() {
           <p className="text-gray-600 mt-2">
             Track your interview preparation progress and continue your journey to success
           </p>
+        </motion.div>
+
+        {/* Admin Theme Controls - Now Always Available */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="border-l-4 border-primary pl-4"
+        >
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-2">
+              <Palette className="h-5 w-5 text-primary" />
+              <h2 className="text-xl font-semibold">Theme Management</h2>
+              <Badge variant="secondary">Admin Access</Badge>
+            </div>
+            <Button
+              variant="outline"
+              onClick={() => setShowThemeSelector(!showThemeSelector)}
+              className="btn-secondary-enhanced"
+            >
+              {showThemeSelector ? 'Hide' : 'Show'} Theme Controls
+            </Button>
+          </div>
+          
+          {showThemeSelector && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ThemeSelector />
+            </motion.div>
+          )}
         </motion.div>
 
         {/* Quick Stats */}
@@ -178,7 +215,7 @@ export function DashboardContent() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              {stats?.progressByCompany?.slice(0, 5).map((item, index) => (
+              {stats?.progressByCompany?.slice(0, 5).map((item: any, index: number) => (
                 <motion.div
                   key={item.company.id}
                   initial={{ opacity: 0, x: -20 }}
@@ -243,7 +280,7 @@ export function DashboardContent() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                {stats?.recentActivity?.slice(0, 5).map((activity, index) => (
+                {stats?.recentActivity?.slice(0, 5).map((activity: any, index: number) => (
                   <motion.div
                     key={activity.id}
                     initial={{ opacity: 0, y: 10 }}

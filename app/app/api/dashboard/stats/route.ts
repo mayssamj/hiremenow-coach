@@ -1,7 +1,5 @@
 
 import { NextRequest, NextResponse } from 'next/server';
-import { getServerSession } from 'next-auth';
-import { authOptions } from '@/lib/auth';
 import { prisma } from '@/lib/db';
 import { DashboardStats } from '@/lib/types';
 
@@ -9,12 +7,22 @@ export const dynamic = 'force-dynamic';
 
 export async function GET(req: NextRequest) {
   try {
-    const session = await getServerSession(authOptions);
-    if (!session) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    // Get first available user or demo user for public access
+    const user = await prisma.user.findFirst({
+      where: {
+        OR: [
+          { username: 'demo' },
+          { username: 'admin' },
+          { isActive: true }
+        ]
+      }
+    });
+
+    if (!user) {
+      return NextResponse.json({ error: 'No user data available' }, { status: 404 });
     }
 
-    const userId = session.user.id;
+    const userId = user.id;
 
     // Get total stories
     const totalStories = await prisma.story.count({
@@ -45,24 +53,24 @@ export async function GET(req: NextRequest) {
       const progress = userProgress.find(p => p.companyId === company.id);
       const totalQuestions = company._count.questions;
       const answeredQuestions = progress?.answeredQuestions || 0;
-      const criticalAnswered = progress?.criticalAnswered || 0;
+      const completionPercentage = totalQuestions > 0 ? (answeredQuestions / totalQuestions) * 100 : 0;
       
       return {
-        company,
-        progress: {
-          totalQuestions,
-          answeredQuestions,
-          criticalAnswered,
-          completionPercentage: totalQuestions > 0 ? (answeredQuestions / totalQuestions) * 100 : 0,
-          averageTimePerAnswer: progress?.averageTimePerAnswer || 0,
+        company: {
+          id: company.id,
+          name: company.name,
+          slug: company.slug,
         },
+        totalQuestions,
+        answeredQuestions,
+        progress: completionPercentage,
       };
-    }).filter(item => item.progress.totalQuestions > 0)
-      .sort((a, b) => b.progress.completionPercentage - a.progress.completionPercentage);
+    }).filter(item => item.totalQuestions > 0)
+      .sort((a, b) => b.progress - a.progress);
 
     // Calculate overall completion rate
-    const totalQuestionsAvailable = progressByCompany.reduce((sum, item) => sum + item.progress.totalQuestions, 0);
-    const totalQuestionsAnswered = progressByCompany.reduce((sum, item) => sum + item.progress.answeredQuestions, 0);
+    const totalQuestionsAvailable = progressByCompany.reduce((sum, item) => sum + item.totalQuestions, 0);
+    const totalQuestionsAnswered = progressByCompany.reduce((sum, item) => sum + item.answeredQuestions, 0);
     const completionRate = totalQuestionsAvailable > 0 ? totalQuestionsAnswered / totalQuestionsAvailable : 0;
 
     // Get recent activity
@@ -124,11 +132,20 @@ export async function GET(req: NextRequest) {
       .slice(0, 5);
 
     const stats: DashboardStats = {
+      totalQuestions: totalQuestionsAvailable,
+      answeredQuestions: totalQuestionsAnswered,
       totalStories,
       totalAnswers,
       completionRate,
-      recentActivity,
+      companiesProgress: progressByCompany.map(item => ({
+        id: item.company.id,
+        name: item.company.name,
+        totalQuestions: item.totalQuestions,
+        answeredQuestions: item.answeredQuestions,
+        progress: item.progress,
+      })),
       progressByCompany,
+      recentActivity,
     };
 
     return NextResponse.json(stats);

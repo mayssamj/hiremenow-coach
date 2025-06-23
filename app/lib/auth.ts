@@ -1,36 +1,11 @@
 
-import { NextAuthOptions, getServerSession } from 'next-auth';
+import { NextAuthOptions } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
-import { PrismaAdapter } from '@next-auth/prisma-adapter';
-import { prisma } from '@/lib/db';
 import bcrypt from 'bcryptjs';
-
-declare module 'next-auth' {
-  interface Session {
-    user: {
-      id: string;
-      username: string;
-      name?: string;
-      role: string;
-    };
-  }
-  
-  interface User {
-    id: string;
-    username: string;
-    name?: string;
-    role: string;
-  }
-}
-
-declare module 'next-auth/jwt' {
-  interface JWT {
-    role?: string;
-  }
-}
+import { prisma } from '@/lib/db';
 
 export const authOptions: NextAuthOptions = {
-  adapter: PrismaAdapter(prisma),
+  // Remove PrismaAdapter when using JWT strategy
   providers: [
     CredentialsProvider({
       name: 'credentials',
@@ -39,73 +14,77 @@ export const authOptions: NextAuthOptions = {
         password: { label: 'Password', type: 'password' }
       },
       async authorize(credentials) {
-        console.log('🔐 NextAuth authorize called with:', { username: credentials?.username, hasPassword: !!credentials?.password });
-        
-        try {
-          if (!credentials?.username || !credentials?.password) {
-            console.log('❌ Missing credentials');
-            return null;
-          }
+        console.log('🔐 NextAuth authorize called with:', { 
+          username: credentials?.username, 
+          hasPassword: !!credentials?.password 
+        });
 
-          console.log('🔍 Looking for user:', credentials.username);
-          const user = await prisma.user.findUnique({
-            where: {
-              username: credentials.username
-            }
-          });
-
-          if (!user) {
-            console.log('❌ User not found');
-            return null;
-          }
-
-          console.log('✅ User found, checking if active');
-          if (!user.isActive) {
-            console.log('❌ User is not active');
-            return null;
-          }
-
-          console.log('🔑 Verifying password');
-          const isPasswordValid = await bcrypt.compare(
-            credentials.password,
-            user.password
-          );
-
-          if (!isPasswordValid) {
-            console.log('❌ Password verification failed');
-            return null;
-          }
-
-          console.log('✅ Authentication successful for user:', user.username);
-          const result = {
-            id: user.id,
-            username: user.username,
-            name: user.name || undefined,
-            role: user.role,
-          };
-          console.log('✅ Returning user object:', result);
-          return result;
-        } catch (error) {
-          console.error('❌ Exception in authorize function:', error);
+        if (!credentials?.username || !credentials?.password) {
+          console.log('❌ Missing credentials');
           return null;
         }
+
+        const user = await prisma.user.findUnique({
+          where: {
+            username: credentials.username
+          }
+        });
+
+        console.log('👤 User lookup result:', user ? { 
+          id: user.id, 
+          username: user.username, 
+          hasPassword: !!user.password 
+        } : 'User not found');
+
+        if (!user) {
+          console.log('❌ User not found');
+          return null;
+        }
+
+        const isPasswordValid = await bcrypt.compare(
+          credentials.password,
+          user.password
+        );
+
+        console.log('🔑 Password validation result:', isPasswordValid);
+
+        if (!isPasswordValid) {
+          console.log('❌ Invalid password');
+          return null;
+        }
+
+        console.log('✅ Authentication successful for user:', user.username);
+        return {
+          id: user.id,
+          username: user.username,
+          name: user.name,
+          email: user.email,
+          role: user.role,
+          themePreference: user.themePreference,
+        };
       }
     })
   ],
   session: {
     strategy: 'jwt',
+    maxAge: 24 * 60 * 60, // 24 hours
+    updateAge: 60 * 60, // 1 hour
   },
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
+        token.username = user.username;
         token.role = user.role;
+        token.themePreference = user.themePreference;
       }
       return token;
     },
     async session({ session, token }) {
       if (token) {
         session.user.id = token.sub!;
+        session.user.username = token.username as string;
         session.user.role = token.role as string;
+        session.user.themePreference = token.themePreference as string | null;
       }
       return session;
     },
@@ -113,7 +92,5 @@ export const authOptions: NextAuthOptions = {
   pages: {
     signIn: '/auth/signin',
   },
+  secret: process.env.NEXTAUTH_SECRET,
 };
-
-// Helper function to get server session
-export const getServerAuthSession = () => getServerSession(authOptions);

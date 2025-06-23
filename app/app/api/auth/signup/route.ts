@@ -1,31 +1,70 @@
 
 import { NextRequest, NextResponse } from 'next/server';
+import { PrismaClient } from '@prisma/client';
 import bcrypt from 'bcryptjs';
-import { prisma } from '@/lib/db';
-import { z } from 'zod';
+
+const prisma = new PrismaClient();
 
 export const dynamic = 'force-dynamic';
 
-const signupSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters'),
-  username: z.string().min(3, 'Username must be at least 3 characters').max(20, 'Username must be less than 20 characters'),
-  password: z.string().min(8, 'Password must be at least 8 characters'),
-});
-
-export async function POST(req: NextRequest) {
+export async function POST(request: NextRequest) {
   try {
-    const body = await req.json();
-    const { name, username, password } = signupSchema.parse(body);
+    const { username, email, name, password } = await request.json();
 
-    // Check if user already exists
-    const existingUser = await prisma.user.findUnique({
+    // Validate input
+    if (!username || !email || !name || !password) {
+      return NextResponse.json(
+        { error: 'All fields are required' },
+        { status: 400 }
+      );
+    }
+
+    // Validate username length
+    if (username.length < 3) {
+      return NextResponse.json(
+        { error: 'Username must be at least 3 characters long' },
+        { status: 400 }
+      );
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { error: 'Please enter a valid email address' },
+        { status: 400 }
+      );
+    }
+
+    // Validate password length
+    if (password.length < 6) {
+      return NextResponse.json(
+        { error: 'Password must be at least 6 characters long' },
+        { status: 400 }
+      );
+    }
+
+    // Check if username already exists
+    const existingUserByUsername = await prisma.user.findUnique({
       where: { username },
     });
 
-    if (existingUser) {
+    if (existingUserByUsername) {
       return NextResponse.json(
-        { error: 'User with this username already exists' },
-        { status: 400 }
+        { error: 'Username already exists' },
+        { status: 409 }
+      );
+    }
+
+    // Check if email already exists
+    const existingUserByEmail = await prisma.user.findUnique({
+      where: { email },
+    });
+
+    if (existingUserByEmail) {
+      return NextResponse.json(
+        { error: 'Email already exists' },
+        { status: 409 }
       );
     }
 
@@ -35,35 +74,53 @@ export async function POST(req: NextRequest) {
     // Create user
     const user = await prisma.user.create({
       data: {
-        name,
         username,
+        email,
+        name,
         password: hashedPassword,
+        role: 'USER',
+        isActive: true,
+        themePreference: 'modern-vibrant', // Default theme
       },
       select: {
         id: true,
-        name: true,
         username: true,
+        email: true,
+        name: true,
         role: true,
+        isActive: true,
         createdAt: true,
       },
     });
 
-    return NextResponse.json({
-      message: 'User created successfully',
-      user,
-    });
+    return NextResponse.json(
+      {
+        message: 'User created successfully',
+        user,
+      },
+      { status: 201 }
+    );
+
   } catch (error) {
-    if (error instanceof z.ZodError) {
-      return NextResponse.json(
-        { error: error.errors[0]?.message || 'Invalid input' },
-        { status: 400 }
-      );
+    console.error('Signup error:', error);
+    
+    // Handle Prisma unique constraint errors
+    if (error && typeof error === 'object' && 'code' in error) {
+      if (error.code === 'P2002') {
+        const meta = (error as any).meta;
+        const field = meta?.target?.[0] || 'Field';
+        return NextResponse.json(
+          { error: `${field} already exists` },
+          { status: 409 }
+        );
+      }
     }
 
-    console.error('Signup error:', error);
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
     );
+  } finally {
+    await prisma.$disconnect();
   }
 }

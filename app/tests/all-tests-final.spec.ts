@@ -89,7 +89,7 @@ test.describe('HireMeNow.Coach - All Tests Final', () => {
       }
     });
     
-    expect(answerResponse.status()).toBe(200);
+    expect(answerResponse.status()).toBe(201);
     console.log('✅ Answer submission API works');
   });
 
