@@ -1,0 +1,25 @@
+# Build outputs
+app/.build/
+app/.next/
+*.tgz
+
+# Cache files
+app/.yarn/
+*.pack
+*.pack.gz
+*.tsbuildinfo
+
+# Logs
+.logs/
+*.log
+dev.log
+
+# Database
+*.db
+*.db-*
+
+# Test results
+test-results/
+
+# Node modules
+node_modules/
