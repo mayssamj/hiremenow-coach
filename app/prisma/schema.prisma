@@ -1,0 +1,393 @@
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+    output = "/home/ubuntu/em_interview_prep/app/node_modules/.prisma/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Category {
+  id              String            @id
+  name            String
+  slug            String
+  description     String?
+  color           String?
+  icon            String?
+  order           Int               @default(0)
+  companyId       String
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime
+  Company         Company           @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  CompanyQuestion CompanyQuestion[]
+
+  @@unique([companyId, slug])
+}
+
+model Company {
+  id                   String                 @id
+  name                 String                 @unique
+  slug                 String                 @unique
+  description          String?
+  logoUrl              String?
+  values               String[]
+  principles           String[]
+  createdAt            DateTime               @default(now())
+  updatedAt            DateTime
+  Category             Category[]
+  CompanyFAQ           CompanyFAQ[]
+  CompanyQuestion      CompanyQuestion[]
+  CompanyStrategy      CompanyStrategy[]
+  SystemDesignQuestion SystemDesignQuestion[]
+  UserNote             UserNote[]
+}
+
+model CompanyFAQ {
+  id          String   @id
+  companyId   String
+  question    String
+  answer      String
+  category    String?
+  tags        String[]
+  order       Int      @default(0)
+  isPublished Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+  Company     Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+}
+
+model CompanyQuestion {
+  id         String   @id
+  questionId String
+  companyId  String
+  categoryId String
+  isCritical Boolean  @default(false)
+  order      Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime
+  Category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  Company    Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  Question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([questionId, companyId])
+}
+
+model CompanyStrategy {
+  id          String       @id
+  companyId   String
+  type        StrategyType
+  title       String
+  description String
+  content     String
+  keyPoints   String[]
+  examples    String[]
+  tips        String[]
+  order       Int          @default(0)
+  isPublished Boolean      @default(true)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime
+  Company     Company      @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@unique([companyId, type])
+}
+
+model FAQ {
+  id          String   @id
+  question    String
+  answer      String
+  category    String?
+  order       Int      @default(0)
+  isPublished Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+}
+
+model Interview {
+  id                  String                @id
+  userId              String
+  title               String
+  company             String
+  date                DateTime?
+  round               String?
+  interviewer         String?
+  outcome             InterviewOutcome?
+  overallNotes        String?
+  createdAt           DateTime              @default(now())
+  updatedAt           DateTime
+  User                User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  InterviewReflection InterviewReflection[]
+}
+
+model InterviewReflection {
+  id            String    @id
+  interviewId   String
+  questionAsked String
+  myResponse    String?
+  reflection    String?
+  whatWentWell  String?
+  whatToImprove String?
+  order         Int       @default(0)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime
+  Interview     Interview @relation(fields: [interviewId], references: [id], onDelete: Cascade)
+}
+
+model PrivateAnswer {
+  id         String   @id
+  userId     String
+  questionId String
+  companyId  String?
+  content    String
+  notes      String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime
+  Question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  User       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, questionId, companyId])
+}
+
+model Progress {
+  id         String     @id
+  userId     String
+  questionId String
+  status     PrepStatus @default(NOT_STARTED)
+  notes      String?
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime
+  Question   Question   @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  User       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, questionId])
+}
+
+model PublicAnswer {
+  id         String   @id
+  userId     String
+  questionId String
+  companyId  String?
+  content    String
+  title      String?
+  isApproved Boolean  @default(true)
+  upvotes    Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime
+  Question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  User       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, questionId, companyId])
+}
+
+model Question {
+  id              String            @id
+  title           String            @unique
+  content         String
+  difficulty      Difficulty        @default(MEDIUM)
+  type            QuestionType      @default(BEHAVIORAL)
+  tips            String[]
+  followUps       String[]
+  isAiGenerated   Boolean           @default(false)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime
+  CompanyQuestion CompanyQuestion[]
+  PrivateAnswer   PrivateAnswer[]
+  Progress        Progress[]
+  PublicAnswer    PublicAnswer[]
+  StoryQuestion   StoryQuestion[]
+  UserNote        UserNote[]
+}
+
+model Story {
+  id            String          @id
+  title         String
+  content       String
+  situation     String?
+  task          String?
+  action        String?
+  result        String?
+  reflection    String?
+  isPublic      Boolean         @default(false)
+  userId        String
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime
+  User          User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  StoryQuestion StoryQuestion[]
+  StoryTag      StoryTag[]
+  UserNote      UserNote[]
+}
+
+model StoryQuestion {
+  id            String   @id
+  storyId       String
+  questionId    String
+  userId        String
+  companyId     String?
+  relevance     String?
+  customization String?
+  lastUsed      DateTime @default(now())
+  usageCount    Int      @default(1)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime
+  Question      Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  Story         Story    @relation(fields: [storyId], references: [id], onDelete: Cascade)
+  User          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([storyId, questionId, companyId, userId])
+}
+
+model StoryTag {
+  id      String @id
+  storyId String
+  tagId   String
+  Story   Story  @relation(fields: [storyId], references: [id], onDelete: Cascade)
+  Tag     Tag    @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@unique([storyId, tagId])
+}
+
+model SystemDesignAnswer {
+  id                   String               @id
+  userId               String
+  questionId           String
+  content              String
+  isPrivate            Boolean              @default(true)
+  createdAt            DateTime             @default(now())
+  updatedAt            DateTime
+  SystemDesignQuestion SystemDesignQuestion @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  User                 User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, questionId])
+}
+
+model SystemDesignNote {
+  id                   String               @id
+  userId               String
+  questionId           String
+  content              String
+  isPrivate            Boolean              @default(true)
+  createdAt            DateTime             @default(now())
+  updatedAt            DateTime
+  SystemDesignQuestion SystemDesignQuestion @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  User                 User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, questionId])
+}
+
+model SystemDesignQuestion {
+  id                 String               @id
+  title              String
+  description        String
+  difficulty         Difficulty           @default(MEDIUM)
+  companyId          String?
+  isGeneral          Boolean              @default(true)
+  requirements       String?
+  architecture       String?
+  components         String?
+  dataModel          String?
+  scalability        String?
+  tradeoffs          String?
+  references         String[]
+  videoLinks         String[]
+  blogPosts          String[]
+  tags               String[]
+  estimatedTime      Int?
+  order              Int                  @default(0)
+  isPublished        Boolean              @default(true)
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime
+  SystemDesignAnswer SystemDesignAnswer[]
+  SystemDesignNote   SystemDesignNote[]
+  Company            Company?             @relation(fields: [companyId], references: [id])
+}
+
+model Tag {
+  id        String     @id
+  name      String     @unique
+  color     String?
+  createdAt DateTime   @default(now())
+  updatedAt DateTime
+  StoryTag  StoryTag[]
+}
+
+model User {
+  id                 String               @id
+  username           String               @unique
+  password           String
+  role               UserRole             @default(USER)
+  preferredCompany   String?
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime
+  Interview          Interview[]
+  PrivateAnswer      PrivateAnswer[]
+  Progress           Progress[]
+  PublicAnswer       PublicAnswer[]
+  Story              Story[]
+  StoryQuestion      StoryQuestion[]
+  SystemDesignAnswer SystemDesignAnswer[]
+  SystemDesignNote   SystemDesignNote[]
+  UserNote           UserNote[]
+}
+
+model UserNote {
+  id         String    @id
+  content    String
+  questionId String?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime
+  companyId  String?
+  isPinned   Boolean   @default(false)
+  isPrivate  Boolean   @default(true)
+  storyId    String?
+  tags       String[]
+  title      String?
+  userId     String
+  Company    Company?  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  Question   Question? @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  Story      Story?    @relation(fields: [storyId], references: [id], onDelete: Cascade)
+  User       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+enum Difficulty {
+  EASY
+  MEDIUM
+  HARD
+}
+
+enum InterviewOutcome {
+  PENDING
+  PASSED
+  FAILED
+  CANCELLED
+  NO_RESPONSE
+}
+
+enum PrepStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  PREPARED
+  NEEDS_WORK
+}
+
+enum QuestionType {
+  BEHAVIORAL
+  SYSTEM_DESIGN
+  TECHNICAL
+  LEADERSHIP
+  CULTURAL_FIT
+}
+
+enum StrategyType {
+  INTERVIEW_APPROACH
+  PERSUASION_FRAMEWORK
+  CULTURAL_ALIGNMENT
+  TECHNICAL_PREPARATION
+  BEHAVIORAL_PREPARATION
+  LEADERSHIP_PHILOSOPHY
+}
+
+enum UserRole {
+  USER
+  ADMIN
+}

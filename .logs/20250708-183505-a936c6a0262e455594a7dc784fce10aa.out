@@ -1,0 +1,60 @@
+➤ YN0000: · Yarn 4.9.2
+➤ YN0000: ┌ Resolution step
+➤ YN0085: │ + @auth/prisma-adapter@npm:2.9.0, bcrypt@npm:5.1.1, dotenv@npm:16.6.1, @auth/core@npm:0.39.0, @mapbox/node-pre-gyp@npm:1.0.11, abbrev@npm:1.1.1, and 38 more.
+➤ YN0085: │ - @next-auth/prisma-adapter@npm:1.0.7, dotenv@npm:16.5.0, tsx@npm:4.20.3
+➤ YN0000: └ Completed in 1s 148ms
+➤ YN0000: ┌ Post-resolution validation
+➤ YN0060: │ @typescript-eslint/parser is listed by your project with version 7.0.0 (p6cb6c), which doesn't satisfy what @typescript-eslint/eslint-plugin requests (^6.0.0-alpha).
+➤ YN0060: │ eslint is listed by your project with version 9.24.0 (pe6e00), which doesn't satisfy what @typescript-eslint/eslint-plugin and other dependencies request (^8.57.0).
+➤ YN0002: │ app@workspace:. doesn't provide prettier (pd88b5), requested by eslint-plugin-prettier.
+➤ YN0086: │ Some peer dependencies are incorrectly met by your project; run yarn explain peer-requirements <hash> for details, where <hash> is the six-letter p-prefixed code.
+➤ YN0086: │ Some peer dependencies are incorrectly met by dependencies; run yarn explain peer-requirements for details.
+➤ YN0000: └ Completed
+➤ YN0000: ┌ Fetch step
+➤ YN0013: │ 39 packages were added to the project (+ 20.01 MiB).
+➤ YN0000: └ Completed in 3s 336ms
+➤ YN0000: ┌ Link step
+➤ YN0007: │ unrs-resolver@npm:1.10.1 must be built because it never has been before or the last one failed
+➤ YN0000: └ Completed in 1s 445ms
+➤ YN0000: · Done with warnings in 6s 95ms
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+
+✔ Generated Prisma Client (v6.7.0) to ./node_modules/.prisma/client in 216ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Easily identify and fix slow SQL queries in your app. Optimize helps you enhance your visibility: https://pris.ly/--optimize
+
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 2.1s
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 733ms (164 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 4.4s (1390 modules)
+ GET / 200 in 979ms
+ ✓ Compiled in 596ms (697 modules)
+ GET / 200 in 75ms
+ GET / 200 in 57ms
+ GET / 200 in 78ms
+ GET / 200 in 70ms
+ GET / 200 in 93ms
+ ○ Compiling /api/companies ...
+ ✓ Compiled /api/companies in 1008ms (803 modules)
+ ✓ Compiled (806 modules)
+ GET /api/companies 401 in 1323ms
+ GET /api/auth/me 401 in 1339ms
+ GET /api/companies 401 in 20ms
+ GET /api/auth/me 401 in 19ms
+ GET /api/companies 401 in 24ms
+ GET /api/companies 401 in 23ms
+ GET /api/companies 401 in 24ms
+ GET /api/companies 401 in 22ms
+ GET /api/companies 401 in 25ms
+ GET /api/companies 401 in 23ms

@@ -1,0 +1,151 @@
+sending incremental file list
+components.json
+next-env.d.ts
+next.config.js
+package.json
+postcss.config.js
+tailwind.config.ts
+tsconfig.json
+app/
+app/globals.css
+app/layout.tsx
+app/page.tsx
+app/api/
+app/api/categories/
+app/api/categories/route.ts
+app/api/companies/
+app/api/companies/route.ts
+app/api/faqs/
+app/api/faqs/route.ts
+app/api/questions/
+app/api/questions/route.ts
+app/api/seed/
+app/api/seed/route.ts
+app/api/stories/
+app/api/stories/route.ts
+app/api/tags/
+app/api/tags/route.ts
+app/api/user-notes/
+app/api/user-notes/route.ts
+app/comprehensive/
+app/comprehensive/page.tsx
+app/critical/
+app/critical/page.tsx
+app/faq/
+app/faq/page.tsx
+app/stories/
+app/stories/page.tsx
+components/
+components/animated-section.tsx
+components/company-values.tsx
+components/navigation.tsx
+components/question-card.tsx
+components/theme-provider.tsx
+components/ui/
+components/ui/accordion.tsx
+components/ui/alert-dialog.tsx
+components/ui/alert.tsx
+components/ui/aspect-ratio.tsx
+components/ui/avatar.tsx
+components/ui/badge.tsx
+components/ui/breadcrumb.tsx
+components/ui/button.tsx
+components/ui/calendar.tsx
+components/ui/card.tsx
+components/ui/carousel.tsx
+components/ui/checkbox.tsx
+components/ui/collapsible.tsx
+components/ui/command.tsx
+components/ui/context-menu.tsx
+components/ui/date-range-picker.tsx
+components/ui/dialog.tsx
+components/ui/drawer.tsx
+components/ui/dropdown-menu.tsx
+components/ui/form.tsx
+components/ui/hover-card.tsx
+components/ui/input-otp.tsx
+components/ui/input.tsx
+components/ui/label.tsx
+components/ui/menubar.tsx
+components/ui/navigation-menu.tsx
+components/ui/pagination.tsx
+components/ui/popover.tsx
+components/ui/progress.tsx
+components/ui/radio-group.tsx
+components/ui/resizable.tsx
+components/ui/scroll-area.tsx
+components/ui/select.tsx
+components/ui/separator.tsx
+components/ui/sheet.tsx
+components/ui/skeleton.tsx
+components/ui/slider.tsx
+components/ui/sonner.tsx
+components/ui/switch.tsx
+components/ui/table.tsx
+components/ui/tabs.tsx
+components/ui/task-card.tsx
+components/ui/textarea.tsx
+components/ui/toast.tsx
+components/ui/toaster.tsx
+components/ui/toggle-group.tsx
+components/ui/toggle.tsx
+components/ui/tooltip.tsx
+components/ui/use-toast.ts
+hooks/
+hooks/use-toast.ts
+lib/
+lib/db.ts
+lib/types.ts
+lib/utils.ts
+lib/db/
+prisma/
+prisma/schema.prisma
+
+sent 248,339 bytes  received 1,663 bytes  500,004.00 bytes/sec
+total size is 242,287  speedup is 0.97
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+  ▲ Next.js 14.2.28
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Skipping linting
+   Checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/8) ...
+   Generating static pages (2/8) 
+   Generating static pages (4/8) 
+   Generating static pages (6/8) 
+ ✓ Generating static pages (8/8)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    399 B           129 kB
+├ ○ /_not-found                          873 B            88 kB
+├ ƒ /api/categories                      0 B                0 B
+├ ƒ /api/companies                       0 B                0 B
+├ ƒ /api/faqs                            0 B                0 B
+├ ƒ /api/questions                       0 B                0 B
+├ ƒ /api/seed                            0 B                0 B
+├ ƒ /api/stories                         0 B                0 B
+├ ƒ /api/tags                            0 B                0 B
+├ ƒ /api/user-notes                      0 B                0 B
+├ ○ /comprehensive                       5.59 kB         165 kB
+├ ○ /critical                            3.05 kB         163 kB
+├ ○ /faq                                 4.01 kB         134 kB
+└ ○ /stories                             7 kB            144 kB
++ First Load JS shared by all            87.1 kB
+  ├ chunks/117-dd07c636a25f747e.js       31.6 kB
+  ├ chunks/fd9d1056-31cd4e5e32ed9a2a.js  53.6 kB
+  └ other shared chunks (total)          1.9 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

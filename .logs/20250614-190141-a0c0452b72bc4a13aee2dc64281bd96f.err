@@ -1,0 +1,131 @@
+Seeding error: TypeError: Cannot read properties of undefined (reading 'deleteMany')
+    at POST (/home/ubuntu/em_interview_prep/app/.next/server/app/api/seed/route.js:121:38)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1588:28)
+    at async DevServer.renderToResponseWithComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/opt/hostedapp/node/root/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js:141:13)
+Seeding error: TypeError: Cannot read properties of undefined (reading 'deleteMany')
+    at POST (/home/ubuntu/em_interview_prep/app/.next/server/app/api/seed/route.js:121:38)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/opt/hostedapp/node/root/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1588:28)
+    at async DevServer.renderToResponseWithComponentsImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/opt/hostedapp/node/root/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/opt/hostedapp/node/root/app/node_modules/next/dist/server/lib/start-server.js:141:13)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat '/home/ubuntu/em_interview_prep/app/.next/server/vendor-chunks/react-intersection-observer.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/react-intersection-observer' in /home/ubuntu/em_interview_prep/app/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em_interview_prep/app/.next/server/vendor-chunks/react-intersection-observer.js', but to 'Error: Can't resolve './vendor-chunks/react-intersection-observer' in '/home/ubuntu/em_interview_prep/app/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/react-intersection-observer (expected /home/ubuntu/em_interview_prep/app/.next/server/vendor-chunks/react-intersection-observer.js)
+<w>  at file dependencies /home/ubuntu/em_interview_prep/app/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em_interview_prep/app/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em_interview_prep/app/.next/server/app/_not-found/page.js
+<w>  at file /home/ubuntu/em_interview_prep/app/.next/server/app/_not-found/page.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/framer-motion' in /home/ubuntu/em_interview_prep/app/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em_interview_prep/app/.next/server/vendor-chunks/framer-motion.js', but to 'Error: Can't resolve './vendor-chunks/framer-motion' in '/home/ubuntu/em_interview_prep/app/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/framer-motion (expected /home/ubuntu/em_interview_prep/app/.next/server/vendor-chunks/framer-motion.js)
+<w>  at file dependencies /home/ubuntu/em_interview_prep/app/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em_interview_prep/app/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em_interview_prep/app/.next/server/app/_not-found/page.js
+<w>  at file /home/ubuntu/em_interview_prep/app/.next/server/app/_not-found/page.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/get-nonce' in /home/ubuntu/em_interview_prep/app/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em_interview_prep/app/.next/server/vendor-chunks/get-nonce.js', but to 'Error: Can't resolve './vendor-chunks/get-nonce' in '/home/ubuntu/em_interview_prep/app/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/get-nonce (expected /home/ubuntu/em_interview_prep/app/.next/server/vendor-chunks/get-nonce.js)
+<w>  at file dependencies /home/ubuntu/em_interview_prep/app/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em_interview_prep/app/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em_interview_prep/app/.next/server/app/_not-found/page.js
+<w>  at file /home/ubuntu/em_interview_prep/app/.next/server/app/_not-found/page.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/clsx' in /home/ubuntu/em_interview_prep/app/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em_interview_prep/app/.next/server/vendor-chunks/clsx.js', but to 'Error: Can't resolve './vendor-chunks/clsx' in '/home/ubuntu/em_interview_prep/app/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/clsx (expected /home/ubuntu/em_interview_prep/app/.next/server/vendor-chunks/clsx.js)
+<w>  at file dependencies /home/ubuntu/em_interview_prep/app/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em_interview_prep/app/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em_interview_prep/app/.next/server/app/_not-found/page.js
+<w>  at file /home/ubuntu/em_interview_prep/app/.next/server/app/_not-found/page.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/react-style-singleton' in /home/ubuntu/em_interview_prep/app/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em_interview_prep/app/.next/server/vendor-chunks/react-style-singleton.js', but to 'Error: Can't resolve './vendor-chunks/react-style-singleton' in '/home/ubuntu/em_interview_prep/app/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/react-style-singleton (expected /home/ubuntu/em_interview_prep/app/.next/server/vendor-chunks/react-style-singleton.js)
+<w>  at file dependencies /home/ubuntu/em_interview_prep/app/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em_interview_prep/app/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em_interview_prep/app/.next/server/app/_not-found/page.js
+<w>  at file /home/ubuntu/em_interview_prep/app/.next/server/app/_not-found/page.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/class-variance-authority' in /home/ubuntu/em_interview_prep/app/.next/server for build dependencies doesn't lead to expected result '/home/ubuntu/em_interview_prep/app/.next/server/vendor-chunks/class-variance-authority.js', but to 'Error: Can't resolve './vendor-chunks/class-variance-authority' in '/home/ubuntu/em_interview_prep/app/.next/server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/class-variance-authority (expected /home/ubuntu/em_interview_prep/app/.next/server/vendor-chunks/class-variance-authority.js)
+<w>  at file dependencies /home/ubuntu/em_interview_prep/app/.next/server/webpack-runtime.js
+<w>  at file /home/ubuntu/em_interview_prep/app/.next/server/webpack-runtime.js
+<w>  at file dependencies /home/ubuntu/em_interview_prep/app/.next/server/app/_not-found/page.js
+<w>  at file /home/ubuntu/em_interview_prep/app/.next/server/app/_not-found/page.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/server/require.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/server/load-components.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/build/utils.js
+<w>  at file dependencies /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at file /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js
+<w>  at resolve commonjs /opt/hostedapp/node/root/app/node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js

@@ -1,0 +1,300 @@
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 1672ms
+ ✓ Compiled /middleware in 232ms (164 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 2.4s (1383 modules)
+ GET / 200 in 2955ms
+ ✓ Compiled in 624ms (697 modules)
+ GET / 200 in 164ms
+ GET /?company=meta 200 in 158ms
+ ○ Compiling /login ...
+ ✓ Compiled /api/companies in 3.4s (1661 modules)
+ GET /api/auth/me 401 in 3062ms
+ GET /api/auth/me 401 in 3061ms
+ GET /api/companies 401 in 3081ms
+ GET /api/companies 401 in 3081ms
+ GET /stories?company=meta 200 in 3937ms
+ GET /faq?company=meta 200 in 3950ms
+ GET /comprehensive?company=meta 200 in 3952ms
+ GET /critical?company=meta 200 in 3977ms
+ GET /login?redirect=%2Fretrospective 200 in 3862ms
+ GET /companies?company=meta 200 in 3984ms
+ GET /api/auth/me 401 in 221ms
+ GET /api/auth/me 401 in 221ms
+ GET /api/companies 401 in 255ms
+ GET /api/companies 401 in 255ms
+ GET /api/companies 401 in 666ms
+ GET /api/companies 401 in 665ms
+ GET /api/companies 401 in 120ms
+ GET /api/companies 401 in 119ms
+ GET /api/companies 401 in 98ms
+ GET /api/auth/me 401 in 166ms
+ GET /api/companies 401 in 194ms
+ GET /api/companies 401 in 194ms
+ GET /api/auth/me 401 in 225ms
+ GET /api/auth/me 401 in 213ms
+ GET /api/auth/me 401 in 162ms
+ GET /api/companies 401 in 195ms
+ GET /api/auth/me 401 in 269ms
+ GET /api/auth/me 401 in 182ms
+ GET /api/auth/me 401 in 182ms
+ GET /api/companies 401 in 253ms
+ GET /api/companies 401 in 253ms
+ ○ Compiling /api/system-design-questions ...
+ ✓ Compiled /api/system-design-questions in 1063ms (899 modules)
+ ✓ Compiled (909 modules)
+ GET /api/companies 401 in 1618ms
+ GET /api/companies 401 in 1618ms
+ GET /api/auth/me 401 in 1627ms
+ GET /api/auth/me 401 in 1627ms
+ GET /api/auth/me 401 in 1627ms
+ GET /api/auth/me 401 in 1522ms
+ GET /api/auth/me 401 in 1521ms
+ GET /api/stories? 401 in 1745ms
+ GET /api/companies 401 in 1749ms
+ GET /api/companies 401 in 1641ms
+ GET /api/companies 401 in 1640ms
+ GET /api/companies 401 in 1608ms
+ GET /api/companies 401 in 1569ms
+ GET /api/companies 401 in 1569ms
+ GET /api/system-design-questions? 401 in 1829ms
+ GET /login 200 in 1672ms
+ GET /api/faqs 200 in 1953ms
+ GET /api/questions?company=meta 500 in 1928ms
+ GET /api/questions?critical=true&company=meta 500 in 1934ms
+ GET /api/tags 500 in 1947ms
+ GET /api/categories 500 in 1951ms
+ GET /api/companies 401 in 87ms
+ GET /api/companies 401 in 87ms
+ GET /api/stories? 401 in 129ms
+ GET /api/companies 401 in 153ms
+ GET /api/companies 401 in 153ms
+ GET /api/companies 401 in 153ms
+ GET /api/companies 401 in 153ms
+ GET /api/companies 401 in 153ms
+ GET /api/companies 401 in 153ms
+ GET /api/system-design-questions? 401 in 160ms
+ GET /api/tags 500 in 209ms
+ GET /api/faqs 200 in 233ms
+ GET /api/categories 500 in 236ms
+ GET /api/questions?company=meta 500 in 247ms
+ GET /api/questions?critical=true&company=meta 500 in 250ms
+ GET /login 200 in 317ms
+ GET /api/companies 401 in 162ms
+ GET /api/companies 401 in 162ms
+ GET /api/companies 401 in 116ms
+ GET /api/companies 401 in 116ms
+ GET /api/companies 401 in 116ms
+ GET /api/companies 401 in 116ms
+ GET /api/stories? 401 in 149ms
+ GET /api/companies 401 in 161ms
+ GET /api/tags 500 in 169ms
+ GET /api/companies 401 in 122ms
+ GET /api/companies 401 in 121ms
+ GET /api/companies 401 in 95ms
+ GET /api/stories? 401 in 125ms
+ GET /api/tags 500 in 117ms
+ GET /api/companies 401 in 90ms
+ GET /api/companies 401 in 90ms
+ GET /api/companies 401 in 137ms
+ GET /api/companies 401 in 181ms
+ GET /login 200 in 218ms
+ GET /api/auth/me 401 in 140ms
+ GET /api/companies 401 in 126ms
+ GET /api/companies 401 in 76ms
+ GET /login 200 in 87ms
+ GET /api/auth/me 401 in 123ms
+ GET /login 200 in 129ms
+ GET /api/companies 401 in 106ms
+ GET /login 200 in 161ms
+ GET /api/companies 401 in 105ms
+ GET /api/companies 401 in 62ms
+ GET /api/auth/me 401 in 84ms
+ GET /api/companies 401 in 94ms
+ GET /api/auth/me 401 in 98ms
+ GET /api/auth/me 401 in 80ms
+ GET /api/companies 401 in 74ms
+ GET /api/auth/me 401 in 60ms
+ GET /api/companies 401 in 56ms
+ GET /api/companies 401 in 59ms
+ GET /api/companies 401 in 40ms
+ GET /api/companies 401 in 46ms
+ GET /api/companies 401 in 45ms
+ GET /api/companies 401 in 40ms
+ GET /login 200 in 126ms
+ ○ Compiling /signup ...
+ ✓ Compiled /signup in 1135ms (1683 modules)
+ GET /api/auth/me 401 in 993ms
+ GET /api/companies 401 in 928ms
+ GET /stories?redirect=%2Fretrospective&company=meta 200 in 1718ms
+ GET /critical?redirect=%2Fretrospective&company=meta 200 in 1744ms
+ GET /companies?redirect=%2Fretrospective&company=meta 200 in 1747ms
+ GET /comprehensive?redirect=%2Fretrospective&company=meta 200 in 1747ms
+ GET /faq?redirect=%2Fretrospective&company=meta 200 in 1733ms
+ GET /login?redirect=%2Fretrospective 200 in 1652ms
+ GET /signup 200 in 1852ms
+ GET /?redirect=%2Fretrospective&company=meta 200 in 1850ms
+ GET /api/auth/me 401 in 304ms
+ GET /api/companies 401 in 405ms
+ GET /api/companies 401 in 130ms
+ GET /api/companies 401 in 44ms
+ GET /api/auth/me 401 in 64ms
+ GET /api/auth/me 401 in 177ms
+ GET /api/companies 401 in 215ms
+ GET /api/auth/me 401 in 199ms
+ GET /api/companies 401 in 283ms
+ GET /api/companies 401 in 222ms
+ GET /api/auth/me 401 in 286ms
+ GET /api/auth/me 401 in 271ms
+ GET /api/auth/me 401 in 222ms
+ GET /api/auth/me 401 in 222ms
+ GET /api/stories? 401 in 285ms
+ GET /api/companies 401 in 296ms
+ GET /api/auth/me 401 in 312ms
+ GET /api/auth/me 401 in 287ms
+ GET /api/auth/me 401 in 275ms
+ GET /api/companies 401 in 280ms
+ GET /api/companies 401 in 280ms
+ GET /api/faqs 200 in 430ms
+ GET /api/tags 500 in 448ms
+ GET /api/auth/me 401 in 221ms
+ GET /api/auth/me 401 in 221ms
+ GET /api/auth/me 401 in 221ms
+ GET /api/companies 401 in 303ms
+ GET /api/companies 401 in 303ms
+ GET /api/companies 401 in 302ms
+ GET /api/questions?critical=true&company=meta 500 in 442ms
+ GET /api/auth/me 401 in 219ms
+ GET /api/auth/me 401 in 219ms
+ GET /api/auth/me 401 in 219ms
+ GET /api/companies 401 in 215ms
+ GET /api/companies 401 in 215ms
+ GET /api/companies 401 in 200ms
+ GET /api/stories? 401 in 260ms
+ GET /login 200 in 276ms
+ GET /api/companies 401 in 174ms
+ GET /api/companies 401 in 176ms
+ GET /api/questions?critical=true&company=meta 500 in 201ms
+ GET /api/tags 500 in 288ms
+ GET /api/faqs 200 in 291ms
+ GET /api/companies 401 in 154ms
+ GET /api/companies 401 in 154ms
+ GET /api/companies 401 in 133ms
+ GET /api/companies 401 in 133ms
+ GET /api/stories? 401 in 131ms
+ GET /api/companies 401 in 112ms
+ GET /login 200 in 246ms
+ GET /api/tags 500 in 155ms
+ GET /api/companies 401 in 94ms
+ GET /api/companies 401 in 105ms
+ GET /api/companies 401 in 105ms
+ GET /api/stories? 401 in 83ms
+ GET /api/tags 500 in 74ms
+ GET /api/companies 401 in 82ms
+ GET /api/companies 401 in 82ms
+ GET /api/companies 401 in 44ms
+ GET /login 200 in 53ms
+ GET /api/companies 401 in 71ms
+ GET /api/companies 401 in 52ms
+ GET /login 200 in 90ms
+ GET /api/auth/me 401 in 92ms
+ GET /api/companies 401 in 107ms
+ GET /api/companies 401 in 65ms
+ GET /api/companies 401 in 65ms
+ GET /api/auth/me 401 in 66ms
+ GET /api/companies 401 in 43ms
+ GET /api/companies 401 in 35ms
+ GET /api/auth/me 401 in 51ms
+ GET /api/companies 401 in 64ms
+ GET /api/auth/me 401 in 43ms
+ GET /api/companies 401 in 36ms
+ GET /api/companies 401 in 33ms
+ GET /api/companies 401 in 66ms
+ GET /?redirect=/retrospective&company=meta 200 in 198ms
+ GET / 200 in 200ms
+ GET /?company=meta 200 in 227ms
+ GET /faq?company=meta 200 in 249ms
+ GET /login 200 in 248ms
+ GET /comprehensive?company=meta 200 in 256ms
+ GET /stories?company=meta 200 in 256ms
+ GET /signup 200 in 257ms
+ GET /faq?redirect=/retrospective&company=meta 200 in 256ms
+ GET /companies?company=meta 200 in 285ms
+ GET /comprehensive?redirect=/retrospective&company=meta 200 in 95ms
+ GET /stories?redirect=/retrospective&company=meta 200 in 147ms
+ GET /companies?redirect=/retrospective&company=meta 200 in 163ms
+ GET /critical?company=meta 200 in 166ms
+ GET /critical?redirect=/retrospective&company=meta 200 in 166ms
+ GET /login?redirect=/retrospective 200 in 120ms
+ GET /login?redirect=/retrospective 200 in 117ms
+ ✓ Compiled /api/auth/login in 415ms (918 modules)
+ POST /api/auth/login 401 in 974ms
+ POST /api/auth/login 200 in 398ms
+ POST /api/auth/login 200 in 374ms
+ GET / 200 in 120ms
+ GET /login 200 in 52ms
+ GET / 200 in 81ms
+ GET /api/auth/me 401 in 46ms
+ GET /api/companies 401 in 57ms
+ GET /api/auth/me 401 in 49ms
+ GET /api/companies 401 in 29ms
+ GET /api/companies 401 in 27ms
+ GET /api/companies 401 in 29ms
+ GET /api/companies 401 in 30ms
+ GET /api/companies 401 in 31ms
+ GET /api/companies 401 in 31ms
+ GET /api/companies 401 in 44ms
+ GET /login 200 in 51ms
+ GET /api/auth/me 401 in 38ms
+ GET /api/companies 401 in 52ms
+ GET /api/auth/me 401 in 44ms
+ GET /api/companies 401 in 29ms
+ GET /api/companies 401 in 25ms
+ GET /api/companies 401 in 25ms
+ GET /api/companies 401 in 29ms
+ GET /api/auth/me 401 in 30ms
+ GET /comprehensive 200 in 51ms
+ ✓ Compiled in 498ms (780 modules)
+ ✓ Compiled in 675ms (1672 modules)
+ ✓ Compiled in 325ms (780 modules)
+ ✓ Compiled in 424ms (780 modules)
+ ✓ Compiled in 392ms (780 modules)
+ ✓ Compiled in 314ms (780 modules)
+ ✓ Compiled in 497ms (780 modules)
+ ✓ Compiled in 603ms (780 modules)
+ ✓ Compiled in 419ms (780 modules)
+ ✓ Compiled in 430ms (780 modules)
+ ✓ Compiled in 336ms (780 modules)
+ ✓ Compiled in 413ms (780 modules)
+ ✓ Compiled in 368ms (780 modules)
+ ✓ Compiled in 327ms (780 modules)
+ ✓ Compiled in 380ms (780 modules)
+ ✓ Compiled in 311ms (780 modules)
+ ✓ Compiled in 328ms (780 modules)
+ ✓ Compiled in 732ms (780 modules)
+ ✓ Compiled in 579ms (780 modules)
+ ✓ Compiled in 513ms (780 modules)
+ ✓ Compiled in 365ms (780 modules)
+ ✓ Compiled in 409ms (780 modules)
+ ✓ Compiled in 335ms (780 modules)
+ GET / 200 in 131ms
+ GET / 200 in 144ms
+ GET / 200 in 47ms
+ ✓ Compiled /api/companies in 473ms (882 modules)
+ ✓ Compiled (885 modules)
+ GET /api/companies 401 in 764ms
+ GET /api/auth/me 401 in 797ms
+ GET /api/companies 401 in 45ms
+ GET /api/auth/me 401 in 44ms
+ GET /api/companies 401 in 25ms
+ GET /api/companies 401 in 26ms
+ GET /api/companies 401 in 26ms
+ GET /api/companies 401 in 24ms
+ GET /api/companies 401 in 26ms
+ GET /api/companies 401 in 24ms

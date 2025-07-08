@@ -1,0 +1,208 @@
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 1604ms
+ ✓ Compiled /middleware in 221ms (164 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 2.9s (1339 modules)
+ GET / 200 in 3358ms
+ ✓ Compiled in 570ms (675 modules)
+ ○ Compiling /login ...
+ ✓ Compiled /login in 1157ms (1419 modules)
+ GET /?company=meta 200 in 1454ms
+ GET / 200 in 1463ms
+ GET /stories?company=meta 200 in 1502ms
+ GET /login?redirect=%2Fretrospective 200 in 1482ms
+ GET /critical?company=meta 200 in 1507ms
+ GET /faq?company=meta 200 in 1509ms
+ GET /comprehensive?company=meta 200 in 1515ms
+ ✓ Compiled /api/questions in 493ms (832 modules)
+ ✓ Compiled (845 modules)
+ GET /api/auth/me 401 in 1085ms
+ GET /api/auth/me 401 in 1075ms
+ GET /api/auth/me 401 in 1019ms
+ GET /api/auth/me 401 in 1011ms
+ GET /api/auth/me 401 in 1009ms
+ GET /api/auth/me 401 in 1009ms
+ GET /api/auth/me 401 in 1009ms
+ GET /api/auth/me 401 in 98ms
+ GET /api/auth/me 401 in 97ms
+ GET /api/auth/me 401 in 97ms
+ GET /api/auth/me 401 in 97ms
+ GET /api/auth/me 401 in 97ms
+ GET /api/auth/me 401 in 97ms
+ GET /api/auth/me 401 in 97ms
+ GET /api/stories 200 in 1258ms
+ GET /api/companies 200 in 1277ms
+ GET /api/faqs 200 in 1169ms
+ GET /api/companies 200 in 1175ms
+ GET /api/tags 200 in 1290ms
+ GET /api/companies 200 in 1179ms
+ GET /api/companies 200 in 1180ms
+ GET /api/categories 200 in 1190ms
+ GET /api/companies 200 in 1268ms
+ GET /api/companies 200 in 1195ms
+ GET /api/companies 200 in 1195ms
+ GET /api/questions?critical=true&company=meta 200 in 1196ms
+ GET /api/questions 200 in 1217ms
+ GET /api/stories 200 in 85ms
+ GET /api/faqs 200 in 77ms
+ GET /api/companies 200 in 109ms
+ GET /api/companies 200 in 84ms
+ GET /api/companies 200 in 85ms
+ GET /api/companies 200 in 86ms
+ GET /api/companies 200 in 86ms
+ GET /api/companies 200 in 87ms
+ GET /api/companies 200 in 87ms
+ GET /api/tags 200 in 101ms
+ GET /api/categories 200 in 102ms
+ GET /api/questions?critical=true&company=meta 200 in 105ms
+ GET /api/questions 200 in 103ms
+ GET /api/companies 200 in 49ms
+ GET /api/companies 200 in 51ms
+ GET /api/companies 200 in 52ms
+ GET /api/companies 200 in 53ms
+ GET /api/companies 200 in 54ms
+ GET /api/companies 200 in 55ms
+ GET /api/companies 200 in 56ms
+ GET /api/companies 200 in 37ms
+ GET /api/companies 200 in 38ms
+ GET /api/companies 200 in 39ms
+ GET /api/companies 200 in 40ms
+ GET /api/companies 200 in 41ms
+ GET /api/companies 200 in 42ms
+ GET /api/companies 200 in 43ms
+ GET /api/companies 200 in 26ms
+ GET /api/companies 200 in 28ms
+ GET /api/companies 200 in 30ms
+ GET /api/companies 200 in 29ms
+ GET /api/companies 200 in 55ms
+ GET /api/companies 200 in 56ms
+ GET /api/companies 200 in 56ms
+ GET /api/companies 200 in 58ms
+ GET /api/companies 200 in 26ms
+ GET /api/companies 200 in 27ms
+ GET /api/companies 200 in 33ms
+ GET /api/companies 200 in 34ms
+ GET /?redirect=%2Fretrospective&company=meta 200 in 111ms
+ GET /comprehensive?redirect=%2Fretrospective&company=meta 200 in 185ms
+ GET /critical?redirect=%2Fretrospective&company=meta 200 in 201ms
+ GET /login 200 in 224ms
+ GET /faq?redirect=%2Fretrospective&company=meta 200 in 224ms
+ GET /stories?redirect=%2Fretrospective&company=meta 200 in 234ms
+ ○ Compiling /signup ...
+ ✓ Compiled /signup in 1119ms (1559 modules)
+ ✓ Compiled in 1ms (851 modules)
+ GET /login?redirect=%2Fretrospective 200 in 1444ms
+ ✓ Compiled in 1ms (851 modules)
+ GET /api/faqs 200 in 713ms
+ ✓ Compiled in 0ms (851 modules)
+ GET /api/auth/me 401 in 1191ms
+ GET /api/auth/me 401 in 1127ms
+ GET /api/auth/me 401 in 1111ms
+ GET /api/auth/me 401 in 1108ms
+ GET /api/auth/me 401 in 961ms
+ GET /api/auth/me 401 in 1435ms
+ GET /signup 200 in 2141ms
+ GET /api/categories 200 in 1236ms
+ GET /api/questions 200 in 1241ms
+ GET /api/questions?critical=true&company=meta 200 in 1172ms
+ GET /api/companies 200 in 1494ms
+ GET /api/companies 200 in 1281ms
+ GET /api/companies 200 in 1032ms
+ GET /api/companies 200 in 1227ms
+ GET /api/companies 200 in 1217ms
+ GET /api/companies 200 in 1217ms
+ ✓ Compiled in 0ms (851 modules)
+ GET /api/tags 200 in 1447ms
+ GET /api/stories 200 in 1449ms
+ ✓ Compiled in 1ms (851 modules)
+ ✓ Compiled in 0ms (851 modules)
+ ✓ Compiled in 0ms (851 modules)
+ GET /api/auth/me 401 in 1247ms
+ GET /api/auth/me 401 in 1247ms
+ GET /api/auth/me 401 in 1247ms
+ GET /api/auth/me 401 in 1247ms
+ GET /api/auth/me 401 in 1246ms
+ GET /api/auth/me 401 in 601ms
+ GET /api/auth/me 401 in 1390ms
+ GET /api/auth/me 401 in 1247ms
+ GET /api/faqs 200 in 1507ms
+ GET /api/categories 200 in 1194ms
+ GET /api/companies 200 in 1287ms
+ GET /api/questions 200 in 1201ms
+ GET /api/companies 200 in 1189ms
+ GET /api/companies 200 in 1191ms
+ GET /api/companies 200 in 1192ms
+ GET /api/companies 200 in 1223ms
+ GET /api/companies 200 in 1206ms
+ GET /api/companies 200 in 1205ms
+ GET /api/questions?critical=true&company=meta 200 in 1229ms
+ ✓ Compiled in 0ms (851 modules)
+ GET /api/stories 200 in 1147ms
+ GET /api/tags 200 in 1148ms
+ GET /api/auth/me 401 in 648ms
+ GET /api/auth/me 401 in 649ms
+ GET /api/companies 200 in 489ms
+ GET /api/companies 200 in 502ms
+ GET /api/companies 200 in 505ms
+ GET /api/companies 200 in 507ms
+ GET /api/companies 200 in 507ms
+ GET /api/companies 200 in 503ms
+ GET /api/companies 200 in 1213ms
+ GET /api/companies 200 in 510ms
+ GET /api/companies 200 in 55ms
+ GET /api/companies 200 in 46ms
+ GET /api/companies 200 in 47ms
+ GET /api/companies 200 in 48ms
+ GET /api/companies 200 in 49ms
+ GET /api/companies 200 in 49ms
+ GET /api/companies 200 in 52ms
+ GET /api/companies 200 in 53ms
+ GET /api/companies 200 in 38ms
+ GET /api/companies 200 in 38ms
+ GET /api/companies 200 in 40ms
+ GET /api/companies 200 in 40ms
+ GET /api/companies 200 in 41ms
+ GET /api/companies 200 in 38ms
+ GET /api/companies 200 in 39ms
+ GET /api/companies 200 in 41ms
+ GET /api/companies 200 in 42ms
+ GET /api/companies 200 in 20ms
+ GET /api/companies 200 in 21ms
+ GET /?redirect=/retrospective&company=meta 200 in 154ms
+ GET /comprehensive?redirect=/retrospective&company=meta 200 in 169ms
+ GET /critical?redirect=/retrospective&company=meta 200 in 168ms
+ GET / 200 in 170ms
+ GET /stories?company=meta 200 in 181ms
+ GET /stories?redirect=/retrospective&company=meta 200 in 181ms
+ GET /comprehensive?company=meta 200 in 181ms
+ GET /login 200 in 186ms
+ GET /faq?redirect=/retrospective&company=meta 200 in 188ms
+ GET /login?redirect=/retrospective 200 in 192ms
+ GET /faq?company=meta 200 in 65ms
+ GET /?company=meta 200 in 76ms
+ GET /signup 200 in 77ms
+ GET /critical?company=meta 200 in 79ms
+ GET /login?redirect=/retrospective 200 in 88ms
+ GET / 200 in 48ms
+ GET /api/auth/me 401 in 36ms
+ GET /api/companies 200 in 46ms
+ GET /api/auth/me 401 in 41ms
+ GET /api/companies 200 in 38ms
+ GET /api/companies 200 in 34ms
+ GET /api/companies 200 in 51ms
+ GET /api/companies 200 in 41ms
+ GET /api/companies 200 in 22ms
+ GET /api/companies 200 in 20ms
+ GET /api/companies 200 in 18ms
+ GET / 200 in 29ms
+ GET /?company=google 200 in 30ms
+ GET /?company=amazon 200 in 29ms
+ GET /?company=netflix 200 in 35ms
+ GET /?company=linkedin 200 in 30ms
+[?25h

@@ -1,0 +1,193 @@
+sending incremental file list
+add_shared_question.js
+components.json
+middleware.ts
+next-env.d.ts
+next.config.js
+package.json
+postcss.config.js
+server.log
+simple_seed.js
+tailwind.config.ts
+tsconfig.json
+app/
+app/globals.css
+app/layout.tsx
+app/page.tsx
+app/api/
+app/api/auth/
+app/api/auth/login/
+app/api/auth/login/route.ts
+app/api/auth/logout/
+app/api/auth/logout/route.ts
+app/api/auth/me/
+app/api/auth/me/route.ts
+app/api/auth/signup/
+app/api/auth/signup/route.ts
+app/api/categories/
+app/api/categories/route.ts
+app/api/companies/
+app/api/companies/route.ts
+app/api/faqs/
+app/api/faqs/route.ts
+app/api/interviews/
+app/api/interviews/route.ts
+app/api/interviews/[id]/
+app/api/interviews/[id]/route.ts
+app/api/progress/
+app/api/progress/route.ts
+app/api/questions/
+app/api/questions/route.ts
+app/api/seed/
+app/api/seed/route.ts
+app/api/stories/
+app/api/stories/route.ts
+app/api/tags/
+app/api/tags/route.ts
+app/api/user-notes/
+app/api/user-notes/route.ts
+app/comprehensive/
+app/comprehensive/page.tsx
+app/critical/
+app/critical/page.tsx
+app/faq/
+app/faq/page.tsx
+app/login/
+app/login/page.tsx
+app/retrospective/
+app/retrospective/page.tsx
+app/signup/
+app/signup/page.tsx
+app/stories/
+app/stories/page.tsx
+components/
+components/animated-section.tsx
+components/company-selector.tsx
+components/company-values.tsx
+components/enhanced-company-selector.tsx
+components/interview-form.tsx
+components/navigation-wrapper.tsx
+components/navigation.tsx
+components/question-card.tsx
+components/theme-provider.tsx
+components/ui/
+components/ui/accordion.tsx
+components/ui/alert-dialog.tsx
+components/ui/alert.tsx
+components/ui/aspect-ratio.tsx
+components/ui/avatar.tsx
+components/ui/badge.tsx
+components/ui/breadcrumb.tsx
+components/ui/button.tsx
+components/ui/calendar.tsx
+components/ui/card.tsx
+components/ui/carousel.tsx
+components/ui/checkbox.tsx
+components/ui/collapsible.tsx
+components/ui/command.tsx
+components/ui/context-menu.tsx
+components/ui/date-range-picker.tsx
+components/ui/dialog.tsx
+components/ui/drawer.tsx
+components/ui/dropdown-menu.tsx
+components/ui/form.tsx
+components/ui/hover-card.tsx
+components/ui/input-otp.tsx
+components/ui/input.tsx
+components/ui/label.tsx
+components/ui/menubar.tsx
+components/ui/navigation-menu.tsx
+components/ui/pagination.tsx
+components/ui/popover.tsx
+components/ui/progress.tsx
+components/ui/radio-group.tsx
+components/ui/resizable.tsx
+components/ui/scroll-area.tsx
+components/ui/select.tsx
+components/ui/separator.tsx
+components/ui/sheet.tsx
+components/ui/skeleton.tsx
+components/ui/slider.tsx
+components/ui/sonner.tsx
+components/ui/switch.tsx
+components/ui/table.tsx
+components/ui/tabs.tsx
+components/ui/task-card.tsx
+components/ui/textarea.tsx
+components/ui/toast.tsx
+components/ui/toaster.tsx
+components/ui/toggle-group.tsx
+components/ui/toggle.tsx
+components/ui/tooltip.tsx
+components/ui/use-toast.ts
+hooks/
+hooks/use-toast.ts
+lib/
+lib/auth.ts
+lib/db.ts
+lib/types.ts
+lib/utils.ts
+lib/db/
+prisma/
+prisma/schema.prisma
+
+sent 429,447 bytes  received 2,080 bytes  287,684.67 bytes/sec
+total size is 421,597  speedup is 0.98
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+  ▲ Next.js 14.2.28
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Skipping linting
+   Checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/15) ...
+   Generating static pages (3/15) 
+   Generating static pages (7/15) 
+   Generating static pages (11/15) 
+ ✓ Generating static pages (15/15)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    10.9 kB         173 kB
+├ ○ /_not-found                          873 B            88 kB
+├ ƒ /api/auth/login                      0 B                0 B
+├ ƒ /api/auth/logout                     0 B                0 B
+├ ƒ /api/auth/me                         0 B                0 B
+├ ƒ /api/auth/signup                     0 B                0 B
+├ ƒ /api/categories                      0 B                0 B
+├ ƒ /api/companies                       0 B                0 B
+├ ƒ /api/faqs                            0 B                0 B
+├ ƒ /api/interviews                      0 B                0 B
+├ ƒ /api/interviews/[id]                 0 B                0 B
+├ ƒ /api/progress                        0 B                0 B
+├ ƒ /api/questions                       0 B                0 B
+├ ƒ /api/seed                            0 B                0 B
+├ ƒ /api/stories                         0 B                0 B
+├ ƒ /api/tags                            0 B                0 B
+├ ƒ /api/user-notes                      0 B                0 B
+├ ○ /comprehensive                       8.97 kB         167 kB
+├ ○ /critical                            5.79 kB         164 kB
+├ ○ /faq                                 5.56 kB         134 kB
+├ ○ /login                               2.83 kB         107 kB
+├ ○ /retrospective                       11.8 kB         132 kB
+├ ○ /signup                              4.01 kB         133 kB
+└ ○ /stories                             5 kB            145 kB
++ First Load JS shared by all            87.1 kB
+  ├ chunks/117-f3f496001b3123df.js       31.6 kB
+  ├ chunks/fd9d1056-a8c33b581c3fa0f6.js  53.6 kB
+  └ other shared chunks (total)          1.9 kB
+
+
+ƒ Middleware                             52.9 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

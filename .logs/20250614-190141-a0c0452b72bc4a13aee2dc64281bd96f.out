@@ -1,0 +1,107 @@
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 1810ms
+ ○ Compiling / ...
+ ✓ Compiled / in 4s (1287 modules)
+ GET / 200 in 1012ms
+ GET / 200 in 4525ms
+ GET / 200 in 4617ms
+ ✓ Compiled in 589ms (633 modules)
+ GET / 200 in 103ms
+ GET / 200 in 54ms
+ GET / 200 in 49ms
+ GET / 200 in 53ms
+ ✓ Compiled /api/companies in 263ms (678 modules)
+ GET /api/companies 200 in 457ms
+ GET / 200 in 80ms
+ GET / 200 in 30ms
+ GET / 200 in 36ms
+ GET / 200 in 43ms
+ GET / 200 in 35ms
+ GET / 200 in 36ms
+ GET / 200 in 32ms
+ GET / 200 in 31ms
+ GET / 200 in 32ms
+ GET / 200 in 40ms
+ GET / 200 in 32ms
+ ✓ Compiled in 480ms (633 modules)
+ ✓ Compiled /api/seed in 228ms (678 modules)
+ POST /api/seed 200 in 546ms
+ ✓ Compiled in 295ms (633 modules)
+ ✓ Compiled in 283ms (633 modules)
+ ✓ Compiled in 1063ms (1322 modules)
+ ✓ Compiled in 1001ms (1307 modules)
+ ✓ Compiled in 408ms (665 modules)
+ ✓ Compiled in 281ms (665 modules)
+ ✓ Compiled in 261ms (665 modules)
+ ✓ Compiled in 259ms (665 modules)
+ ✓ Compiled in 232ms (665 modules)
+ ✓ Compiled /api/companies in 209ms (685 modules)
+ GET /api/companies 200 in 373ms
+ ✓ Compiled /api/questions in 120ms (687 modules)
+ GET /api/questions?company=google 200 in 237ms
+ GET / 200 in 148ms
+ GET /api/companies?slug=meta 200 in 83ms
+ GET /api/companies 200 in 117ms
+ GET /api/companies?slug=meta 200 in 20ms
+ GET /api/companies 200 in 28ms
+ GET /api/companies 200 in 23ms
+ GET /api/companies 200 in 16ms
+ GET /api/companies 200 in 17ms
+ GET /api/companies 200 in 27ms
+ ✓ Compiled in 266ms (665 modules)
+ ✓ Compiled in 311ms (665 modules)
+ ✓ Compiled in 271ms (665 modules)
+ ✓ Compiled in 276ms (665 modules)
+ ✓ Compiled in 251ms (665 modules)
+ ✓ Compiled in 321ms (665 modules)
+ ✓ Compiled in 242ms (665 modules)
+ ✓ Compiled in 237ms (665 modules)
+ ✓ Compiled in 253ms (665 modules)
+ GET / 200 in 39ms
+ GET / 200 in 30ms
+ GET / 200 in 31ms
+ GET /api/companies 200 in 32ms
+ GET /api/companies?slug=meta 200 in 31ms
+ GET /api/companies 200 in 19ms
+ GET /api/companies?slug=meta 200 in 17ms
+ GET /api/companies 200 in 16ms
+ GET /api/companies 200 in 15ms
+ GET /api/companies 200 in 15ms
+ GET /api/companies 200 in 15ms
+ ✓ Compiled in 414ms (665 modules)
+ ✓ Compiled in 251ms (665 modules)
+ ✓ Compiled in 378ms (665 modules)
+ ✓ Compiled in 250ms (665 modules)
+ ✓ Compiled in 298ms (665 modules)
+ ✓ Compiled in 239ms (665 modules)
+ ✓ Compiled in 273ms (665 modules)
+ ✓ Compiled in 244ms (665 modules)
+ ✓ Compiled in 266ms (665 modules)
+ ✓ Compiled /api/seed in 209ms (685 modules)
+ POST /api/seed 500 in 351ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 626ms (1341 modules)
+ POST /api/seed 404 in 729ms
+ ✓ Compiled in 503ms (1353 modules)
+ GET /_next/static/css/app/layout.css?v=1749930324168 404 in 37ms
+ ✓ Compiled in 363ms (1353 modules)
+ GET /_next/static/css/app/layout.css?v=1749930330713 404 in 30ms
+ POST /api/seed 500 in 108ms
+ ✓ Compiled in 374ms (665 modules)
+ ✓ Compiled /_not-found in 296ms (1310 modules)
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1102ms (1537 modules)
+ GET / 200 in 95ms
+ GET /_next/static/css/app/layout.css?v=1749930510593 404 in 46ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 64ms
+ GET /_next/static/chunks/main-app.js?v=1749930510593 404 in 65ms
+ GET /_next/static/chunks/app/page.js 404 in 56ms
+ ✓ Compiled in 251ms (853 modules)
+ HEAD / 404 in 15ms
+[?25h
